@@ -29,6 +29,15 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Controller.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Controller.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Controller.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ReadDstMUX.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ReadDstMUX.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ReadDstMUX.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ReadReg1MUX.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ReadReg1MUX.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ReadReg1MUX.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ReadReg2MUX.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ReadReg2MUX.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ReadReg2MUX.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Register.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Register.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Register.xst"/>
@@ -96,19 +105,12 @@
     <transform xil_pn:end_ts="1511766057" xil_pn:in_ck="3481382579728205874" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-977251028570408546" xil_pn:start_ts="1511766046">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name=".lso"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="cpu.lso"/>
-      <outfile xil_pn:name="cpu.ngc"/>
-      <outfile xil_pn:name="cpu.ngr"/>
-      <outfile xil_pn:name="cpu.prj"/>
-      <outfile xil_pn:name="cpu.stx"/>
-      <outfile xil_pn:name="cpu.syr"/>
-      <outfile xil_pn:name="cpu.xst"/>
-      <outfile xil_pn:name="cpu_vhdl.prj"/>
-      <outfile xil_pn:name="cpu_xst.xrpt"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1511763419" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4734378280469302336" xil_pn:start_ts="1511763419">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -117,20 +119,22 @@
     <transform xil_pn:end_ts="1511766065" xil_pn:in_ck="132379022094" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3486100200077750706" xil_pn:start_ts="1511766059">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="cpu.bld"/>
-      <outfile xil_pn:name="cpu.ngd"/>
-      <outfile xil_pn:name="cpu_ngdbuild.xrpt"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1511765549" xil_pn:in_ck="132379022095" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1511765545">
       <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="cpu_map.map"/>
-      <outfile xil_pn:name="cpu_map.mrp"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-27T14:59:20</DateModified>
+  <DateModified>2017-11-27T16:48:38</DateModified>
   <ModuleName>cpu</ModuleName>
   <SummaryTimeStamp>2017-11-27T14:52:29</SummaryTimeStamp>
-  <SavedFilePath>C:/Xilinx_project/the_cpu/iseconfig/cpu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Xilinx_project/the_cpu\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/iseconfig/cpu.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-27T13:33:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

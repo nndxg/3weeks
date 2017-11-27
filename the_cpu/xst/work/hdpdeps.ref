@@ -1,4 +1,25 @@
-V3 15
+V3 24
+FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd 2017/11/27.17:08:31 P.20131013
+EN work/ReadDstMUX 1511773713 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ReadDstMUX/Behavioral 1511773714 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd \
+      EN work/ReadDstMUX 1511773713
+FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd 2017/11/27.16:57:17 P.20131013
+EN work/ReadReg1MUX 1511773039 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ReadReg1MUX/Behavioral 1511773040 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd \
+      EN work/ReadReg1MUX 1511773039
+FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd 2017/11/27.16:59:55 P.20131013
+EN work/ReadReg2MUX 1511773197 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ReadReg2MUX/Behavioral 1511773198 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd \
+      EN work/ReadReg2MUX 1511773197
 FL C:/Xilinx_project/the_cpu/ALU.vhd 2017/11/27.14:25:42 P.20131013
 EN work/ALU 1511763944 FL C:/Xilinx_project/the_cpu/ALU.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177

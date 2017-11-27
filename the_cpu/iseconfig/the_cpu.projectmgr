@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Controller - Behavioral (C:/Xilinx_project/the_cpu/controller.vhd)</SelectedItem>
+         <SelectedItem>Memory_unit - Behavioral (C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000126000000020000000000000000000000000200000064ffffffff000000810000000300000002000001260000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000014a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000014a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Controller - Behavioral (C:/Xilinx_project/the_cpu/controller.vhd)</CurrentItem>
+      <CurrentItem>Memory_unit - Behavioral (C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
