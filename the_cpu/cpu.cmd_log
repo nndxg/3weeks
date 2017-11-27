@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_project/the_cpu/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  

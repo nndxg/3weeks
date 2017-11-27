@@ -1,0 +1,10 @@
+AR registers behavioral C:/Xilinx_project/the_cpu/Register.vhd sub00/vhpl09 1511765382
+EN cpu NULL C:/Xilinx_project/the_cpu/cpu.vhd sub00/vhpl00 1511766049
+AR cpu behavioral C:/Xilinx_project/the_cpu/cpu.vhd sub00/vhpl01 1511766050
+EN imme_unit NULL C:/Xilinx_project/the_cpu/imme_unit.vhd sub00/vhpl06 1511764099
+AR imme_unit behavioral C:/Xilinx_project/the_cpu/imme_unit.vhd sub00/vhpl07 1511764100
+AR alu behavioral C:/Xilinx_project/the_cpu/ALU.vhd sub00/vhpl03 1511763945
+EN controller NULL C:/Xilinx_project/the_cpu/controller.vhd sub00/vhpl04 1511763951
+AR controller behavioral C:/Xilinx_project/the_cpu/controller.vhd sub00/vhpl05 1511763952
+EN registers NULL C:/Xilinx_project/the_cpu/Register.vhd sub00/vhpl08 1511765381
+EN alu NULL C:/Xilinx_project/the_cpu/ALU.vhd sub00/vhpl02 1511763944

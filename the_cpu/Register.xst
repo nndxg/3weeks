@@ -1,0 +1,5 @@
+set -tmpdir "C:/Xilinx_project/the_cpu/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx_project/the_cpu/xst"
+elaborate
+-ifn Register.prj
+-ifmt mixed
