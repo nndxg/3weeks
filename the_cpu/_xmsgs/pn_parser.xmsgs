@@ -8,31 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALU.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/controller.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/imme_unit.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

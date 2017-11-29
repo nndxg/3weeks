@@ -31,10 +31,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ReadReg2MUX is
 	port(
-			ten_downto_eight : in std_logic_vector(2 downto 0);
+			tenv_downto_eight : in std_logic_vector(2 downto 0);
 			seven_downto_five : in std_logic_vector(2 downto 0);
 			
-			contro : in std_logic;
+			contro : in std_logic_vector(1 downto 0);
 			
 			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1111"=没有
 		);
@@ -46,9 +46,9 @@ begin
 	process(ten_downto_eight,seven_downto_five,contro)
 	begin
 		case contro is
-			when '0' =>		--(10,8)
+			when "10" =>		--(10,8)
 				ReadReg2Out <= '0' & ten_downto_eight;
-			when '1' =>		--(7,5)
+			when "11" =>		--(7,5)
 				ReadReg2Out <= '0' & seven_downto_five;
 			when others =>		--No ReadReg2
 				ReadReg2Out <= "1111";
