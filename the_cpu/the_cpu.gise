@@ -119,7 +119,7 @@
     <transform xil_pn:end_ts="1511766065" xil_pn:in_ck="132379022094" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3486100200077750706" xil_pn:start_ts="1511766059">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -129,7 +129,7 @@
     </transform>
     <transform xil_pn:end_ts="1511765549" xil_pn:in_ck="132379022095" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1511765545">
       <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

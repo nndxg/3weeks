@@ -34,6 +34,9 @@ entity Controller is
       rst : in  std_logic;
 		command : in std_logic_vector(15 downto 0);
 		controller : out std_logic_vector(20 downto 0)
+		-- RegWrite(1) RegDst(3) RegSrc1(3) RegSrc2(1) 
+		-- immeSelect(3) ALUSrcB(1) ALUOp(4) 
+		-- MemRead(1) MemWrite(1) MemToReg(1) isJump(1) isMFPC(1)
 	);
 end Controller;
 
