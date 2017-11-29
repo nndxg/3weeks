@@ -36,7 +36,7 @@ entity MemWriteDataMux is
 		--供选择数据
 		readData2 : in std_logic_vector(15 downto 0);
 		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
-		MemWbResult : in std_logic_vector(15 downto 0);	   -- 上上条指令将写回的寄存器值(WriteData)
+		MemWbResult : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
 		WriteData : out std_logic_vector(15 downto 0)
 	);
@@ -58,5 +58,5 @@ begin
 		end case;
 	end process;
 
-end Behavioral;
+end Behavioral; 
 

@@ -36,7 +36,7 @@ entity ALUMuxA is
 		--供选择数据
 		readData1 : in std_logic_vector(15 downto 0);
 		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
-		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令将写回的寄存器值(WriteData)
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
 		--选择结果输出
 		ALUSrcA : out std_logic_vector(15 downto 0)
 	);

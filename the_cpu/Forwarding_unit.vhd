@@ -31,8 +31,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Forwarding_unit is
 	port(
-		ExeMemWriteReg : in std_logic_vector(3 downto 0);   -- 上条指令写回的寄存器 上条指令的ALU结果（严格说是MFPCMux的结果）
-		MemWbWriteReg : in std_logic_vector(3 downto 0);    -- 上上条指令写回的寄存器 上上条指令的WriteData
+		ExeMemWriteReg : in std_logic_vector(3 downto 0);   -- 上条指令写回的寄存器 
+		MemWbWriteReg : in std_logic_vector(3 downto 0);    -- 上上条指令写回的寄存器 
 		
 		IdExeMemWrite : in std_logic;
 		
