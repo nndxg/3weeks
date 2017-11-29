@@ -1,35 +1,37 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Xilinx_project/the_cpu/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.18 secs
  
---> Parameter xsthdpdir set to C:/Xilinx_project/the_cpu/xst
+--> Parameter xsthdpdir set to C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Xilinx_project/the_cpu/Register.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/Registers is now defined in a different file.  It was defined in "C:/Xilinx_project/the_cpu/Register.vhd", and is now defined in "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd".
+WARNING:HDLParsers:3607 - Unit work/Registers/Behavioral is now defined in a different file.  It was defined in "C:/Xilinx_project/the_cpu/Register.vhd", and is now defined in "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd".
+Compiling vhdl file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd" in Library work.
 Entity <registers> compiled.
-Entity <Registers> (Architecture <Behavioral>) compiled.
+Entity <registers> (Architecture <behavioral>) compiled.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> 
 
-Total memory usage is 264588 kilobytes
+Total memory usage is 264612 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

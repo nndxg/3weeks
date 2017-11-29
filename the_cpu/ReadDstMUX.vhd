@@ -36,7 +36,7 @@ entity ReadDstMUX is
 			four_downto_two : in std_logic_vector(2 downto 0);
 			contro : in std_logic_vector(2 downto 0);
 			
-			ReadDstOut : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1111"=没有
+			ReadDstOut : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T, "1110"=没有
 		);
 end ReadDstMUX;
 
@@ -59,7 +59,7 @@ begin
 			when "110" =>		--IH
 				ReadDstOut <= "1001";
 			when others =>		--No ReadDst
-				ReadDstOut <= "1111";
+				ReadDstOut <= "1110";
 		end case;
 	end process;
 

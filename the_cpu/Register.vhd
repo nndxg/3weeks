@@ -88,7 +88,9 @@ begin
 					when "1010" => T <= WriteData;
 					when others =>
 				end case;
+			else
 			end if;
+		else
 		end if;
 	end process;
 	
