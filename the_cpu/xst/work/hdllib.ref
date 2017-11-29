@@ -1,8 +1,10 @@
 AR readdstmux behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd sub00/vhpl15 1511773714
+AR memory_unit behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd sub00/vhpl17 1511969134
 AR registers behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd sub00/vhpl09 1511957824
-EN cpu NULL C:/Xilinx_project/the_cpu/cpu.vhd sub00/vhpl00 1511766049
+EN cpu NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd sub00/vhpl00 1511965276
+EN memory_unit NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd sub00/vhpl16 1511969133
 EN readreg2mux NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd sub00/vhpl12 1511773197
-AR cpu behavioral C:/Xilinx_project/the_cpu/cpu.vhd sub00/vhpl01 1511766050
+AR cpu behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd sub00/vhpl01 1511965277
 EN imme_unit NULL C:/Xilinx_project/the_cpu/imme_unit.vhd sub00/vhpl06 1511764099
 AR readreg1mux behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd sub00/vhpl11 1511773040
 AR imme_unit behavioral C:/Xilinx_project/the_cpu/imme_unit.vhd sub00/vhpl07 1511764100

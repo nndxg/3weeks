@@ -1,4 +1,18 @@
-V3 25
+V3 29
+FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd 2017/11/27.15:00:46 P.20131013
+EN work/cpu 1511965276 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/cpu/Behavioral 1511965277 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd EN work/cpu 1511965276
+FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd 2017/11/29.23:25:31 P.20131013
+EN work/Memory_unit 1511969133 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Memory_unit/Behavioral 1511969134 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd \
+      EN work/Memory_unit 1511969133
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd 2017/11/27.17:08:31 P.20131013
 EN work/ReadDstMUX 1511773713 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd \
@@ -38,9 +52,6 @@ EN work/Controller 1511763951 FL C:/Xilinx_project/the_cpu/controller.vhd \
 AR work/Controller/Behavioral 1511763952 \
       FL C:/Xilinx_project/the_cpu/controller.vhd EN work/Controller 1511763951
 FL C:/Xilinx_project/the_cpu/cpu.vhd 2017/11/27.15:00:46 P.20131013
-EN work/cpu 1511766049 FL C:/Xilinx_project/the_cpu/cpu.vhd PB ieee/std_logic_1164 1381692176
-AR work/cpu/Behavioral 1511766050 \
-      FL C:/Xilinx_project/the_cpu/cpu.vhd EN work/cpu 1511766049
 FL C:/Xilinx_project/the_cpu/imme_unit.vhd 2017/11/27.14:28:17 P.20131013
 EN work/imme_unit 1511764099 FL C:/Xilinx_project/the_cpu/imme_unit.vhd \
       PB ieee/std_logic_1164 1381692176

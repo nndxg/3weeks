@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst"
+elaborate
+-ifn Memory_unit.prj
+-ifmt mixed

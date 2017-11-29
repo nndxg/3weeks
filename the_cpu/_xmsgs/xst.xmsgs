@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cpu</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Xilinx_project/the_cpu/cpu.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/cpu/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Xilinx_project/the_cpu/cpu.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd</arg>&quot;.
+</msg>
+
 </messages>
 
