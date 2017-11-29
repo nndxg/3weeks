@@ -16,3 +16,4 @@ xst -intstyle ise -ifn "C:/Xilinx_project/the_cpu/cpu.xst" -ofn "C:/Xilinx_proje
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  
 xst -intstyle ise -ifn "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.xst" -ofn "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 cpu.ngc cpu.ngd  
+xst -intstyle ise -ifn "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.xst" -ofn "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.syr" 

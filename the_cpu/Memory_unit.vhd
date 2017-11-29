@@ -72,9 +72,7 @@ entity Memory_unit is
 		
 		ram2_en : out std_logic;		--RAM2使能，='1'禁止，永远等于'0'
 		ram2_oe : out std_logic;		--RAM2读使能，='1'禁止
-		ram2_we : out std_logic;		--RAM2写使能，='1'禁止
-		
-		MemoryState : out std_logic_vector(1 downto 0)		
+		ram2_we : out std_logic		--RAM2写使能，='1'禁止		
 		
 	);
 end Memory_unit;

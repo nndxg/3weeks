@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ReadReg2MUX is
 	port(
-			tenv_downto_eight : in std_logic_vector(2 downto 0);
+			ten_downto_eight : in std_logic_vector(2 downto 0);
 			seven_downto_five : in std_logic_vector(2 downto 0);
 			
 			contro : in std_logic_vector(1 downto 0);
