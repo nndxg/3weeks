@@ -1,4 +1,4 @@
-V3 40
+V3 100
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALU.vhd 2017/11/27.14:25:42 P.20131013
 EN work/ALU 1511971819 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALU.vhd \
@@ -6,6 +6,18 @@ EN work/ALU 1511971819 \
       PB ieee/std_logic_arith 1381692177
 AR work/ALU/Behavioral 1511971820 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALU.vhd EN work/ALU 1511971819
+FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxA.vhd 2017/11/30.10:07:57 P.20131013
+EN work/ALUMuxA 1512027212 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxA.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ALUMuxA/Behavioral 1512027213 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxA.vhd \
+      EN work/ALUMuxA 1512027212
+EN work/ALUMuxB 0 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ALUMuxB/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd \
+      EN work/ALUMuxB 0
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/controller.vhd 2017/11/30.10:34:00 P.20131013
 EN work/Controller 1512009243 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/controller.vhd \
@@ -19,8 +31,41 @@ EN work/cpu 1511965276 \
       PB ieee/std_logic_1164 1381692176
 AR work/cpu/Behavioral 1511965277 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd EN work/cpu 1511965276 \
-      CP Memory_unit CP ReadDstMUX CP Controller CP Registers CP imme_unit CP ALU \
-      CP ReadReg1MUX CP ReadReg2MUX
+      CP ALUMuxA CP ALUMuxB CP ExeMemRegisters CP Forwarding_unit \
+      CP HazardDetectionUnit CP IdExeRegisters CP IfIdRegisters CP MFPCMux \
+      CP MemWbRegisters CP MemWriteDataMux CP PCBrancherAdder CP PCIncrementer \
+      CP PCMux CP PCRegister CP StructConflictUnit CP Memory_unit CP ReadDstMUX \
+      CP Controller CP Registers CP imme_unit CP ALU CP ReadReg1MUX CP ReadReg2MUX
+EN work/ExeMemRegisters 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ExeMemRegisters.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ExeMemRegisters/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ExeMemRegisters.vhd \
+      EN work/ExeMemRegisters 0
+EN work/Forwarding_unit 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Forwarding_unit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Forwarding_unit/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Forwarding_unit.vhd \
+      EN work/Forwarding_unit 0
+EN work/HazardDetectionUnit 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/HazardDetectionUnit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/HazardDetectionUnit/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/HazardDetectionUnit.vhd \
+      EN work/HazardDetectionUnit 0
+EN work/IdExeRegisters 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/IdExeRegisters.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/IdExeRegisters/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/IdExeRegisters.vhd \
+      EN work/IdExeRegisters 0
+EN work/IfIdRegisters 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/IfIdRegisters.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/IfIdRegisters/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/IfIdRegisters.vhd \
+      EN work/IfIdRegisters 0
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/imme_unit.vhd 2017/11/27.14:28:17 P.20131013
 EN work/imme_unit 1511971817 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/imme_unit.vhd \
@@ -36,6 +81,45 @@ EN work/Memory_unit 1511971809 \
 AR work/Memory_unit/Behavioral 1511971810 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd \
       EN work/Memory_unit 1511971809
+EN work/MemWbRegisters 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/MemWbRegisters.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MemWbRegisters/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/MemWbRegisters.vhd \
+      EN work/MemWbRegisters 0
+EN work/MemWriteDataMux 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/MemWriteDataMux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MemWriteDataMux/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/MemWriteDataMux.vhd \
+      EN work/MemWriteDataMux 0
+EN work/MFPCMux 0 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/MFPCMux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MFPCMux/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/MFPCMux.vhd \
+      EN work/MFPCMux 0
+EN work/PCBrancherAdder 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCBrancherAdder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/PCBrancherAdder/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCBrancherAdder.vhd \
+      EN work/PCBrancherAdder 0
+EN work/PCIncrementer 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCIncrementer.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/PCIncrementer/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCIncrementer.vhd \
+      EN work/PCIncrementer 0
+EN work/PCMux 0 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCMux.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/PCMux/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCMux.vhd EN work/PCMux 0
+EN work/PCRegister 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCRegister.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/PCRegister/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/PCRegister.vhd \
+      EN work/PCRegister 0
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd 2017/11/29.20:13:57 P.20131013
 EN work/ReadDstMUX 1511971811 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd \
@@ -64,6 +148,12 @@ EN work/Registers 1511971815 \
 AR work/Registers/Behavioral 1511971816 \
       FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd \
       EN work/Registers 1511971815
+EN work/StructConflictUnit 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/StructConflictUnit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/StructConflictUnit/Behavioral 0 \
+      FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/StructConflictUnit.vhd \
+      EN work/StructConflictUnit 0
 FL C:/Xilinx_project/the_cpu/ALU.vhd 2017/11/27.14:25:42 P.20131013
 FL C:/Xilinx_project/the_cpu/controller.vhd 2017/11/27.14:04:48 P.20131013
 FL C:/Xilinx_project/the_cpu/cpu.vhd 2017/11/27.15:00:46 P.20131013

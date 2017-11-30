@@ -40,7 +40,7 @@ entity MemWbRegisters is
 		ExeMemWriteReg: in std_logic_vector(15 downto 0);
 		
 		MemWbRegWrite: out std_logic;
-		MemWbWriteReg: out std_logic_vector(15 downto 0);
+		MemWbWriteReg: out std_logic_vector(3 downto 0);
 		WriteData: out std_logic_vector(15 downto 0)
 	);
 end MemWbRegisters;

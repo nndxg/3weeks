@@ -64,8 +64,6 @@ entity Memory_unit is
 		ram1_data : inout std_logic_vector(15 downto 0);--RAM1数据总线
 		ram2_data : inout std_logic_vector(15 downto 0);--RAM2数据总线
 		
-		ram2AddrOutput : out std_logic_vector(17 downto 0);
-		
 		ram1_en : out std_logic;		--RAM1使能，='1'禁止，永远等于'1'
 		ram1_oe : out std_logic;		--RAM1读使能，='1'禁止，永远等于'1'
 		ram1_we : out std_logic;		--RAM1写使能，='1'禁止，永远等于'1'

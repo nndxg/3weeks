@@ -6,6 +6,7 @@ EN memory_unit NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit
 EN readreg2mux NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd sub00/vhpl12 1511971823
 AR cpu behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu.vhd sub00/vhpl01 1511965277
 EN imme_unit NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/imme_unit.vhd sub00/vhpl06 1511971817
+AR alumuxa behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxA.vhd sub00/vhpl19 1512027213
 AR readreg1mux behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd sub00/vhpl11 1511971822
 AR imme_unit behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/imme_unit.vhd sub00/vhpl07 1511971818
 EN readreg1mux NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd sub00/vhpl10 1511971821
@@ -14,5 +15,6 @@ EN controller NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/controller.v
 AR readreg2mux behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd sub00/vhpl13 1511971824
 EN readdstmux NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadDstMUX.vhd sub00/vhpl14 1511971811
 AR controller behavioral C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/controller.vhd sub00/vhpl05 1512009244
+EN alumuxa NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxA.vhd sub00/vhpl18 1512027212
 EN registers NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd sub00/vhpl08 1511971815
 EN alu NULL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALU.vhd sub00/vhpl02 1511971819
