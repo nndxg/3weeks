@@ -38,7 +38,7 @@ entity HazardDetectionUnit is
 		
 		IdExeFlush_LW: out std_logic;
 		PCKeep: out std_logic;
-		IfIdFlush_LW: out std_logic
+		IfIdKeep_LW: out std_logic
 	);
 end HazardDetectionUnit;
 
@@ -51,11 +51,11 @@ begin
 		if ((IdExeMemRead = '1') and ((readReg1 = IdExeWriteReg) or (readReg2 = IdExeWriteReg))) then
 			IdExeFlush_LW <= '1';
 			PCKeep <= '1';
-			IfIdFlush_LW <= '1';
+			IfIdKeep_LW <= '1';
 		else
 			IdExeFlush_LW <= '0';
 			PCKeep <= '0';
-			IfIdFlush_LW <= '0';
+			IfIdKeep_LW <= '0';
 		end if;
 	end process;
 
