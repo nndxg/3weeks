@@ -55,3 +55,5 @@ xst -intstyle ise -ifn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.xst" -ofn "C
 xst -intstyle ise -ifn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.xst" -ofn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.syr" 
 xst -intstyle ise -ifn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.xst" -ofn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.syr" 
 xst -intstyle ise -ifn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.xst" -ofn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.syr" 
+xst -intstyle ise -ifn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.xst" -ofn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.syr" 
+xst -intstyle ise -ifn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.xst" -ofn "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.syr" 

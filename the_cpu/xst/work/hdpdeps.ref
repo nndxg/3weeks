@@ -23,167 +23,167 @@ FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg1MUX.vhd 2017/11/27.1
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ReadReg2MUX.vhd 2017/11/30.10:07:58 P.20131013
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Register.vhd 2017/11/29.20:17:01 P.20131013
 FL C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/StructConflictUnit.vhd 2017/11/30.16:39:26 P.20131013
-FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd 2017/11/30.16:32:28 P.20131013
-EN work/ALU 1512042032 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd \
+FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd 2017/11/30.19:50:51 P.20131013
+EN work/ALU 1512042702 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
       PB ieee/std_logic_arith 1381692177
-AR work/ALU/Behavioral 1512042033 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd EN work/ALU 1512042032
+AR work/ALU/Behavioral 1512042703 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd EN work/ALU 1512042702
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxA.vhd 2017/11/30.16:32:28 P.20131013
-EN work/ALUMuxA 1512041992 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxA.vhd \
+EN work/ALUMuxA 1512042662 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxA.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ALUMuxA/Behavioral 1512041993 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxA.vhd EN work/ALUMuxA 1512041992
+AR work/ALUMuxA/Behavioral 1512042663 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxA.vhd EN work/ALUMuxA 1512042662
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxB.vhd 2017/11/30.19:16:12 P.20131013
-EN work/ALUMuxB 1512041994 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxB.vhd \
+EN work/ALUMuxB 1512042664 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxB.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ALUMuxB/Behavioral 1512041995 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxB.vhd EN work/ALUMuxB 1512041994
+AR work/ALUMuxB/Behavioral 1512042665 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxB.vhd EN work/ALUMuxB 1512042664
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/controller.vhd 2017/11/30.16:55:25 P.20131013
-EN work/Controller 1512042026 \
+EN work/Controller 1512042696 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/controller.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Controller/Behavioral 1512042027 \
+AR work/Controller/Behavioral 1512042697 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/controller.vhd \
-      EN work/Controller 1512042026
+      EN work/Controller 1512042696
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd 2017/11/30.19:21:28 P.20131013
-EN work/cpu 1512042038 FL C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd \
+EN work/cpu 1512042708 FL C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/cpu/Behavioral 1512042039 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd EN work/cpu 1512042038 \
+AR work/cpu/Behavioral 1512042709 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd EN work/cpu 1512042708 \
       CP ALUMuxA CP ALUMuxB CP ExeMemRegisters CP Forwarding_unit \
       CP HazardDetectionUnit CP IdExeRegisters CP IfIdRegisters CP MFPCMux \
       CP MemWbRegisters CP MemWriteDataMux CP PCBrancherAdder CP PCIncrementer \
       CP PCMux CP PCRegister CP StructConflictUnit CP Memory_unit CP ReadDstMUX \
       CP Controller CP Registers CP imme_unit CP ALU CP ReadReg1MUX CP ReadReg2MUX
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ExeMemRegisters.vhd 2017/11/30.19:30:27 P.20131013
-EN work/ExeMemRegisters 1512041996 \
+EN work/ExeMemRegisters 1512042666 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ExeMemRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ExeMemRegisters/Behavioral 1512041997 \
+AR work/ExeMemRegisters/Behavioral 1512042667 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ExeMemRegisters.vhd \
-      EN work/ExeMemRegisters 1512041996
+      EN work/ExeMemRegisters 1512042666
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/Forwarding_unit.vhd 2017/11/30.17:14:15 P.20131013
-EN work/Forwarding_unit 1512041998 \
+EN work/Forwarding_unit 1512042668 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/Forwarding_unit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Forwarding_unit/Behavioral 1512041999 \
+AR work/Forwarding_unit/Behavioral 1512042669 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/Forwarding_unit.vhd \
-      EN work/Forwarding_unit 1512041998
+      EN work/Forwarding_unit 1512042668
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/HazardDetectionUnit.vhd 2017/11/30.17:14:44 P.20131013
-EN work/HazardDetectionUnit 1512042000 \
+EN work/HazardDetectionUnit 1512042670 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/HazardDetectionUnit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/HazardDetectionUnit/Behavioral 1512042001 \
+AR work/HazardDetectionUnit/Behavioral 1512042671 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/HazardDetectionUnit.vhd \
-      EN work/HazardDetectionUnit 1512042000
+      EN work/HazardDetectionUnit 1512042670
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/IdExeRegisters.vhd 2017/11/30.19:29:59 P.20131013
-EN work/IdExeRegisters 1512042002 \
+EN work/IdExeRegisters 1512042672 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/IdExeRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/IdExeRegisters/Behavioral 1512042003 \
+AR work/IdExeRegisters/Behavioral 1512042673 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/IdExeRegisters.vhd \
-      EN work/IdExeRegisters 1512042002
+      EN work/IdExeRegisters 1512042672
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/IfIdRegisters.vhd 2017/11/30.19:28:19 P.20131013
-EN work/IfIdRegisters 1512042004 \
+EN work/IfIdRegisters 1512042674 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/IfIdRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/IfIdRegisters/Behavioral 1512042005 \
+AR work/IfIdRegisters/Behavioral 1512042675 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/IfIdRegisters.vhd \
-      EN work/IfIdRegisters 1512042004
+      EN work/IfIdRegisters 1512042674
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/imme_unit.vhd 2017/11/30.19:39:39 P.20131013
-EN work/imme_unit 1512042030 \
+EN work/imme_unit 1512042700 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/imme_unit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/imme_unit/Behavioral 1512042031 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/imme_unit.vhd EN work/imme_unit 1512042030
+AR work/imme_unit/Behavioral 1512042701 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/imme_unit.vhd EN work/imme_unit 1512042700
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/Memory_unit.vhd 2017/11/30.16:38:08 P.20131013
-EN work/Memory_unit 1512042022 \
+EN work/Memory_unit 1512042692 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/Memory_unit.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Memory_unit/Behavioral 1512042023 \
+AR work/Memory_unit/Behavioral 1512042693 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/Memory_unit.vhd \
-      EN work/Memory_unit 1512042022
+      EN work/Memory_unit 1512042692
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/MemWbRegisters.vhd 2017/11/30.19:30:55 P.20131013
-EN work/MemWbRegisters 1512042008 \
+EN work/MemWbRegisters 1512042678 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/MemWbRegisters.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MemWbRegisters/Behavioral 1512042009 \
+AR work/MemWbRegisters/Behavioral 1512042679 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/MemWbRegisters.vhd \
-      EN work/MemWbRegisters 1512042008
+      EN work/MemWbRegisters 1512042678
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/MemWriteDataMux.vhd 2017/11/30.16:32:28 P.20131013
-EN work/MemWriteDataMux 1512042010 \
+EN work/MemWriteDataMux 1512042680 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/MemWriteDataMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MemWriteDataMux/Behavioral 1512042011 \
+AR work/MemWriteDataMux/Behavioral 1512042681 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/MemWriteDataMux.vhd \
-      EN work/MemWriteDataMux 1512042010
+      EN work/MemWriteDataMux 1512042680
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/MFPCMux.vhd 2017/11/30.16:32:28 P.20131013
-EN work/MFPCMux 1512042006 FL C:/Users/thinkpad/Desktop/5days/the_cpu/MFPCMux.vhd \
+EN work/MFPCMux 1512042676 FL C:/Users/thinkpad/Desktop/5days/the_cpu/MFPCMux.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/MFPCMux/Behavioral 1512042007 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/MFPCMux.vhd EN work/MFPCMux 1512042006
+AR work/MFPCMux/Behavioral 1512042677 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/MFPCMux.vhd EN work/MFPCMux 1512042676
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCBrancherAdder.vhd 2017/11/30.17:20:08 P.20131013
-EN work/PCBrancherAdder 1512042012 \
+EN work/PCBrancherAdder 1512042682 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCBrancherAdder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCBrancherAdder/Behavioral 1512042013 \
+AR work/PCBrancherAdder/Behavioral 1512042683 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCBrancherAdder.vhd \
-      EN work/PCBrancherAdder 1512042012
+      EN work/PCBrancherAdder 1512042682
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCIncrementer.vhd 2017/11/30.17:20:41 P.20131013
-EN work/PCIncrementer 1512042014 \
+EN work/PCIncrementer 1512042684 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCIncrementer.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCIncrementer/Behavioral 1512042015 \
+AR work/PCIncrementer/Behavioral 1512042685 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCIncrementer.vhd \
-      EN work/PCIncrementer 1512042014
+      EN work/PCIncrementer 1512042684
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCMux.vhd 2017/11/30.17:21:17 P.20131013
-EN work/PCMux 1512042016 FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCMux.vhd \
+EN work/PCMux 1512042686 FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCMux.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/PCMux/Behavioral 1512042017 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCMux.vhd EN work/PCMux 1512042016
+AR work/PCMux/Behavioral 1512042687 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCMux.vhd EN work/PCMux 1512042686
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCRegister.vhd 2017/11/30.16:32:28 P.20131013
-EN work/PCRegister 1512042018 \
+EN work/PCRegister 1512042688 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCRegister.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/PCRegister/Behavioral 1512042019 \
+AR work/PCRegister/Behavioral 1512042689 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/PCRegister.vhd \
-      EN work/PCRegister 1512042018
+      EN work/PCRegister 1512042688
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadDstMUX.vhd 2017/11/30.16:32:28 P.20131013
-EN work/ReadDstMUX 1512042024 \
+EN work/ReadDstMUX 1512042694 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadDstMUX.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadDstMUX/Behavioral 1512042025 \
+AR work/ReadDstMUX/Behavioral 1512042695 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadDstMUX.vhd \
-      EN work/ReadDstMUX 1512042024
+      EN work/ReadDstMUX 1512042694
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg1MUX.vhd 2017/11/30.19:12:34 P.20131013
-EN work/ReadReg1MUX 1512042034 \
+EN work/ReadReg1MUX 1512042704 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg1MUX.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadReg1MUX/Behavioral 1512042035 \
+AR work/ReadReg1MUX/Behavioral 1512042705 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg1MUX.vhd \
-      EN work/ReadReg1MUX 1512042034
+      EN work/ReadReg1MUX 1512042704
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg2MUX.vhd 2017/11/30.16:32:28 P.20131013
-EN work/ReadReg2MUX 1512042036 \
+EN work/ReadReg2MUX 1512042706 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg2MUX.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ReadReg2MUX/Behavioral 1512042037 \
+AR work/ReadReg2MUX/Behavioral 1512042707 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg2MUX.vhd \
-      EN work/ReadReg2MUX 1512042036
+      EN work/ReadReg2MUX 1512042706
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/Register.vhd 2017/11/30.19:35:27 P.20131013
-EN work/Registers 1512042028 \
+EN work/Registers 1512042698 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/Register.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Registers/Behavioral 1512042029 \
-      FL C:/Users/thinkpad/Desktop/5days/the_cpu/Register.vhd EN work/Registers 1512042028
+AR work/Registers/Behavioral 1512042699 \
+      FL C:/Users/thinkpad/Desktop/5days/the_cpu/Register.vhd EN work/Registers 1512042698
 FL C:/Users/thinkpad/Desktop/5days/the_cpu/StructConflictUnit.vhd 2017/11/30.17:21:57 P.20131013
-EN work/StructConflictUnit 1512042020 \
+EN work/StructConflictUnit 1512042690 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/StructConflictUnit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/StructConflictUnit/Behavioral 1512042021 \
+AR work/StructConflictUnit/Behavioral 1512042691 \
       FL C:/Users/thinkpad/Desktop/5days/the_cpu/StructConflictUnit.vhd \
-      EN work/StructConflictUnit 1512042020
+      EN work/StructConflictUnit 1512042690
 FL C:/Xilinx_project/the_cpu/ALU.vhd 2017/11/27.14:25:42 P.20131013
 FL C:/Xilinx_project/the_cpu/controller.vhd 2017/11/27.14:04:48 P.20131013
 FL C:/Xilinx_project/the_cpu/cpu.vhd 2017/11/27.15:00:46 P.20131013

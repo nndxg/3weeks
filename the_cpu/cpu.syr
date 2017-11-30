@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.38 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.38 secs
  
 --> Reading design: cpu.prj
@@ -143,10 +143,10 @@ Architecture behavioral of Entity controller is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/Register.vhd" in Library work.
 Architecture behavioral of Entity registers is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/imme_unit.vhd" in Library work.
-Entity <imme_unit> compiled.
-Entity <imme_unit> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity imme_unit is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd" in Library work.
-Architecture behavioral of Entity alu is up to date.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg1MUX.vhd" in Library work.
 Architecture behavioral of Entity readreg1mux is up to date.
 Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg2MUX.vhd" in Library work.
@@ -951,12 +951,12 @@ Offset:              4.897ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 24.17 secs
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.27 secs
  
 --> 
 
-Total memory usage is 342304 kilobytes
+Total memory usage is 373684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   21 (   0 filtered)
