@@ -5,118 +5,325 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="1202" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">420</arg>. Redeclaration of symbol <arg fmt="%s" index="3">controller</arg>.
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; line <arg fmt="%d" index="2">50</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;ALUSrcBIsImme&gt;, &lt;imme&gt;</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">538</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">IdExeALUSrcBIsImme</arg>&apos;.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_addr</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">000000000000000000</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">538</arg>. <arg fmt="%s" index="3">IdExeALUSrcBIsImme</arg>: Undefined symbol (last report in this block)
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram2_addr&lt;17&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">528</arg>. Formal <arg fmt="%s" index="3">ALUSrcBIsImme</arg> of <arg fmt="%s" index="4">ALUMuxB</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram2_addr&lt;16&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3313" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">542</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ExeMemRegisters</arg>&apos;.  Should it be: <arg fmt="%s" index="4">ExMemRegisters</arg>?
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_en</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">544</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">clk</arg>&apos;.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_oe</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">544</arg>. <arg fmt="%s" index="3">clk</arg>: Undefined symbol (last report in this block)
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_we</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">594</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram2_en</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">595</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;15&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">596</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;14&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">597</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;13&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">598</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;12&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">599</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;11&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">600</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;10&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">601</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;9&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">587</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">IdExeRegisters</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ram1_data&lt;8&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; has a constant value of <arg fmt="%s" index="3">Z</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">627</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">IfIdRegisters</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">655</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">MemWbRegisters</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">671</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">MemWriteDataMux</arg>&apos;.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">709</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">PCRegister</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">723</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">IdExeMemWrite</arg>&apos;.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">723</arg>. <arg fmt="%s" index="3">IdExeMemWrite</arg>: Undefined symbol (last report in this block)
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">720</arg>. Formal <arg fmt="%s" index="3">IdExeMemWrite</arg> of <arg fmt="%s" index="4">StructConflictUnit</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">731</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">Memory_unit</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2561" delta="old" >Always blocking tristate driving signal &lt;<arg fmt="%s" index="1">ram1_data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Memory_unit</arg>&gt; is removed.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">772</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;10&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">766</arg>. Formal <arg fmt="%s" index="3">contro</arg> of <arg fmt="%s" index="4">ReadDstMUX</arg> with no default value must be associated with an actual value.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;11&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="402" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">780</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> can not be used as a primary name.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;12&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="837" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">778</arg>. Width mismatch. Expected width <arg fmt="%u" index="3">16</arg>, Actual width is <arg fmt="%u" index="4">11</arg> for dimension <arg fmt="%d" index="5">1</arg> of <arg fmt="%s" index="6">command10to0</arg>.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;13&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="850" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">794</arg>. Formal port <arg fmt="%s" index="3">contro</arg> does not exist in <arg fmt="%s" index="4">Component &apos;Registers&apos;</arg>.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;14&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">803</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;15&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">800</arg>. Formal <arg fmt="%s" index="3">Im_select</arg> of <arg fmt="%s" index="4">imme_unit</arg> with no default value must be associated with an actual value.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;8&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">811</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ALUSrcC</arg>&apos;.
+<msg type="warning" file="Xst" num="2563" delta="old" >Inout &lt;<arg fmt="%s" index="1">ram1_data&lt;9&gt;</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">Z</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">811</arg>. <arg fmt="%s" index="3">ALUSrcC</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">readData1</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="error" file="HDLParsers" num="850" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">814</arg>. Formal port <arg fmt="%s" index="3">result</arg> does not exist in <arg fmt="%s" index="4">Component &apos;ALU&apos;</arg>.
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">822</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">readData2</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">818</arg>. Formal <arg fmt="%s" index="3">contro</arg> of <arg fmt="%s" index="4">ReadReg1MUX</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">831</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_10</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">827</arg>. Formal <arg fmt="%s" index="3">contro</arg> of <arg fmt="%s" index="4">ReadReg2MUX</arg> with no default value must be associated with an actual value.
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_11</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_0</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_1</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_2</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_3</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_4</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_5</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_6</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_7</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_8</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Im_out_9</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">16</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">result</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">redOut</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">hs</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">digit1</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">digit2</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk_hand</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk_50</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">blueOut</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">vs</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">opt</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">greenOut</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">led</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">IdExeReadReg2Out</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_2&gt; &lt;command10to0_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_1&gt; &lt;command10to0_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_0&gt; &lt;command10to0_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_7&gt; &lt;command10to0_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_6&gt; &lt;command10to0_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_5&gt; &lt;command10to0_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_2&gt; &lt;command10to0_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_1&gt; &lt;command10to0_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_0&gt; &lt;command10to0_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">u7</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_2&gt; &lt;command10to0_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_1&gt; &lt;command10to0_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to8_0&gt; &lt;command10to0_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_7&gt; &lt;command10to0_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_6&gt; &lt;command10to0_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">command7to5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;CommandOut_5&gt; &lt;command10to0_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_2&gt; &lt;command10to0_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_1&gt; &lt;command10to0_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command4to2_0&gt; &lt;command10to0_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">CommandOut_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IfIdRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;command10to0_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Im_out_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">imme_unit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Im_out_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">WBSrcOut</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">IdExeRegisters</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MemReadOut&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2170" delta="old" >Unit <arg fmt="%s" index="1">ALU</arg> : the following signal(s) form a combinatorial loop: </msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/ReadReg2Out_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/ReadReg2Out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/ReadReg2Out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">u6/ReadReg2Out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u6/ImmeOut_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u6/ImmeOut_14&gt; &lt;u6/ImmeOut_13&gt; &lt;u6/ImmeOut_12&gt; &lt;u6/ImmeOut_11&gt; &lt;u6/ImmeOut_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">u3/ExeMemMemRead</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;u3/ExeMemWBSrc&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>
