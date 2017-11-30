@@ -175,7 +175,7 @@ architecture Behavioral of cpu is
 			input1:in STD_LOGIC_VECTOR(15 downto 0);
 			input2:in STD_LOGIC_VECTOR(15 downto 0);
 			contro:in STD_LOGIC_VECTOR(3 downto 0);
-			result:out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000";
+			ALUresult:out STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000";
 			branch:out STD_LOGIC
 		);
 	end component;
@@ -190,6 +190,226 @@ architecture Behavioral of cpu is
 			-- MemRead(1) MemWrite(1) MemToReg(1) jump(1) MFPC(1)
 		);
 	end component;
+	
+	component ALUMuxA
+	port(
+		--控制信号
+		ForwardA : in std_logic_vector(1 downto 0);
+		--供选择数据
+		readData1 : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
+		--选择结果输出
+		ALUSrcA : out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	--选择器：ALU的第二个计算数
+	component ALUMuxB
+	port(
+		--控制信号
+		ForwardB : in std_logic_vector(1 downto 0);
+		ALUSrcB  : in std_logic;
+		--供选择数据
+		readData2 : in std_logic_vector(15 downto 0);
+		imme 	    : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
+		--选择结果输出
+		ALUSrcB : out std_logic_vector(15 downto 0)
+	);	
+	end component;
+	
+	component PCMux
+	port(
+		PCPlusOne: in std_logic_vector(15 downto 0);
+		ALUResult: in std_logic_vector(15 downto 0);
+		PCAfterBranch: in std_logic_vector(15 downto 0);
+		isJump: in std_logic;
+		willBranch: in std_logic;
+		PCRollBack: in std_logic;
+		
+		selectedPC: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	component MFPCMux
+	--（MFPC指令）从PC+1和ALUResult中选择一个作为"真正的ALUResult" ???
+	port(
+		PCAddOne  : in std_logic_vector(15 downto 0);	
+		RawALUResult : in std_logic_vector(15 downto 0); -- ALU计算结果
+		isMFPC		 : in std_logic;		-- isMFPC = '1' 表示当前指令是MFPC，选择PC+1的值
+		
+		RealALUResult : out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	component ExMemRegisters
+	port(
+		rst: in std_logic;
+		clk: in std_logic;
+		IdExeRegWrite: in std_logic;
+		IdExeWBSrc: in std_logic;
+		IdExeMemRead: in std_logic;
+		IdExeMemWrite: in std_logic;
+		RealALUResultIn: in std_logic_vector(15 downto 0);
+		MemWriteDataIn: in std_logic_vector(15 downto 0);
+		IdExeWriteReg: in std_logic_vector(3 downto 0);
+		
+		ExeMemRegWrite: out std_logic;
+		ExeMemWBSrc: out std_logic;
+		ExeMemMemRead: out std_logic;
+		ExeMemMemWrite: out std_logic;
+		ALUResultOut: out std_logic_vector(15 downto 0);
+		MemWriteDataOut: out std_logic_vector(15 downto 0);
+		ExeMemWriteReg: out std_logic_vector(3 downto 0)
+	);
+	end component;
+	
+	component Forwarding_unit
+	port(
+		ExeMemWriteReg : in std_logic_vector(3 downto 0);   -- 上条指令写回的寄存器 
+		MemWbWriteReg : in std_logic_vector(3 downto 0);    -- 上上条指令写回的寄存器 
+		
+		IdExeMemWrite : in std_logic;
+		
+		IdExeReadReg1 : in std_logic_vector(3 downto 0);  -- 本条指令的源寄存器1
+		IdExeReadReg2 : in std_logic_vector(3 downto 0);  -- 本条指令的源寄存器2
+		
+		ForwardA : out std_logic_vector(1 downto 0);
+		ForwardB : out std_logic_vector(1 downto 0);
+		ForwardSW : out std_logic_vector(1 downto 0)	     -- 选择SW/SW_SP的WriteData
+	);
+	end component;
+	
+	component HazardDetectionUnit
+	port(
+		IdExeMemRead: in std_logic;
+		IdExeWriteReg: in std_logic_vector(3 downto 0);
+		readReg1: in std_logic_vector(3 downto 0);
+		readReg2: in std_logic_vector(3 downto 0);
+		
+		IdExeFlush_LW: out std_logic;
+		PCKeep: out std_logic;
+		IfIdKeep_LW: out std_logic
+	);
+	end component;
+	
+	component IdExeRegisters
+	port(
+		rst : in std_logic;
+		clk : in std_logic;
+		IdExeFlush_LW : in std_logic;		            --LW数据冲突用
+		IdExeFlush_StructConflict : in std_logic;		--SW结构冲突用
+		
+		RegWriteIn : in std_logic;
+		WBSrcIn : in std_logic;
+		MemWriteIn : in std_logic;
+		MemReadIn : in std_logic;
+		isMFPCIn : in std_logic;
+		isJumpIn : in std_logic;
+		ALUOpIn : in std_logic_vector(3 downto 0);
+		ALUSrcBIn : in std_logic;
+		
+		PCPlusOneIn : in std_logic_vector(15 downto 0);
+		ReadReg1In : in std_logic_vector(3 downto 0);		
+		ReadReg2In : in std_logic_vector(3 downto 0);
+		ReadData1In : in std_logic_vector(15 downto 0);	
+		ReadData2In : in std_logic_vector(15 downto 0);			
+		ImmeIn : in std_logic_vector(15 downto 0);	
+		WriteRegIn : in std_logic_vector(3 downto 0);
+		
+		
+		RegWriteOut : out std_logic;
+		WBSrcOut : out std_logic;
+		MemWriteOut : out std_logic;
+		MemReadOut : out std_logic;
+		isMFPCOut : out std_logic;
+		isJumpOut : out std_logic;
+		ALUOpOut : out std_logic_vector(3 downto 0);
+		ALUSrcBOut : out std_logic;
+		
+		PCPlusOneOut : out std_logic_vector(15 downto 0);
+		ReadReg1Out : out std_logic_vector(3 downto 0);		
+		ReadReg2Out : out std_logic_vector(3 downto 0);
+		ReadData1Out : out std_logic_vector(15 downto 0);	
+		ReadData2Out : out std_logic_vector(15 downto 0);			
+		ImmeOut : out std_logic_vector(15 downto 0);	
+		WriteRegOut : out std_logic_vector(3 downto 0)
+	);
+	end component;
+	
+	component IfIdRegisters
+	port(
+		rst: in std_logic;
+		clk: in std_logic;
+		isJump: in std_logic;
+		willBranch: in std_logic;
+		IfIdFlush_StructConflict: in std_logic;
+		IfIdKeep_LW: in std_logic;
+		PCPlusOneIn: in std_logic_vector(15 downto 0);
+		CommandIn: in std_logic_vector(15 downto 0);
+		
+		PCPlusOneOut: out std_logic_vector(15 downto 0);
+		CommandOut: out std_logic_vector(15 downto 0);
+		command10to8: out std_logic_vector(2 downto 0);
+		command7to5: out std_logic_vector(2 downto 0);
+		command4to2: out std_logic_vector(2 downto 0);
+		command10to0: out std_logic_vector(10 downto 0)
+	);
+	end component;
+	
+	component MemWbRegisters
+		port(
+		rst: in std_logic;
+		clk: in std_logic;
+		ExeMemRegWrite: in std_logic;
+		ExeMemWBSrc: in std_logic;
+		MemReadData: in std_logic_vector(15 downto 0);
+		ALUResult: in std_logic_vector(15 downto 0);
+		ExeMemWriteReg: in std_logic_vector(15 downto 0);
+		
+		MemWbRegWrite: out std_logic;
+		MemWbWriteReg: out std_logic_vector(15 downto 0);
+		WriteData: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	component PCBrancherAdder
+		port(
+			PCPlusOne: in std_logic_vector(15 downto 0);
+			IdExeImme: in std_logic_vector(15 downto 0);
+			PCAfterBranch: out std_logic_vector(15 downto 0)
+		);
+	end component;
+	
+	component PCIncrementer
+	port(
+		PCin: in std_logic_vector(15 downto 0);
+		PCPlusOne: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	component PCRegister
+	port(
+		rst: in std_logic;
+		clk: in std_logic;
+		PCKeep: in std_logic;
+		selectedPC: in std_logic_vector(15 downto 0);
+		nextPC: out std_logic_vector(15 downto 0)
+	);
+	end component;
+	
+	component StructConflictUnit
+	port(
+		IdExeMemWrite: in std_logic;
+		ALUResult: in std_logic_vector(15 downto 0);
+		IfIdFlush_StructConflict: out std_logic;
+		IdExeFlush_StructConflict: out std_logic;
+		PCRollBack: out std_logic
+	);
+	end component;
+	
 	
 	--Memory_unit （有一大部分都已在cpu的port里体现）
 	signal DataOut : std_logic_vector(15 downto 0);
@@ -208,17 +428,305 @@ architecture Behavioral of cpu is
 	signal Im_out : std_logic_vector(15 downto 0);
 	
 	--ALU
-	signal result : std_logic_vector(15 downto 0);
+	signal ALUresult : std_logic_vector(15 downto 0);
 	signal branch : std_logic;
 	
 	--ReadReg1MUX
-	signal ReadReg1Out : std_logic_vector(3 downto 0);
+	signal ReadReg1MUXOut : std_logic_vector(3 downto 0);
 	
 	--ReadReg2MUX
+	signal ReadReg2MUXOut : std_logic_vector(3 downto 0);
+	
+	--ALUMuxA
+	signal ALUSrcA : std_logic_vector(15 downto 0);
+	
+	--ALUMuxB
+	signal ALUSrcB : std_logic_vector(15 downto 0);
+	
+	--ExeMemRegisters
+	signal ExeMemRegWrite : std_logic;
+	signal ExeMemWBSrc: std_logic;
+	signal ExeMemMemRead: std_logic;
+	signal ExeMemMemWrite: std_logic;
+	signal ExeMemALUResultOut: std_logic_vector(15 downto 0);
+	signal MemWriteDataOut: std_logic_vector(15 downto 0);
+	signal ExeMemWriteReg: std_logic_vector(3 downto 0);
+	
+	--Forwarding_unit
+	signal ForwardA : std_logic_vector(1 downto 0);
+	signal ForwardB : std_logic_vector(1 downto 0);
+	signal ForwardSW : std_logic_vector(1 downto 0);
+	
+	--HazardDetectionUnit
+	signal IdExeFlush_LW: std_logic;
+	signal PCKeep: std_logic;
+	signal IfIdKeep_LW: std_logic;
+	
+	--IdExeRegisters
+	signal RegWriteOut : std_logic;
+	signal WBSrcOut : std_logic;
+	signal MemWriteOut : std_logic;
+	signal MemReadOut : std_logic;
+	signal isMFPCOut : std_logic;
+	signal isJumpOut : std_logic;
+	signal ALUOpOut : std_logic_vector(3 downto 0);
+	signal ALUSrcBOut : std_logic;
+		
+	signal PCPlusOneOut : std_logic_vector(15 downto 0);
+	signal ReadReg1Out : std_logic_vector(3 downto 0);		
 	signal ReadReg2Out : std_logic_vector(3 downto 0);
+	signal ReadData1Out : std_logic_vector(15 downto 0);	
+	signal ReadData2Out : std_logic_vector(15 downto 0);			
+	signal IdExeImme : std_logic_vector(15 downto 0);	
+	signal WriteRegOut : std_logic_vector(3 downto 0);
+	
+	--IfIdRegisters
+	signal PCPlusOneOut: std_logic_vector(15 downto 0);
+	signal CommandOut: std_logic_vector(15 downto 0);
+	signal command10to8: std_logic_vector(2 downto 0);
+	signal command7to5: std_logic_vector(2 downto 0);
+	signal command4to2: std_logic_vector(2 downto 0);
+	signal command10to0: std_logic_vector(10 downto 0);
+	
+	--MFPCMux
+	signal RealALUResult : std_logic_vector(15 downto 0);
+	
+	--MemWbRegisters
+	signal MemWbRegWrite: std_logic;
+	signal MemWbWriteReg: std_logic_vector(15 downto 0);
+	signal MemWbResult: std_logic_vector(15 downto 0);
+	
+	--MemWriteDataMux
+	signal WriteData : std_logic_vector(15 downto 0);
+	
+	--PCBrancherAdder
+	signal PCAfterBranch: std_logic_vector(15 downto 0);
+	
+	--PCIncrementer
+	signal PCPlusOne: std_logic_vector(15 downto 0);
+	
+	--PCMux
+	signal selectedPC: std_logic_vector(15 downto 0);
+	
+	--PCRegister
+	signal nextPC: std_logic_vector(15 downto 0);
+	
+	--StructConflictUnit
+	signal IfIdFlush_StructConflict: std_logic;
+	signal IdExeFlush_StructConflict: std_logic;
+	signal PCRollBack: std_logic;
 	
 begin
-	u17 : Memory_unit
+	u1 : ALUMuxA
+	port map(
+			ForwardA => ForwardA,
+			readData1 => ReadData1Out,
+			ExeMemALUResult => ExeMemALUResultOut,
+			MemWbWriteData => MemWbResult,
+
+			ALUSrcA => ALUSrcA
+		);
+		
+	u2 : ALUMuxB
+	port map(
+			ForwardB => ForwardB,
+			readData2 => ReadData2Out,
+			ExeMemALUResult => ExeMemALUResultOut,
+			MemWbWriteData => MemWbResult,
+
+			ALUSrcB => ALUSrcB
+		);
+	
+	u3 : ExeMemRegisters
+	port map(
+			rst => rst,
+			clk => clk,
+			IdExeRegWrite => RegWriteOut,
+			IdExeWBSrc => WBSrcOut,
+			IdExeMemRead => MemReadOut,
+			IdExeMemWrite => MemWriteOut,
+			RealALUResultIn => RealALUResult,
+			MemWriteDataIn => WriteData,
+			IdExeWriteReg => WriteRegOut,
+
+			ExeMemRegWrite => ExeMemRegWrite,
+			ExeMemWBSrc => ExeMemWBSrc,
+			ExeMemMemRead => ExeMemMemRead,
+			ExeMemMemWrite => ExeMemMemWrite,
+			ALUResultOut => ExeMemALUResultOut,
+			MemWriteDataOut => MemWriteDataOut,
+			ExeMemWriteReg => ExeMemWriteReg
+		);
+		
+	u4 : Forwarding_unit
+	port map(
+			ExeMemWriteReg => ExeMemWriteReg,
+			MemWbWriteReg => MemWbWriteReg,
+			IdExeMemWrite => MemWriteOut,
+			IdExeReadReg1 => ReadReg1Out,
+			IdExeReadReg2 => ReadReg1Out,
+
+			ForwardA => ForwardA,
+			ForwardB => ForwardB,
+			ForwardSW => ForwardSW
+		);
+		
+	u5 : HazardDetectionUnit
+	port map(
+			IdExeMemRead => MemReadOut,
+			IdExeWriteReg => WriteRegOut,
+			readReg1 => ReadReg1MUXOut,
+			readReg2 => ReadReg2MUXOut,
+
+			IdExeFlush_LW => IdExeFlush_LW,
+			PCKeep => PCKeep,
+			IfIdKeep_LW => IfIdKeep_LW
+		);
+		
+	u6 : IdExeRegisters
+	port map(
+			rst => rst,
+			clk => clk,
+			IdExeFlush_LW => IdExeFlush_LW,
+			IdExeFlush_StructConflict => IdExeFlush_StructConflict,
+			RegWriteIn => rst,
+			WBSrcIn => clk,
+			MemWriteIn => rst,
+			MemReadIn => clk,
+			isMFPCIn => rst,
+			isJumpIn => clk,
+			ALUOpIn => rst,
+			ALUSrcBIn => clk,
+			PCPlusOneIn => clk,
+			ReadReg1In => clk,
+			ReadReg2In => clk,
+			ReadData1In => clk,
+			ReadData2In => clk,
+			ImmeIn => clk,
+			WriteRegIn => clk,
+
+			RegWriteOut => RegWriteOut,
+			WBSrcOut => WBSrcOut,
+			MemWriteOut => MemWriteOut,
+			MemReadOut => MemReadOut,
+			isMFPCOut => isMFPCOut,
+			isJumpOut => isJumpOut,
+			ALUOpOut => ALUOpOut,
+			ALUSrcBOut => ALUSrcBOut,
+			PCPlusOneOut => PCPlusOneOut,
+			ReadReg1Out => ReadReg1Out,
+			ReadReg2Out => ReadReg2Out,
+			ReadData1Out => ReadData1Out,
+			ReadData2Out => ReadData2Out,
+			ImmeOut => IdExeImme,
+			WriteRegOut => WriteRegOut
+		);
+	
+	u7 : IfIdRegisters
+	port map(
+			rst => rst,
+			clk => clk,
+			isJump => isJumpOut,
+			willBranch => branch,
+			IfIdFlush_StructConflict => IfIdFlush_StructConflict,
+			IfIdKeep_LW => IfIdKeep_LW,
+			PCPlusOneIn => PCPlusOne,
+			CommandIn => InsOut,
+
+			PCPlusOneOut => PCPlusOneOut,
+			CommandOut => CommandOut,
+			command10to8 => command10to8,
+			command7to5 => command7to5,
+			command4to2 => command4to2,
+			command10to0 => command10to0
+		);
+	
+	u8 : MFPCMux
+	port map(
+			PCAddOne => PCPlusOneOut,
+			RawALUResult => ALUresult,
+			isMFPC => isMFPCOut,
+
+			RealALUResult => RealALUResult
+		);
+	
+	u9 : MemWbRegisters
+	port map(
+			rst => rst,
+			clk => clk,
+			ExeMemRegWrite => ExeMemRegWrite,
+			ExeMemWBSrc => ExeMemWBSrc,
+			ExeMemWriteReg => ExeMemWriteReg,
+			MemReadData => DataOut,
+			ALUResult => RealALUResult,
+
+			MemWbRegWrite => MemWbRegWrite,
+			MemWbWriteReg => MemWbWriteReg,
+			WriteData => MemWbResult
+		);
+		
+	u10 : MemWriteDataMux
+	port map(
+			ForwardSW => ForwardSW,
+			ExeMemALUResult => ExeMemALUResultOut,
+			readData2 => readData2,
+			MemWbResult => MemWbResult,
+
+			WriteData => WriteData
+		);
+		
+	u11 : PCBrancherAdder
+	port map(
+			PCPlusOne => PCPlusOne,
+			IdExeImme => IdExeImme,
+
+			PCAfterBranch => PCAfterBranch
+		);
+		
+	u12 : PCIncrementer
+	port map(
+			
+			PCin => nextPC,
+
+			PCPlusOne => PCPlusOne
+		);
+		
+	u13 : PCMux
+	port map(
+			
+			PCPlusOne => PCPlusOne,
+			ALUResult => ALUresult,
+			PCAfterBranch => PCAfterBranch,
+			isJump => isJumpOut,
+			willBranch => branch,
+			PCRollBack => PCRollBack,
+
+			selectedPC => selectedPC
+		);
+		
+	u14 : PCRegister
+	port map(
+			
+			clk => clk,
+			rst => rst,
+			PCKeep => PCKeep,
+			selectedPC => selectedPC,
+
+			nextPC => nextPC
+		);
+	
+	u15 : StructConflictUnit
+	port map(
+			
+			IdExeMemWrite => IdExeMemWrite,
+			ALUResult => ALUresult,
+
+			IfIdFlush_StructConflict => IfIdFlush_StructConflict,
+			IdExeFlush_StructConflict => IdExeFlush_StructConflict,
+			PCRollBack => PCRollBack
+		);
+	
+	u16 : Memory_unit
 		port map( 
 			clk => clk,
          rst => rst,
@@ -256,7 +764,7 @@ begin
 			ram2_we => ram2We
 		);
 
-	u4 : ReadDstMUX
+	u17 : ReadDstMUX
 	port map(
 			ten_downto_eight => ten_downto_eight,
 			seven_downto_five => seven_downto_five,
@@ -266,7 +774,7 @@ begin
 			ReadDstOut => ReadDstOut
 		);
 		
-	u5 : Controller
+	u18 : Controller
 	port map(	
 			command => IfIdCommand,
 			rst => rst,
@@ -276,7 +784,7 @@ begin
 			-- MemRead(4) MemWrite(3) MemToReg(2) jump(1) MFPC(0)
 		);
 		
-	u6 : Registers
+	u19 : Registers
 	port map(
 			clk => clk,
 			rst => rst,
@@ -293,7 +801,7 @@ begin
 			readData2 => readData2
 		);
 		
-	u7 : imme_unit
+	u20 : imme_unit
 	port map(
 			 Im_in => imme_10_0,
 			 Im_select => controller(12 downto 10),
@@ -301,32 +809,32 @@ begin
 			 Im_out => extendedImme
 		);
 	
-	u12 : ALU
+	u21 : ALU
 	port map(
 			input1      	=> AMuxOut,
 			input2        => BMuxOut,
 			contro		  	=> IdExALUOP,
 			
-			result  	=> result,
+			result  	=> ALUresult,
 			branch => branch
 	);
 	
-	u21 : ReadReg1MUX
+	u22 : ReadReg1MUX
 	port map(
 			ten_downto_eight => ten_downto_eight,
 			seven_downto_five => seven_downto_five,
 			contro => controller(17 downto 15),
 			
-			ReadReg1Out => ReadReg1MuxOut
+			ReadReg1Out => ReadReg1MUXOut
 	);
 	
-	u22 : ReadReg2MUX
+	u23 : ReadReg2MUX
 	port map(
 			ten_downto_eight => ten_downto_eight,
 			seven_downto_five => seven_downto_five,
 			contro => controller(14 downto 13),
 			
-			ReadReg2Out => ReadReg2MuxOut
+			ReadReg2Out => ReadReg2MUXOut
 
 	);
 

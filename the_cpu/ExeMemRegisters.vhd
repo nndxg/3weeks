@@ -43,8 +43,8 @@ entity ExeMemRegisters is
 		
 		ExeMemRegWrite: out std_logic;
 		ExeMemWBSrc: out std_logic;
-		IdExeMemRead: out std_logic;
-		IdExeMemWrite: out std_logic;
+		ExeMemMemRead: out std_logic;
+		ExeMemMemWrite: out std_logic;
 		ALUResultOut: out std_logic_vector(15 downto 0);
 		MemWriteDataOut: out std_logic_vector(15 downto 0);
 		ExeMemWriteReg: out std_logic_vector(3 downto 0)
@@ -60,16 +60,16 @@ begin
 		if (rst = '0') then
 			ExeMemRegWrite <= '0';
 			ExeMemWBSrc <= '0';
-			IdExeMemRead <= '0';
-			IdExeMemWrite <= '0';
+			ExeMemMemRead <= '0';
+			ExeMemMemWrite <= '0';
 			ALUResultOut <= (others => 0);
 			MemWriteDataOut <= (others => 0);
 			ExeMemWriteReg <= "1110";
 		elsif (rising_edge(clk)) then
 			ExeMemRegWrite <= IdExeRegWrite;
 			ExeMemWBSrc <= IdExeWBSrc;
-			IdExeMemRead <= IdExeMemRead;
-			IdExeMemWrite <= IdExeMemWrite;
+			ExeMemMemRead <= IdExeMemRead;
+			ExeMemMemWrite <= IdExeMemWrite;
 			ALUResultOut <= RealALUResultIn;
 			MemWriteDataOut <= MemWriteDataIn;
 			ExeMemWriteReg <= IdExeWriteReg;

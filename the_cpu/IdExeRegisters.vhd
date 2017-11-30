@@ -95,7 +95,7 @@ begin
 			ReadReg2Out <= "1111";
 			ReadData1Out <= (others => '0');	
 			ReadData2Out <= (others => '0');			
-			ImmeOut : <= (others => '0');	
+			ImmeOut <= (others => '0');	
 			WriteRegOut <= "1110";
 			
 		elsif (rising_edge(clk)) then
@@ -116,7 +116,7 @@ begin
 				ReadReg2Out <= "1111";
 				ReadData1Out <= (others => '0');	
 				ReadData2Out <= (others => '0');			
-				ImmeOut : <= (others => '0');	
+				ImmeOut <= (others => '0');	
 				WriteRegOut <= "1110";
 				
 			else
@@ -135,7 +135,7 @@ begin
 				ReadReg2Out <= ReadReg2In;
 				ReadData1Out <= ReadData1In;	
 				ReadData2Out <= ReadData2In;			
-				ImmeOut : <= ImmeIn;	
+				ImmeOut <= ImmeIn;	
 				WriteRegOut <= WriteRegIn;
 				
 			end if;

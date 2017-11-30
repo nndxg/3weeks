@@ -75,6 +75,6 @@ begin
 			else
 				ForwardSW <= "00";
 		end if;
-
+	end process;
 end Behavioral;
 

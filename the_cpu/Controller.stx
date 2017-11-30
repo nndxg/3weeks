@@ -1,33 +1,33 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Xilinx_project/the_cpu/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.17 secs
  
---> Parameter xsthdpdir set to C:/Xilinx_project/the_cpu/xst
+--> Parameter xsthdpdir set to C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Xilinx_project/the_cpu/controller.vhd" in Library work.
-Entity <Controller> compiled.
-Entity <Controller> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/controller.vhd" in Library work.
+Entity <controller> compiled.
+Entity <controller> (Architecture <behavioral>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> 
 
-Total memory usage is 264592 kilobytes
+Total memory usage is 264608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

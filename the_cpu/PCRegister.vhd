@@ -35,7 +35,7 @@ entity PCRegister is
 		clk: in std_logic;
 		PCKeep: in std_logic;
 		selectedPC: in std_logic_vector(15 downto 0);
-		nextPC; out std_logic_vector(15 downto 0)
+		nextPC: out std_logic_vector(15 downto 0)
 	);
 end PCRegister;
 

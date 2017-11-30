@@ -33,17 +33,10 @@ entity Controller is
 	port(
       rst : in  std_logic;
 		command : in std_logic_vector(15 downto 0);
-<<<<<<< HEAD
 		controller : out std_logic_vector(21 downto 0)
 		-- RegWrite(1) RegDst(3) ReadReg1(3) ReadReg2(2) 
 		-- immeSelect(3) ALUSrcB(1) ALUOp(4) 
 		-- MemRead(1) MemWrite(1) MemToReg(1) jump(1) MFPC(1)
-=======
-		controller : out std_logic_vector(20 downto 0)
-		-- RegWrite(1) RegDst(3) RegSrc1(3) RegSrc2(1) 
-		-- immeSelect(3) ALUSrcB(1) ALUOp(4) 
-		-- MemRead(1) MemWrite(1) MemToReg(1) isJump(1) isMFPC(1)
->>>>>>> 426138c1922106af88d5d6176829e1602a37c2a8
 	);
 end Controller;
 
