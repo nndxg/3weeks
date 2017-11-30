@@ -579,6 +579,14 @@ architecture Behavioral of cpu is
 	signal flashFinished : std_logic;
 	
 begin
+	digit1 <= "0000000";
+	digit2 <= "0000000";
+	led <= "0000000000000000";
+	hs <= '0';
+	vs <= '0';
+	greenOut <= "000";
+	redOut <= "000";
+	blueOut <= "000";
 	u1 : ALUMuxA
 	port map(
 			ForwardA => ForwardAOut,
@@ -830,7 +838,17 @@ begin
 			ram1_we => ram1We,
 			ram2_en => ram2En,
 			ram2_oe => ram2Oe,
-			ram2_we => ram2We
+			ram2_we => ram2We,
+			
+			flash_addr => flashAddr,
+			flash_data => flashData,
+			
+			flash_byte => flashByte,
+			flash_vpen => flashVpen,
+			flash_rp => flashRp,
+			flash_ce => flashCe,
+			flash_oe => flashOe,
+			flash_we => flashWe
 		);
 
 	u17 : ReadDstMUX	

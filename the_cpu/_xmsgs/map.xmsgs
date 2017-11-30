@@ -5,16 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">flashData&lt;0&gt;</arg> has no load.
-</msg>
-
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">86</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">flashData&lt;1&gt;,
-flashData&lt;2&gt;,
-flashData&lt;3&gt;,
-flashData&lt;4&gt;,
-flashData&lt;5&gt;</arg>
-To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">opt_IBUF</arg> has no load.
 </msg>
 
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
@@ -48,6 +39,9 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">u21/result_not0001</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">opt_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 </messages>
