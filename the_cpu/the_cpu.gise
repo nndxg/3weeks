@@ -21,6 +21,7 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="the_cpu.xise"/>
 
+<<<<<<< HEAD
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Controller.prj"/>
@@ -29,6 +30,9 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
+=======
+  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+>>>>>>> 34a1bf2f9551692a9dee271527e593c4c079cd99
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
