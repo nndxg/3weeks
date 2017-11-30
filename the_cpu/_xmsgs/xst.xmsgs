@@ -5,64 +5,118 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3516" delta="new" >Found error in file &quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Forwarding_unit.vhd</arg>&quot;. 
+<msg type="error" file="HDLParsers" num="1202" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">420</arg>. Redeclaration of symbol <arg fmt="%s" index="3">controller</arg>.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3458" delta="new" >Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file &quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu_vhdl.prj</arg>&quot; may be inaccurate. Please put the files in the project file in correct order with keyword &apos;nosort&apos; at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">538</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">IdExeALUSrcBIsImme</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1202" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">44</arg>. Redeclaration of symbol <arg fmt="%s" index="3">ALUSrcB</arg>.
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">538</arg>. <arg fmt="%s" index="3">IdExeALUSrcBIsImme</arg>: Undefined symbol (last report in this block)
 </msg>
 
-<msg type="error" file="HDLParsers" num="3010" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. Entity <arg fmt="%s" index="3">ALUMuxB</arg> does not exist.
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">528</arg>. Formal <arg fmt="%s" index="3">ALUSrcBIsImme</arg> of <arg fmt="%s" index="4">ALUMuxB</arg> with no default value must be associated with an actual value.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ForwardB</arg>&apos;.
+<msg type="error" file="HDLParsers" num="3313" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">542</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ExeMemRegisters</arg>&apos;.  Should it be: <arg fmt="%s" index="4">ExMemRegisters</arg>?
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">ForwardB</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">544</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">clk</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">readData2</arg>&apos;.
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">544</arg>. <arg fmt="%s" index="3">clk</arg>: Undefined symbol (last report in this block)
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">readData2</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">594</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ExeMemALUResult</arg>&apos;.
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">595</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">ExeMemALUResult</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">596</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">MemWbWriteData</arg>&apos;.
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">597</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">MemWbWriteData</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">598</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">52</arg>. <arg fmt="%s" index="3">=</arg> can not have such operands in this context.
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">599</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ALUSrcB</arg>&apos;.
+<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">600</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">imme</arg>&apos;.
+<msg type="error" file="HDLParsers" num="1300" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">601</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array index prefix.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">imme</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">587</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">IdExeRegisters</arg> with no default value must be associated with an actual value.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">ALUSrcB</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">627</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">IfIdRegisters</arg> with no default value must be associated with an actual value.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">readData1</arg>&apos;.
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">655</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">MemWbRegisters</arg> with no default value must be associated with an actual value.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">readData1</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">671</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">MemWriteDataMux</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLParsers" num="1406" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. No sensitivity list and no wait in the process
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">709</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">PCRegister</arg> with no default value must be associated with an actual value.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">723</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">IdExeMemWrite</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">723</arg>. <arg fmt="%s" index="3">IdExeMemWrite</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">720</arg>. Formal <arg fmt="%s" index="3">IdExeMemWrite</arg> of <arg fmt="%s" index="4">StructConflictUnit</arg> with no default value must be associated with an actual value.
+</msg>
+
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">731</arg>. Formal <arg fmt="%s" index="3">clk</arg> of <arg fmt="%s" index="4">Memory_unit</arg> with no default value must be associated with an actual value.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">772</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+</msg>
+
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">766</arg>. Formal <arg fmt="%s" index="3">contro</arg> of <arg fmt="%s" index="4">ReadDstMUX</arg> with no default value must be associated with an actual value.
+</msg>
+
+<msg type="error" file="HDLParsers" num="402" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">780</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> can not be used as a primary name.
+</msg>
+
+<msg type="error" file="HDLParsers" num="837" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">778</arg>. Width mismatch. Expected width <arg fmt="%u" index="3">16</arg>, Actual width is <arg fmt="%u" index="4">11</arg> for dimension <arg fmt="%d" index="5">1</arg> of <arg fmt="%s" index="6">command10to0</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="850" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">794</arg>. Formal port <arg fmt="%s" index="3">contro</arg> does not exist in <arg fmt="%s" index="4">Component &apos;Registers&apos;</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">803</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+</msg>
+
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">800</arg>. Formal <arg fmt="%s" index="3">Im_select</arg> of <arg fmt="%s" index="4">imme_unit</arg> with no default value must be associated with an actual value.
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">811</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">ALUSrcC</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">811</arg>. <arg fmt="%s" index="3">ALUSrcC</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="850" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">814</arg>. Formal port <arg fmt="%s" index="3">result</arg> does not exist in <arg fmt="%s" index="4">Component &apos;ALU&apos;</arg>.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">822</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+</msg>
+
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">818</arg>. Formal <arg fmt="%s" index="3">contro</arg> of <arg fmt="%s" index="4">ReadReg1MUX</arg> with no default value must be associated with an actual value.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1301" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">831</arg>. <arg fmt="%s" index="3">Component &apos;Controller&apos;</arg> <arg fmt="%s" index="4">controller</arg> is not an array slice prefix.
+</msg>
+
+<msg type="error" file="HDLParsers" num="851" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd</arg>&quot; Line <arg fmt="%d" index="2">827</arg>. Formal <arg fmt="%s" index="3">contro</arg> of <arg fmt="%s" index="4">ReadReg2MUX</arg> with no default value must be associated with an actual value.
 </msg>
 
 </messages>

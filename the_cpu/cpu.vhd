@@ -184,7 +184,7 @@ architecture Behavioral of cpu is
 			command : in std_logic_vector(15 downto 0);
 			controller : out std_logic_vector(21 downto 0)
 			-- RegWrite(1) RegDst(3) ReadReg1(3) ReadReg2(2) 
-			-- immeSelect(3) ALUSrcB(1) ALUOp(4) 
+			-- immeSelect(3) ALUSrcBIsImme(1) ALUOp(4) 
 			-- MemRead(1) MemWrite(1) MemToReg(1) jump(1) MFPC(1)
 		);
 	end component;
@@ -207,7 +207,7 @@ architecture Behavioral of cpu is
 	port(
 		--控制信号
 		ForwardB : in std_logic_vector(1 downto 0);
-		ALUSrcB  : in std_logic;
+		ALUSrcBIsImme  : in std_logic;
 		--供选择数据
 		readData2 : in std_logic_vector(15 downto 0);
 		imme 	    : in std_logic_vector(15 downto 0);
@@ -307,7 +307,7 @@ architecture Behavioral of cpu is
 		isMFPCIn : in std_logic;
 		isJumpIn : in std_logic;
 		ALUOpIn : in std_logic_vector(3 downto 0);
-		ALUSrcBIn : in std_logic;
+		ALUSrcBIsImmeIn : in std_logic;
 		
 		PCPlusOneIn : in std_logic_vector(15 downto 0);
 		ReadReg1In : in std_logic_vector(3 downto 0);		
@@ -325,7 +325,7 @@ architecture Behavioral of cpu is
 		isMFPCOut : out std_logic;
 		isJumpOut : out std_logic;
 		ALUOpOut : out std_logic_vector(3 downto 0);
-		ALUSrcBOut : out std_logic;
+		ALUSrcBIsImmeOut : out std_logic;
 		
 		PCPlusOneOut : out std_logic_vector(15 downto 0);
 		ReadReg1Out : out std_logic_vector(3 downto 0);		
@@ -365,7 +365,7 @@ architecture Behavioral of cpu is
 		ExeMemWBSrc: in std_logic;
 		MemReadData: in std_logic_vector(15 downto 0);
 		ALUResult: in std_logic_vector(15 downto 0);
-		ExeMemWriteReg: in std_logic_vector(15 downto 0);
+		ExeMemWriteReg: in std_logic_vector(3 downto 0);
 		
 		MemWbRegWrite: out std_logic;
 		MemWbWriteReg: out std_logic_vector(3 downto 0);
@@ -468,7 +468,7 @@ architecture Behavioral of cpu is
 	signal isMFPCOut : std_logic;
 	signal isJumpOut : std_logic;
 	signal IdExeALUOpOut : std_logic_vector(3 downto 0);
-	signal IdExeALUSrcBOut : std_logic;
+	signal IdExeALUSrcBIsImmeOut : std_logic;
 		
 	signal IdExePCPlusOneOut : std_logic_vector(15 downto 0);
 	signal IdExeReadReg1Out : std_logic_vector(3 downto 0);		
@@ -531,8 +531,10 @@ begin
 			readData2 => IdExeReadData2Out,
 			ExeMemALUResult => ExeMemALUResultOut,
 			MemWbWriteData => MemWbResult,
+			imme => IdExeImme,
 
-			ALUSrcB => ALUSrcB
+			ALUSrcB => ALUSrcB,
+			ALUSrcBIsImme => IdExeALUSrcBIsImme
 		);
 	
 	u3 : ExeMemRegisters
@@ -596,7 +598,7 @@ begin
 			isMFPCIn => controller(0),
 			isJumpIn => controller(1),
 			ALUOpIn => controller(8 downto 5),
-			ALUSrcBIn => controller(9),
+			ALUSrcBIsImmeIn => controller(9),
 			PCPlusOneIn => IfIdPCPlusOneOut,
 			ReadReg1In => ReadReg1MUXOut,
 			ReadReg2In => ReadReg2MUXOut,
@@ -612,7 +614,7 @@ begin
 			isMFPCOut => isMFPCOut,
 			isJumpOut => isJumpOut,
 			ALUOpOut => IdExeALUOpOut,
-			ALUSrcBOut => IdExeALUSrcBOut,
+			ALUSrcBIsImmeOut => IdExeALUSrcBIsImmeOut,
 			PCPlusOneOut => IdExePCPlusOneOut,
 			ReadReg1Out => IdExeReadReg1Out,
 			ReadReg2Out => IdExeReadReg2Out,
@@ -777,7 +779,7 @@ begin
 			rst => rst,
 			controller => controller
 			-- RegWrite(21) RegDst(20-18) ReadReg1(17-15) ReadReg2(14-13) 
-			-- immeSelect(12-10) ALUSrcB(9) ALUOp(8-5) 
+			-- immeSelect(12-10) ALUSrcBIsImme(9) ALUOp(8-5) 
 			-- MemRead(4) MemWrite(3) MemToReg(2) jump(1) MFPC(0)
 		);
 		

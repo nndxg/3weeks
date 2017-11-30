@@ -43,7 +43,7 @@ architecture Behavioral of StructConflictUnit is
 
 begin
 
-	process(IdExeMemWrite, ALUResult, IfIdFlush_StructConflict)
+	process(IdExeMemWrite, ALUResult)
 	begin 
 		if ((IdExeMemWrite = '1') and (ALUResult >= x"4000") and (ALUResult <= x"7FFF")) then
 			IfIdFlush_StructConflict <= '1';

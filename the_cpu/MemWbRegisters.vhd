@@ -37,7 +37,7 @@ entity MemWbRegisters is
 		ExeMemWBSrc: in std_logic;
 		MemReadData: in std_logic_vector(15 downto 0);
 		ALUResult: in std_logic_vector(15 downto 0);
-		ExeMemWriteReg: in std_logic_vector(15 downto 0);
+		ExeMemWriteReg: in std_logic_vector(3 downto 0);
 		
 		MemWbRegWrite: out std_logic;
 		MemWbWriteReg: out std_logic_vector(3 downto 0);

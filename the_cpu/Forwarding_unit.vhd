@@ -49,7 +49,7 @@ architecture Behavioral of Forwarding_unit is
 
 begin
 
-	process(ExeMemWriteReg, MemWbWriteReg, IdExeALUsrcB, IdExeMemWrite, IdExeReadReg1, IdExeRead2)
+	process(ExeMemWriteReg, MemWbWriteReg, IdExeMemWrite, IdExeReadReg1, IdExeReadReg2)
 	begin
 		if (IdExeReadReg1 = ExeMemWriteReg) then
 			ForwardA <= "01";
@@ -74,7 +74,11 @@ begin
 				ForwardSW <= "10";
 			else
 				ForwardSW <= "00";
+			end if;
+		else
+			ForwardSW <= "00";
 		end if;
+		
 	end process;
 end Behavioral;
 

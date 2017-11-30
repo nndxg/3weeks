@@ -43,7 +43,7 @@ entity IdExeRegisters is
 		isMFPCIn : in std_logic;
 		isJumpIn : in std_logic;
 		ALUOpIn : in std_logic_vector(3 downto 0);
-		ALUSrcBIn : in std_logic;
+		ALUSrcBIsImmeIn : in std_logic;
 		
 		PCPlusOneIn : in std_logic_vector(15 downto 0);
 		ReadReg1In : in std_logic_vector(3 downto 0);		
@@ -61,7 +61,7 @@ entity IdExeRegisters is
 		isMFPCOut : out std_logic;
 		isJumpOut : out std_logic;
 		ALUOpOut : out std_logic_vector(3 downto 0);
-		ALUSrcBOut : out std_logic;
+		ALUSrcBIsImmeOut : out std_logic;
 		
 		PCPlusOneOut : out std_logic_vector(15 downto 0);
 		ReadReg1Out : out std_logic_vector(3 downto 0);		
@@ -88,7 +88,7 @@ begin
 			isMFPCOut <= '0';
 			isJumpOut <= '0';
 			ALUOpOut <= "0000";
-			ALUSrcBOut <= '0';
+			ALUSrcBIsImmeOut <= '0';
 		
 			PCPlusOneOut <= (others => '0');
 			ReadReg1Out <= "1111";		
@@ -109,7 +109,7 @@ begin
 				isMFPCOut <= '0';
 				isJumpOut <= '0';
 				ALUOpOut <= "0000";
-				ALUSrcBOut <= '0';
+				ALUSrcBIsImmeOut <= '0';
 		
 				PCPlusOneOut <= (others => '0');
 				ReadReg1Out <= "1111";		
@@ -128,7 +128,7 @@ begin
 				isMFPCOut <= isMFPCIn;
 				isJumpOut <= isJumpIn;
 				ALUOpOut <= ALUOpIn;
-				ALUSrcBOut <= ALUSrcBIn;
+				ALUSrcBIsImmeOut <= ALUSrcBIsImmeIn;
 		
 				PCPlusOneOut <= PCPlusOneIn;
 				ReadReg1Out <= ReadReg1In;		

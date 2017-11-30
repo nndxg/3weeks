@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.58 secs
+Total CPU time to Xst completion: 0.50 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.58 secs
+Total CPU time to Xst completion: 0.50 secs
  
 --> Reading design: cpu.prj
 
@@ -104,35 +104,100 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3516 - Found error in file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Forwarding_unit.vhd". 
-WARNING:HDLParsers:3458 - Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/cpu_vhdl.prj" may be inaccurate. Please put the files in the project file in correct order with keyword 'nosort' at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
-Compiling vhdl file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxA.vhd" in Library work.
-Entity <ALUMuxA> compiled.
-Entity <ALUMuxA> (Architecture <Behavioral>) compiled.
-Compiling vhdl file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" in Library work.
-ERROR:HDLParsers:1202 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 44. Redeclaration of symbol ALUSrcB.
-ERROR:HDLParsers:3010 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 47. Entity ALUMuxB does not exist.
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. Undefined symbol 'ForwardB'.
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. ForwardB: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. Undefined symbol 'readData2'.
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. readData2: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. Undefined symbol 'ExeMemALUResult'.
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. ExeMemALUResult: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. Undefined symbol 'MemWbWriteData'.
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. MemWbWriteData: Undefined symbol (last report in this block)
-ERROR:HDLParsers:808 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 52. = can not have such operands in this context.
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 53. Undefined symbol 'ALUSrcB'.
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 53. Undefined symbol 'imme'.
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 53. imme: Undefined symbol (last report in this block)
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 57. ALUSrcB: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3312 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 61. Undefined symbol 'readData1'.
-ERROR:HDLParsers:1209 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 61. readData1: Undefined symbol (last report in this block)
-WARNING:HDLParsers:1406 - "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/ALUMuxB.vhd" Line 50. No sensitivity list and no wait in the process
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxA.vhd" in Library work.
+Architecture behavioral of Entity alumuxa is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ALUMuxB.vhd" in Library work.
+Architecture behavioral of Entity alumuxb is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ExeMemRegisters.vhd" in Library work.
+Architecture behavioral of Entity exememregisters is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/Forwarding_unit.vhd" in Library work.
+Architecture behavioral of Entity forwarding_unit is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/HazardDetectionUnit.vhd" in Library work.
+Architecture behavioral of Entity hazarddetectionunit is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/IdExeRegisters.vhd" in Library work.
+Architecture behavioral of Entity idexeregisters is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/IfIdRegisters.vhd" in Library work.
+Architecture behavioral of Entity ifidregisters is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/MFPCMux.vhd" in Library work.
+Architecture behavioral of Entity mfpcmux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/MemWbRegisters.vhd" in Library work.
+Architecture behavioral of Entity memwbregisters is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/MemWriteDataMux.vhd" in Library work.
+Architecture behavioral of Entity memwritedatamux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/PCBrancherAdder.vhd" in Library work.
+Architecture behavioral of Entity pcbrancheradder is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/PCIncrementer.vhd" in Library work.
+Architecture behavioral of Entity pcincrementer is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/PCMux.vhd" in Library work.
+Architecture behavioral of Entity pcmux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/PCRegister.vhd" in Library work.
+Architecture behavioral of Entity pcregister is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/StructConflictUnit.vhd" in Library work.
+Entity <structconflictunit> compiled.
+Entity <StructConflictUnit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/Memory_unit.vhd" in Library work.
+Entity <memory_unit> compiled.
+Entity <memory_unit> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ReadDstMUX.vhd" in Library work.
+Architecture behavioral of Entity readdstmux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/controller.vhd" in Library work.
+Entity <controller> compiled.
+Entity <controller> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/Register.vhd" in Library work.
+Architecture behavioral of Entity registers is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/imme_unit.vhd" in Library work.
+Architecture behavioral of Entity imme_unit is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg1MUX.vhd" in Library work.
+Architecture behavioral of Entity readreg1mux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/ReadReg2MUX.vhd" in Library work.
+Architecture behavioral of Entity readreg2mux is up to date.
+Compiling vhdl file "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" in Library work.
+Entity <cpu> compiled.
+ERROR:HDLParsers:1202 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 420. Redeclaration of symbol controller.
+ERROR:HDLParsers:3312 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 538. Undefined symbol 'IdExeALUSrcBIsImme'.
+ERROR:HDLParsers:1209 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 538. IdExeALUSrcBIsImme: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 528. Formal ALUSrcBIsImme of ALUMuxB with no default value must be associated with an actual value.
+ERROR:HDLParsers:3313 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 542. Undefined symbol 'ExeMemRegisters'.  Should it be: ExMemRegisters?
+ERROR:HDLParsers:3312 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 544. Undefined symbol 'clk'.
+ERROR:HDLParsers:1209 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 544. clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 594. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 595. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 596. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 597. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 598. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 599. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:1301 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 600. Component 'Controller' controller is not an array slice prefix.
+ERROR:HDLParsers:1300 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 601. Component 'Controller' controller is not an array index prefix.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 587. Formal clk of IdExeRegisters with no default value must be associated with an actual value.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 627. Formal clk of IfIdRegisters with no default value must be associated with an actual value.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 655. Formal clk of MemWbRegisters with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 671. Undefined symbol 'MemWriteDataMux'.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 709. Formal clk of PCRegister with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 723. Undefined symbol 'IdExeMemWrite'.
+ERROR:HDLParsers:1209 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 723. IdExeMemWrite: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 720. Formal IdExeMemWrite of StructConflictUnit with no default value must be associated with an actual value.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 731. Formal clk of Memory_unit with no default value must be associated with an actual value.
+ERROR:HDLParsers:1301 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 772. Component 'Controller' controller is not an array slice prefix.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 766. Formal contro of ReadDstMUX with no default value must be associated with an actual value.
+ERROR:HDLParsers:402 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 780. Component 'Controller' controller can not be used as a primary name.
+ERROR:HDLParsers:837 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 778. Width mismatch. Expected width 16, Actual width is 11 for dimension 1 of command10to0.
+ERROR:HDLParsers:850 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 794. Formal port contro does not exist in Component 'Registers'.
+ERROR:HDLParsers:1301 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 803. Component 'Controller' controller is not an array slice prefix.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 800. Formal Im_select of imme_unit with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 811. Undefined symbol 'ALUSrcC'.
+ERROR:HDLParsers:1209 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 811. ALUSrcC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:850 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 814. Formal port result does not exist in Component 'ALU'.
+ERROR:HDLParsers:1301 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 822. Component 'Controller' controller is not an array slice prefix.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 818. Formal contro of ReadReg1MUX with no default value must be associated with an actual value.
+ERROR:HDLParsers:1301 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 831. Component 'Controller' controller is not an array slice prefix.
+ERROR:HDLParsers:851 - "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd" Line 827. Formal contro of ReadReg2MUX with no default value must be associated with an actual value.
 --> 
 
-Total memory usage is 291140 kilobytes
+Total memory usage is 290852 kilobytes
 
-Number of errors   :   17 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of errors   :   38 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

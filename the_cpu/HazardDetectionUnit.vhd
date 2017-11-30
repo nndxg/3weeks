@@ -46,7 +46,7 @@ architecture Behavioral of HazardDetectionUnit is
 
 begin
 
-	process(IdExeMemRead, IeExeWriteReg, readReg1, readReg2)
+	process(IdExeMemRead, IdExeWriteReg, readReg1, readReg2)
 	begin
 		if ((IdExeMemRead = '1') and ((readReg1 = IdExeWriteReg) or (readReg2 = IdExeWriteReg))) then
 			IdExeFlush_LW <= '1';

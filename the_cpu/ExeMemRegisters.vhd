@@ -62,8 +62,8 @@ begin
 			ExeMemWBSrc <= '0';
 			ExeMemMemRead <= '0';
 			ExeMemMemWrite <= '0';
-			ALUResultOut <= (others => 0);
-			MemWriteDataOut <= (others => 0);
+			ALUResultOut <= (others => '0');
+			MemWriteDataOut <= (others => '0');
 			ExeMemWriteReg <= "1110";
 		elsif (rising_edge(clk)) then
 			ExeMemRegWrite <= IdExeRegWrite;

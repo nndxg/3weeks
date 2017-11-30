@@ -33,7 +33,7 @@ entity ALUMuxB is
 	port(
 		--控制信号
 		ForwardB : in std_logic_vector(1 downto 0);
-		ALUSrcB  : in std_logic;
+		ALUSrcBIsImme  : in std_logic;
 		--供选择数据
 		readData2 : in std_logic_vector(15 downto 0);
 		imme 	    : in std_logic_vector(15 downto 0);
@@ -49,7 +49,7 @@ begin
 
 	process(ForwardB, readData2, ExeMemALUResult, MemWbWriteData)
 	begin
-		if (ALUSrcB = '1') then
+		if (ALUSrcBIsImme = '1') then
 			ALUSrcB <= imme;
 		else
 			case ForwardB is
@@ -58,7 +58,7 @@ begin
 				when "10" =>
 					ALUSrcB <= MemWbWriteData;
 				when others =>
-					ALUSrcB <= readData1;
+					ALUSrcB <= readData2;
 			end case;
 		end if;
 	end process;
