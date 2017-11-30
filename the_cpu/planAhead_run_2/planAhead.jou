@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Fri Dec 01 05:24:31 2017
+# Process ID: 15448
+# Log file: C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/pa.fromNetlist.tcl

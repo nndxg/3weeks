@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\cpu.ncd
+OUTFILE=C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\cpu.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu
+LICENSE=WebPack
+USER_INFO=__0_0_0

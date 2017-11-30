@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Fri Dec 01 05:24:31 2017
+# Process ID: 15448
+# Log file: C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/pa.fromNetlist.tcl
+# create_project -name the_cpu -dir "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_3" -part xc3s1200efg320-4
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_3/the_cpu.ppr
+     C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_3/the_cpu.data
+
+    while executing
+"create_project -name the_cpu -dir "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_3" -part xc3s1200efg320-4"
+    (file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/pa.fromNetlist.tcl" line 4)
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Fri Dec 01 05:25:48 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

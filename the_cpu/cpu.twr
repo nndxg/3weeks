@@ -39,102 +39,196 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock clk
+Setup/Hold to clock clk_in
 ------------+------------+------------+------------------+--------+
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-dataReady   |    2.524(R)|   -0.761(R)|clk_BUFGP         |   0.000|
-ram1Data<0> |    2.949(R)|   -1.102(R)|clk_BUFGP         |   0.000|
-ram1Data<1> |    3.281(R)|   -1.366(R)|clk_BUFGP         |   0.000|
-ram1Data<2> |    1.050(R)|    0.417(R)|clk_BUFGP         |   0.000|
-ram1Data<3> |    1.786(R)|   -0.173(R)|clk_BUFGP         |   0.000|
-ram1Data<4> |    1.568(R)|    0.001(R)|clk_BUFGP         |   0.000|
-ram1Data<5> |    1.635(R)|   -0.053(R)|clk_BUFGP         |   0.000|
-ram1Data<6> |    1.335(R)|    0.190(R)|clk_BUFGP         |   0.000|
-ram1Data<7> |    1.087(R)|    0.388(R)|clk_BUFGP         |   0.000|
-ram2Data<0> |    1.986(R)|    0.241(R)|clk_BUFGP         |   0.000|
-ram2Data<1> |    2.173(R)|    0.045(R)|clk_BUFGP         |   0.000|
-ram2Data<2> |    0.966(R)|    0.589(R)|clk_BUFGP         |   0.000|
-ram2Data<3> |    0.802(R)|    0.934(R)|clk_BUFGP         |   0.000|
-ram2Data<4> |    1.244(R)|    0.405(R)|clk_BUFGP         |   0.000|
-ram2Data<5> |    1.399(R)|    0.686(R)|clk_BUFGP         |   0.000|
-ram2Data<6> |    1.329(R)|    1.098(R)|clk_BUFGP         |   0.000|
-ram2Data<7> |    0.705(R)|    1.230(R)|clk_BUFGP         |   0.000|
-ram2Data<8> |    0.953(R)|    0.507(R)|clk_BUFGP         |   0.000|
-ram2Data<9> |    1.010(R)|    0.529(R)|clk_BUFGP         |   0.000|
-ram2Data<10>|    1.180(R)|    0.722(R)|clk_BUFGP         |   0.000|
-ram2Data<11>|    1.433(R)|    0.312(R)|clk_BUFGP         |   0.000|
-ram2Data<12>|    2.083(R)|    0.428(R)|clk_BUFGP         |   0.000|
-ram2Data<13>|    0.827(R)|    0.972(R)|clk_BUFGP         |   0.000|
-ram2Data<14>|    0.743(R)|    1.059(R)|clk_BUFGP         |   0.000|
-ram2Data<15>|    0.707(R)|    0.836(R)|clk_BUFGP         |   0.000|
-rst         |   10.639(R)|   -0.641(R)|clk_BUFGP         |   0.000|
-tbre        |    3.077(R)|   -1.204(R)|clk_BUFGP         |   0.000|
-tsre        |    2.838(R)|   -1.013(R)|clk_BUFGP         |   0.000|
+dataReady   |   -2.235(R)|    4.850(R)|clk               |   0.000|
+ram1Data<0> |   -2.762(R)|    5.269(R)|clk               |   0.000|
+ram1Data<1> |   -3.595(R)|    5.937(R)|clk               |   0.000|
+ram1Data<2> |   -3.331(R)|    5.751(R)|clk               |   0.000|
+ram1Data<3> |   -2.923(R)|    5.422(R)|clk               |   0.000|
+ram1Data<4> |   -3.242(R)|    5.658(R)|clk               |   0.000|
+ram1Data<5> |   -3.111(R)|    5.552(R)|clk               |   0.000|
+ram1Data<6> |   -2.666(R)|    5.194(R)|clk               |   0.000|
+ram1Data<7> |   -2.209(R)|    4.855(R)|clk               |   0.000|
+ram2Data<0> |   -2.279(R)|    5.635(R)|clk               |   0.000|
+ram2Data<1> |   -2.027(R)|    5.292(R)|clk               |   0.000|
+ram2Data<2> |   -1.329(R)|    5.158(R)|clk               |   0.000|
+ram2Data<3> |   -1.775(R)|    4.910(R)|clk               |   0.000|
+ram2Data<4> |   -2.519(R)|    5.902(R)|clk               |   0.000|
+ram2Data<5> |   -2.513(R)|    5.730(R)|clk               |   0.000|
+ram2Data<6> |   -3.036(R)|    5.649(R)|clk               |   0.000|
+ram2Data<7> |   -2.158(R)|    5.939(R)|clk               |   0.000|
+ram2Data<8> |   -2.991(R)|    5.581(R)|clk               |   0.000|
+ram2Data<9> |   -0.981(R)|    5.366(R)|clk               |   0.000|
+ram2Data<10>|   -3.230(R)|    6.407(R)|clk               |   0.000|
+ram2Data<11>|   -3.178(R)|    6.228(R)|clk               |   0.000|
+ram2Data<12>|   -1.860(R)|    4.669(R)|clk               |   0.000|
+ram2Data<13>|   -2.827(R)|    5.459(R)|clk               |   0.000|
+ram2Data<14>|   -1.964(R)|    4.779(R)|clk               |   0.000|
+ram2Data<15>|   -2.027(R)|    4.862(R)|clk               |   0.000|
+tbre        |   -2.091(R)|    4.731(R)|clk               |   0.000|
+tsre        |   -1.453(R)|    4.220(R)|clk               |   0.000|
 ------------+------------+------------+------------------+--------+
 
-Clock clk to Pad
+Setup/Hold to clock rst
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+dataReady   |   -2.442(R)|    5.109(R)|clk               |   0.000|
+ram1Data<0> |   -2.969(R)|    5.528(R)|clk               |   0.000|
+ram1Data<1> |   -3.802(R)|    6.196(R)|clk               |   0.000|
+ram1Data<2> |   -3.538(R)|    6.010(R)|clk               |   0.000|
+ram1Data<3> |   -3.130(R)|    5.681(R)|clk               |   0.000|
+ram1Data<4> |   -3.449(R)|    5.917(R)|clk               |   0.000|
+ram1Data<5> |   -3.318(R)|    5.811(R)|clk               |   0.000|
+ram1Data<6> |   -2.873(R)|    5.453(R)|clk               |   0.000|
+ram1Data<7> |   -2.416(R)|    5.114(R)|clk               |   0.000|
+ram2Data<0> |   -2.486(R)|    5.894(R)|clk               |   0.000|
+ram2Data<1> |   -2.234(R)|    5.551(R)|clk               |   0.000|
+ram2Data<2> |   -1.536(R)|    5.417(R)|clk               |   0.000|
+ram2Data<3> |   -1.982(R)|    5.169(R)|clk               |   0.000|
+ram2Data<4> |   -2.726(R)|    6.161(R)|clk               |   0.000|
+ram2Data<5> |   -2.720(R)|    5.989(R)|clk               |   0.000|
+ram2Data<6> |   -3.243(R)|    5.908(R)|clk               |   0.000|
+ram2Data<7> |   -2.365(R)|    6.198(R)|clk               |   0.000|
+ram2Data<8> |   -3.198(R)|    5.840(R)|clk               |   0.000|
+ram2Data<9> |   -1.188(R)|    5.625(R)|clk               |   0.000|
+ram2Data<10>|   -3.437(R)|    6.666(R)|clk               |   0.000|
+ram2Data<11>|   -3.385(R)|    6.487(R)|clk               |   0.000|
+ram2Data<12>|   -2.067(R)|    4.928(R)|clk               |   0.000|
+ram2Data<13>|   -3.034(R)|    5.718(R)|clk               |   0.000|
+ram2Data<14>|   -2.171(R)|    5.038(R)|clk               |   0.000|
+ram2Data<15>|   -2.234(R)|    5.121(R)|clk               |   0.000|
+tbre        |   -2.298(R)|    4.990(R)|clk               |   0.000|
+tsre        |   -1.660(R)|    4.479(R)|clk               |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk_in to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-ram1Data<0> |    7.825(R)|clk_BUFGP         |   0.000|
-ram1Data<1> |    7.555(R)|clk_BUFGP         |   0.000|
-ram1Data<2> |    8.163(R)|clk_BUFGP         |   0.000|
-ram1Data<3> |    8.699(R)|clk_BUFGP         |   0.000|
-ram1Data<4> |    7.826(R)|clk_BUFGP         |   0.000|
-ram1Data<5> |    7.875(R)|clk_BUFGP         |   0.000|
-ram1Data<6> |    8.338(R)|clk_BUFGP         |   0.000|
-ram1Data<7> |    8.707(R)|clk_BUFGP         |   0.000|
-ram2Addr<0> |    8.874(R)|clk_BUFGP         |   0.000|
-ram2Addr<1> |    8.465(R)|clk_BUFGP         |   0.000|
-ram2Addr<2> |    8.613(R)|clk_BUFGP         |   0.000|
-ram2Addr<3> |    8.775(R)|clk_BUFGP         |   0.000|
-ram2Addr<4> |    9.235(R)|clk_BUFGP         |   0.000|
-ram2Addr<5> |    9.161(R)|clk_BUFGP         |   0.000|
-ram2Addr<6> |    8.966(R)|clk_BUFGP         |   0.000|
-ram2Addr<7> |    9.518(R)|clk_BUFGP         |   0.000|
-ram2Addr<8> |    8.506(R)|clk_BUFGP         |   0.000|
-ram2Addr<9> |    9.048(R)|clk_BUFGP         |   0.000|
-ram2Addr<10>|    9.262(R)|clk_BUFGP         |   0.000|
-ram2Addr<11>|    8.602(R)|clk_BUFGP         |   0.000|
-ram2Addr<12>|    8.885(R)|clk_BUFGP         |   0.000|
-ram2Addr<13>|    9.242(R)|clk_BUFGP         |   0.000|
-ram2Addr<14>|    8.920(R)|clk_BUFGP         |   0.000|
-ram2Addr<15>|    8.578(R)|clk_BUFGP         |   0.000|
-ram2Data<0> |    9.074(R)|clk_BUFGP         |   0.000|
-ram2Data<1> |    9.344(R)|clk_BUFGP         |   0.000|
-ram2Data<2> |    9.862(R)|clk_BUFGP         |   0.000|
-ram2Data<3> |    7.653(R)|clk_BUFGP         |   0.000|
-ram2Data<4> |    8.642(R)|clk_BUFGP         |   0.000|
-ram2Data<5> |    8.605(R)|clk_BUFGP         |   0.000|
-ram2Data<6> |    7.865(R)|clk_BUFGP         |   0.000|
-ram2Data<7> |    8.181(R)|clk_BUFGP         |   0.000|
-ram2Data<8> |    7.938(R)|clk_BUFGP         |   0.000|
-ram2Data<9> |    8.189(R)|clk_BUFGP         |   0.000|
-ram2Data<10>|    7.952(R)|clk_BUFGP         |   0.000|
-ram2Data<11>|    8.286(R)|clk_BUFGP         |   0.000|
-ram2Data<12>|    8.854(R)|clk_BUFGP         |   0.000|
-ram2Data<13>|    8.163(R)|clk_BUFGP         |   0.000|
-ram2Data<14>|    7.937(R)|clk_BUFGP         |   0.000|
-ram2Data<15>|    8.288(R)|clk_BUFGP         |   0.000|
-ram2Oe      |    8.404(R)|clk_BUFGP         |   0.000|
-ram2We      |    8.340(R)|clk_BUFGP         |   0.000|
-rdn         |    8.437(R)|clk_BUFGP         |   0.000|
-wrn         |    8.132(R)|clk_BUFGP         |   0.000|
+ram1Data<0> |   12.818(R)|clk               |   0.000|
+ram1Data<1> |   12.344(R)|clk               |   0.000|
+ram1Data<2> |   12.952(R)|clk               |   0.000|
+ram1Data<3> |   13.275(R)|clk               |   0.000|
+ram1Data<4> |   12.886(R)|clk               |   0.000|
+ram1Data<5> |   12.289(R)|clk               |   0.000|
+ram1Data<6> |   13.222(R)|clk               |   0.000|
+ram1Data<7> |   13.680(R)|clk               |   0.000|
+ram2Addr<0> |   12.908(R)|clk               |   0.000|
+ram2Addr<1> |   12.956(R)|clk               |   0.000|
+ram2Addr<2> |   13.468(R)|clk               |   0.000|
+ram2Addr<3> |   12.971(R)|clk               |   0.000|
+ram2Addr<4> |   13.089(R)|clk               |   0.000|
+ram2Addr<5> |   12.985(R)|clk               |   0.000|
+ram2Addr<6> |   13.652(R)|clk               |   0.000|
+ram2Addr<7> |   12.892(R)|clk               |   0.000|
+ram2Addr<8> |   13.451(R)|clk               |   0.000|
+ram2Addr<9> |   13.785(R)|clk               |   0.000|
+ram2Addr<10>|   13.256(R)|clk               |   0.000|
+ram2Addr<11>|   13.204(R)|clk               |   0.000|
+ram2Addr<12>|   13.293(R)|clk               |   0.000|
+ram2Addr<13>|   12.935(R)|clk               |   0.000|
+ram2Addr<14>|   13.326(R)|clk               |   0.000|
+ram2Addr<15>|   12.959(R)|clk               |   0.000|
+ram2Data<0> |   14.054(R)|clk               |   0.000|
+ram2Data<1> |   14.887(R)|clk               |   0.000|
+ram2Data<2> |   14.422(R)|clk               |   0.000|
+ram2Data<3> |   13.344(R)|clk               |   0.000|
+ram2Data<4> |   14.960(R)|clk               |   0.000|
+ram2Data<5> |   14.888(R)|clk               |   0.000|
+ram2Data<6> |   15.502(R)|clk               |   0.000|
+ram2Data<7> |   14.629(R)|clk               |   0.000|
+ram2Data<8> |   14.966(R)|clk               |   0.000|
+ram2Data<9> |   13.491(R)|clk               |   0.000|
+ram2Data<10>|   15.130(R)|clk               |   0.000|
+ram2Data<11>|   16.015(R)|clk               |   0.000|
+ram2Data<12>|   13.760(R)|clk               |   0.000|
+ram2Data<13>|   14.121(R)|clk               |   0.000|
+ram2Data<14>|   13.859(R)|clk               |   0.000|
+ram2Data<15>|   13.747(R)|clk               |   0.000|
+ram2Oe      |   12.317(R)|clk               |   0.000|
+ram2We      |   12.871(R)|clk               |   0.000|
+rdn         |   13.234(R)|clk               |   0.000|
+wrn         |   12.978(R)|clk               |   0.000|
 ------------+------------+------------------+--------+
 
-Clock to Setup on destination clock clk
+Clock rst to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+ram1Data<0> |   13.077(R)|clk               |   0.000|
+ram1Data<1> |   12.603(R)|clk               |   0.000|
+ram1Data<2> |   13.211(R)|clk               |   0.000|
+ram1Data<3> |   13.534(R)|clk               |   0.000|
+ram1Data<4> |   13.145(R)|clk               |   0.000|
+ram1Data<5> |   12.548(R)|clk               |   0.000|
+ram1Data<6> |   13.481(R)|clk               |   0.000|
+ram1Data<7> |   13.939(R)|clk               |   0.000|
+ram2Addr<0> |   13.167(R)|clk               |   0.000|
+ram2Addr<1> |   13.215(R)|clk               |   0.000|
+ram2Addr<2> |   13.727(R)|clk               |   0.000|
+ram2Addr<3> |   13.230(R)|clk               |   0.000|
+ram2Addr<4> |   13.348(R)|clk               |   0.000|
+ram2Addr<5> |   13.244(R)|clk               |   0.000|
+ram2Addr<6> |   13.911(R)|clk               |   0.000|
+ram2Addr<7> |   13.151(R)|clk               |   0.000|
+ram2Addr<8> |   13.710(R)|clk               |   0.000|
+ram2Addr<9> |   14.044(R)|clk               |   0.000|
+ram2Addr<10>|   13.515(R)|clk               |   0.000|
+ram2Addr<11>|   13.463(R)|clk               |   0.000|
+ram2Addr<12>|   13.552(R)|clk               |   0.000|
+ram2Addr<13>|   13.194(R)|clk               |   0.000|
+ram2Addr<14>|   13.585(R)|clk               |   0.000|
+ram2Addr<15>|   13.218(R)|clk               |   0.000|
+ram2Data<0> |   14.313(R)|clk               |   0.000|
+ram2Data<1> |   15.146(R)|clk               |   0.000|
+ram2Data<2> |   14.681(R)|clk               |   0.000|
+ram2Data<3> |   13.603(R)|clk               |   0.000|
+ram2Data<4> |   15.219(R)|clk               |   0.000|
+ram2Data<5> |   15.147(R)|clk               |   0.000|
+ram2Data<6> |   15.761(R)|clk               |   0.000|
+ram2Data<7> |   14.888(R)|clk               |   0.000|
+ram2Data<8> |   15.225(R)|clk               |   0.000|
+ram2Data<9> |   13.750(R)|clk               |   0.000|
+ram2Data<10>|   15.389(R)|clk               |   0.000|
+ram2Data<11>|   16.274(R)|clk               |   0.000|
+ram2Data<12>|   14.019(R)|clk               |   0.000|
+ram2Data<13>|   14.380(R)|clk               |   0.000|
+ram2Data<14>|   14.118(R)|clk               |   0.000|
+ram2Data<15>|   14.006(R)|clk               |   0.000|
+ram2Oe      |   12.576(R)|clk               |   0.000|
+ram2We      |   13.130(R)|clk               |   0.000|
+rdn         |   13.493(R)|clk               |   0.000|
+wrn         |   13.237(R)|clk               |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_in
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   12.552|         |         |         |
+clk_in         |    7.885|         |         |         |
+rst            |   14.117|   14.117|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    7.885|         |         |         |
+rst            |   13.910|   13.910|         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Nov 30 23:51:56 2017 
+Analysis completed Fri Dec 01 05:23:43 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

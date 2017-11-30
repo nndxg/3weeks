@@ -1,0 +1,571 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Fri Dec 01 05:24:25 2017
+# Process ID: 22772
+# Log file: C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/pa.fromNetlist.tcl
+startgroup
+set_property package_pin F8 [get_ports {digit1[6]}]
+endgroup
+set_property package_pin "" [get_ports [list  {digit1[5]}]]
+set_property package_pin "" [get_ports [list  {digit1[4]}]]
+startgroup
+set_property package_pin E8 [get_ports {digit1[5]}]
+endgroup
+startgroup
+set_property package_pin A8 [get_ports {digit1[4]}]
+endgroup
+startgroup
+set_property package_pin F7 [get_ports {digit1[3]}]
+endgroup
+startgroup
+set_property package_pin E7 [get_ports {digit1[2]}]
+endgroup
+startgroup
+set_property package_pin D7 [get_ports {digit1[1]}]
+endgroup
+startgroup
+set_property package_pin C7 [get_ports {digit1[0]}]
+endgroup
+startgroup
+set_property package_pin B10 [get_ports {digit2[6]}]
+endgroup
+startgroup
+set_property package_pin A10 [get_ports {digit2[5]}]
+endgroup
+startgroup
+set_property package_pin G9 [get_ports {digit2[4]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {digit2[3]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {digit2[2]}]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports {digit2[1]}]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports {digit2[0]}]
+endgroup
+startgroup
+set_property package_pin K4 [get_ports {flashAddr[22]}]
+endgroup
+startgroup
+set_property package_pin K5 [get_ports {flashAddr[21]}]
+endgroup
+startgroup
+set_property package_pin K6 [get_ports {flashAddr[20]}]
+endgroup
+set_property package_pin "" [get_ports [list  {flashAddr[18]}]]
+startgroup
+set_property package_pin L1 [get_ports {flashAddr[19]}]
+endgroup
+startgroup
+set_property package_pin L2 [get_ports {flashAddr[18]}]
+endgroup
+set_property package_pin "" [get_ports [list  {flashAddr[13]}]]
+startgroup
+set_property package_pin L3 [get_ports {flashAddr[17]}]
+endgroup
+startgroup
+set_property package_pin L4 [get_ports {flashAddr[16]}]
+endgroup
+startgroup
+set_property package_pin L5 [get_ports {flashAddr[15]}]
+endgroup
+startgroup
+set_property package_pin L6 [get_ports {flashAddr[14]}]
+endgroup
+startgroup
+set_property package_pin M3 [get_ports {flashAddr[13]}]
+endgroup
+startgroup
+set_property package_pin M4 [get_ports {flashAddr[12]}]
+endgroup
+startgroup
+set_property package_pin M5 [get_ports {flashAddr[11]}]
+endgroup
+startgroup
+set_property package_pin M6 [get_ports {flashAddr[10]}]
+endgroup
+startgroup
+set_property package_pin N4 [get_ports {flashAddr[9]}]
+endgroup
+startgroup
+set_property package_pin N5 [get_ports {flashAddr[8]}]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports {flashAddr[7]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {flashAddr[6]}]
+endgroup
+startgroup
+set_property package_pin P3 [get_ports {flashAddr[5]}]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports {flashAddr[4]}]
+endgroup
+startgroup
+set_property package_pin R2 [get_ports {flashAddr[3]}]
+endgroup
+startgroup
+set_property package_pin R3 [get_ports {flashAddr[2]}]
+endgroup
+startgroup
+set_property package_pin T1 [get_ports {flashAddr[1]}]
+endgroup
+startgroup
+set_property package_pin T2 [get_ports {flashAddr[0]}]
+endgroup
+startgroup
+set_property package_pin E18 [get_ports {flashData[15]}]
+endgroup
+startgroup
+set_property package_pin F1 [get_ports {flashData[15]}]
+endgroup
+startgroup
+set_property package_pin F2 [get_ports {flashData[14]}]
+endgroup
+startgroup
+set_property package_pin G3 [get_ports {flashData[13]}]
+endgroup
+startgroup
+set_property package_pin G4 [get_ports {flashData[12]}]
+endgroup
+startgroup
+set_property package_pin G5 [get_ports {flashData[11]}]
+endgroup
+startgroup
+set_property package_pin G6 [get_ports {flashData[10]}]
+endgroup
+startgroup
+set_property package_pin H1 [get_ports {flashData[9]}]
+endgroup
+startgroup
+set_property package_pin H2 [get_ports {flashData[8]}]
+endgroup
+startgroup
+set_property package_pin H5 [get_ports {flashData[7]}]
+endgroup
+set_property package_pin "" [get_ports [list  {flashData[6]}]]
+startgroup
+set_property package_pin H3 [get_ports {flashData[7]}]
+endgroup
+startgroup
+set_property package_pin H4 [get_ports {flashData[6]}]
+endgroup
+startgroup
+set_property package_pin H5 [get_ports {flashData[5]}]
+endgroup
+startgroup
+set_property package_pin H6 [get_ports {flashData[4]}]
+endgroup
+startgroup
+set_property package_pin J1 [get_ports {flashData[3]}]
+endgroup
+startgroup
+set_property package_pin J2 [get_ports {flashData[2]}]
+endgroup
+startgroup
+set_property package_pin J4 [get_ports {flashData[1]}]
+endgroup
+set_property package_pin "" [get_ports [list  {flashData[0]}]]
+startgroup
+set_property package_pin J5 [get_ports {flashData[0]}]
+endgroup
+startgroup
+set_property package_pin C5 [get_ports {greenOut[2]}]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports {greenOut[1]}]
+endgroup
+startgroup
+set_property package_pin B4 [get_ports {greenOut[0]}]
+endgroup
+startgroup
+set_property package_pin B6 [get_ports {blueOut[2]}]
+endgroup
+startgroup
+set_property package_pin A6 [get_ports {blueOut[1]}]
+endgroup
+startgroup
+set_property package_pin D5 [get_ports {blueOut[0]}]
+endgroup
+startgroup
+set_property package_pin A14 [get_ports {led[15]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {led[14]}]
+endgroup
+set_property package_pin "" [get_ports [list  {led[13]}]]
+startgroup
+set_property package_pin F4 [get_ports {led[11]}]
+endgroup
+startgroup
+set_property package_pin D13 [get_ports {led[13]}]
+endgroup
+startgroup
+set_property package_pin B13 [get_ports {led[12]}]
+endgroup
+startgroup
+set_property package_pin A13 [get_ports {led[11]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {led[10]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {led[9]}]
+endgroup
+startgroup
+set_property package_pin A12 [get_ports {led[8]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin B11 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin A11 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin E10 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin D10 [get_ports {led[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram1Addr[17]}]]
+set_property package_pin "" [get_ports [list  {ram1Addr[16]}]]
+startgroup
+set_property package_pin H17 [get_ports {ram1Addr[17]}]
+endgroup
+startgroup
+set_property package_pin H16 [get_ports {ram1Addr[16]}]
+endgroup
+startgroup
+set_property package_pin H15 [get_ports {ram1Addr[15]}]
+endgroup
+startgroup
+set_property package_pin H14 [get_ports {ram1Addr[14]}]
+endgroup
+startgroup
+set_property package_pin G16 [get_ports {ram1Addr[13]}]
+endgroup
+startgroup
+set_property package_pin G15 [get_ports {ram1Addr[12]}]
+endgroup
+startgroup
+set_property package_pin G14 [get_ports {ram1Addr[11]}]
+endgroup
+startgroup
+set_property package_pin G13 [get_ports {ram1Addr[10]}]
+endgroup
+startgroup
+set_property package_pin F18 [get_ports {ram1Addr[9]}]
+endgroup
+startgroup
+set_property package_pin F17 [get_ports {ram1Addr[8]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram1Addr[7]}]]
+set_property package_pin "" [get_ports [list  {ram1Addr[6]}]]
+startgroup
+set_property package_pin F15 [get_ports {ram1Addr[7]}]
+endgroup
+startgroup
+set_property package_pin F14 [get_ports {ram1Addr[6]}]
+endgroup
+startgroup
+set_property package_pin E16 [get_ports {ram1Addr[5]}]
+endgroup
+startgroup
+set_property package_pin E15 [get_ports {ram1Addr[4]}]
+endgroup
+startgroup
+set_property package_pin D17 [get_ports {ram1Addr[3]}]
+endgroup
+startgroup
+set_property package_pin D16 [get_ports {ram1Addr[2]}]
+endgroup
+startgroup
+set_property package_pin C18 [get_ports {ram1Addr[1]}]
+endgroup
+startgroup
+set_property package_pin C17 [get_ports {ram1Addr[0]}]
+endgroup
+startgroup
+set_property package_pin M14 [get_ports {ram1Data[15]}]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports {ram1Data[14]}]
+endgroup
+startgroup
+set_property package_pin L18 [get_ports {ram1Data[13]}]
+endgroup
+startgroup
+set_property package_pin L17 [get_ports {ram1Data[12]}]
+endgroup
+startgroup
+set_property package_pin L16 [get_ports {ram1Data[11]}]
+endgroup
+startgroup
+set_property package_pin L15 [get_ports {ram1Data[10]}]
+endgroup
+startgroup
+set_property package_pin K15 [get_ports {ram1Data[9]}]
+endgroup
+startgroup
+set_property package_pin K14 [get_ports {ram1Data[8]}]
+endgroup
+startgroup
+set_property package_pin K13 [get_ports {ram1Data[7]}]
+endgroup
+startgroup
+set_property package_pin K12 [get_ports {ram1Data[6]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram1Data[5]}]]
+set_property package_pin "" [get_ports [list  {ram1Data[4]}]]
+startgroup
+set_property package_pin J17 [get_ports {ram1Data[5]}]
+endgroup
+startgroup
+set_property package_pin J16 [get_ports {ram1Data[4]}]
+endgroup
+startgroup
+set_property package_pin J15 [get_ports {ram1Data[3]}]
+endgroup
+startgroup
+set_property package_pin J14 [get_ports {ram1Data[2]}]
+endgroup
+startgroup
+set_property package_pin J13 [get_ports {ram1Data[1]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {ram1Data[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram2Addr[17]}]]
+set_property package_pin "" [get_ports [list  {ram2Addr[16]}]]
+startgroup
+set_property package_pin U15 [get_ports {ram2Addr[17]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {ram2Addr[16]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports {ram2Addr[15]}]
+endgroup
+startgroup
+set_property package_pin V12 [get_ports {ram2Addr[14]}]
+endgroup
+startgroup
+set_property package_pin V13 [get_ports {ram2Addr[13]}]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports {ram2Addr[12]}]
+endgroup
+startgroup
+set_property package_pin U18 [get_ports {ram2Addr[11]}]
+endgroup
+startgroup
+set_property package_pin T18 [get_ports {ram2Addr[10]}]
+endgroup
+startgroup
+set_property package_pin T17 [get_ports {ram2Addr[9]}]
+endgroup
+startgroup
+set_property package_pin R16 [get_ports {ram2Addr[8]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram2Addr[7]}]]
+startgroup
+set_property package_pin R18 [get_ports {ram2Addr[8]}]
+endgroup
+startgroup
+set_property package_pin R16 [get_ports {ram2Addr[7]}]
+endgroup
+startgroup
+set_property package_pin R15 [get_ports {ram2Addr[6]}]
+endgroup
+startgroup
+set_property package_pin P18 [get_ports {ram2Addr[5]}]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports {ram2Addr[4]}]
+endgroup
+startgroup
+set_property package_pin P16 [get_ports {ram2Addr[3]}]
+endgroup
+startgroup
+set_property package_pin N18 [get_ports {ram2Addr[2]}]
+endgroup
+startgroup
+set_property package_pin N15 [get_ports {ram2Addr[1]}]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports {ram2Addr[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram2Data[15]}]]
+set_property package_pin "" [get_ports [list  {ram2Data[14]}]]
+startgroup
+set_property package_pin N11 [get_ports {ram2Data[15]}]
+endgroup
+startgroup
+set_property package_pin N12 [get_ports {ram2Data[14]}]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports {ram2Data[13]}]
+endgroup
+set_property package_pin "" [get_ports [list  {ram2Data[12]}]]
+startgroup
+set_property package_pin N12 [get_ports {ram2Data[14]}]
+endgroup
+startgroup
+set_property package_pin P10 [get_ports {ram2Data[13]}]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports {ram2Data[12]}]
+endgroup
+startgroup
+set_property package_pin P12 [get_ports {ram2Data[11]}]
+endgroup
+startgroup
+set_property package_pin P13 [get_ports {ram2Data[10]}]
+endgroup
+startgroup
+set_property package_pin R10 [get_ports {ram2Data[9]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {ram2Data[8]}]
+endgroup
+startgroup
+set_property package_pin R12 [get_ports {ram2Data[7]}]
+endgroup
+startgroup
+set_property package_pin R14 [get_ports {ram2Data[6]}]
+endgroup
+startgroup
+set_property package_pin R13 [get_ports {ram2Data[5]}]
+endgroup
+startgroup
+set_property package_pin T12 [get_ports {ram2Data[4]}]
+endgroup
+startgroup
+set_property package_pin T14 [get_ports {ram2Data[3]}]
+endgroup
+startgroup
+set_property package_pin T15 [get_ports {ram2Data[2]}]
+endgroup
+startgroup
+set_property package_pin T16 [get_ports {ram2Data[1]}]
+endgroup
+startgroup
+set_property package_pin U13 [get_ports {ram2Data[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {redOut[2]}]]
+startgroup
+set_property package_pin C3 [get_ports {redOut[1]}]
+endgroup
+startgroup
+set_property package_pin A4 [get_ports {redOut[2]}]
+endgroup
+startgroup
+set_property package_pin A7 [get_ports {redOut[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  clk_in]]
+set_property package_pin "" [get_ports [list  dataReady]]
+startgroup
+set_property package_pin B9 [get_ports clk_in]
+endgroup
+set_property package_pin "" [get_ports [list  dataReady]]
+set_property package_pin "" [get_ports [list  flashByte]]
+startgroup
+set_property package_pin A16 [get_ports dataReady]
+endgroup
+set_property package_pin "" [get_ports [list  flashByte]]
+set_property package_pin "" [get_ports [list  flashCe]]
+startgroup
+set_property package_pin C1 [get_ports flashByte]
+endgroup
+startgroup
+set_property package_pin D4 [get_ports flashCe]
+endgroup
+startgroup
+set_property package_pin E1 [get_ports flashOe]
+endgroup
+startgroup
+set_property package_pin D1 [get_ports flashRp]
+endgroup
+startgroup
+set_property package_pin C2 [get_ports flashVpen]
+endgroup
+set_property package_pin "" [get_ports [list  flashWe]]
+startgroup
+set_property package_pin E4 [get_ports flashCe]
+endgroup
+startgroup
+set_property package_pin D4 [get_ports flashWe]
+endgroup
+startgroup
+set_property package_pin D6 [get_ports hs]
+endgroup
+startgroup
+set_property package_pin T7 [get_ports opt]
+endgroup
+set_property package_pin "" [get_ports [list  ram1En]]
+startgroup
+set_property package_pin M16 [get_ports ram1Oe]
+endgroup
+startgroup
+set_property package_pin M15 [get_ports ram1En]
+endgroup
+startgroup
+set_property package_pin M18 [get_ports ram1We]
+endgroup
+set_property package_pin "" [get_ports [list  ram2En]]
+set_property package_pin "" [get_ports [list  ram2Oe]]
+startgroup
+set_property package_pin N10 [get_ports ram2En]
+endgroup
+startgroup
+set_property package_pin P9 [get_ports ram2Oe]
+endgroup
+set_property package_pin "" [get_ports [list  rdn]]
+startgroup
+set_property package_pin M9 [get_ports ram2We]
+endgroup
+startgroup
+set_property package_pin C14 [get_ports rdn]
+endgroup
+startgroup
+set_property package_pin U10 [get_ports rst]
+endgroup
+startgroup
+set_property package_pin D14 [get_ports tbre]
+endgroup
+startgroup
+set_property package_pin N9 [get_ports tsre]
+endgroup
+startgroup
+set_property package_pin E6 [get_ports vs]
+endgroup
+set_property package_pin "" [get_ports [list  wrn]]
+startgroup
+set_property package_pin E6 [get_ports vs]
+endgroup
+startgroup
+set_property package_pin U5 [get_ports wrn]
+endgroup
+save_constraints
