@@ -18,6 +18,7 @@ vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\HazardDetectionUnit.
 vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\Forwarding_unit.vhd"
 vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\ExeMemRegisters.vhd"
 vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\controller.vhd"
+vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\clock.vhd"
 vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\ALUMuxB.vhd"
 vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\ALUMuxA.vhd"
 vhdl work "C:\Users\nuonuo\Desktop\3weeks_in\3weeks\the_cpu\ALU.vhd"

@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity cpu is
 	port(
 			rst : in std_logic; --reset
-			clk_hand : in std_logic; --时钟源  默认为50M  可以通过修改绑定管脚来改变
-			clk_50 : in std_logic;
-			clk : in std_logic;
+			--clk_hand : in std_logic; --时钟源  默认为50M  可以通过修改绑定管脚来改变
+			--clk_50 : in std_logic;
+			clk_in : in std_logic;
 			opt : in std_logic;	--选择输入时钟（为手动或者50M）
 			
 			
@@ -82,6 +82,18 @@ entity cpu is
 end cpu;
 
 architecture Behavioral of cpu is
+
+	component clock
+	port ( 
+		rst : in STD_LOGIC;
+		clk : in  STD_LOGIC;
+		
+		clkout :out STD_LOGIC;
+		clk1 : out  STD_LOGIC;
+		clk2 : out STD_LOGIC
+	);
+	end component;
+	
 	component Memory_unit
 	port(
 		--时钟
@@ -453,6 +465,10 @@ architecture Behavioral of cpu is
 	);
 	end component;
 	
+	--clock
+	signal clk : std_logic;
+	signal clk_3 : std_logic;
+	signal clk_registers : std_logic;
 	
 	--Memory_unit （有一大部分都已在cpu的port里体现）
 	signal DataOut : std_logic_vector(15 downto 0);
@@ -589,7 +605,7 @@ begin
 	
 	port map(
 			rst => rst,
-			clk => clk,
+			clk => clk_3,
 			flashFinished => flashFinished,
 			IdExeRegWrite => IdExeRegWriteOut,
 			IdExeWBSrc => IdExeWBSrcOut,
@@ -637,7 +653,7 @@ begin
 	
 	port map(
 			rst => rst,
-			clk => clk,
+			clk => clk_3,
 			flashFinished => flashFinished,
 			IdExeFlush_LW => IdExeFlush_LWOut,
 			IdExeFlush_StructConflict => IdExeFlush_StructConflictOut,
@@ -677,7 +693,7 @@ begin
 	u7 : IfIdRegisters
 	port map(
 			rst => rst,
-			clk => clk,
+			clk => clk_3,
 			flashFinished => flashFinished,
 			isJump => isJumpOut,
 			willBranch => branchOut,
@@ -706,7 +722,7 @@ begin
 	u9 : MemWbRegisters
 	port map(
 			rst => rst,
-			clk => clk,
+			clk => clk_3,
 			flashFinished => flashFinished,
 			ExeMemRegWrite => ExeMemRegWriteOut,
 			ExeMemWBSrc => ExeMemWBSrcOut,
@@ -761,7 +777,7 @@ begin
 	u14 : PCRegister
 	port map(
 			
-			clk => clk,
+			clk => clk_3,
 			rst => rst,
 			flashFinished => flashFinished,
 			PCKeep => PCKeepOut,
@@ -888,7 +904,16 @@ begin
 			ReadReg2Out => ReadReg2MUXOut
 
 	);
-
+	
+	u24 : clock
+	port map(
+		rst => rst,
+		clk => clk_in,
+		
+		clkout => clk,
+		clk1 => clk_3,
+		clk2 => clk_registers
+	);
 
 end Behavioral;
 
