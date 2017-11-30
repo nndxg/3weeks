@@ -63,6 +63,8 @@ begin
 			else
 				WriteData <= ALUResult;
 			end if;
+		else
+			null;
 		end if;
 	end process;
 

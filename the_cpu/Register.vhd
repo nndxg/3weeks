@@ -86,11 +86,13 @@ begin
 					when "1000" => SP <= WriteData;
 					when "1001" => IH <= WriteData;
 					when "1010" => T <= WriteData;
-					when others =>
+					when others => null;
 				end case;
 			else
+				null;
 			end if;
 		else
+			null;
 		end if;
 	end process;
 	
@@ -108,7 +110,7 @@ begin
 			when "1000" => readData1 <= SP;
 			when "1001" => readData1 <= IH;
 			when "1010" => readData1 <= T;
-			when others =>
+			when others => readData1 <= (others => '0');
 		end case;
 		
 		case readReg2 is
@@ -120,7 +122,7 @@ begin
 			when "0101" => readData2 <= r5;
 			when "0110" => readData2 <= r6;
 			when "0111" => readData2 <= r7;
-			when others =>
+			when others => readData2 <= (others => '0');
 		end case;
 		
 	end process;

@@ -139,6 +139,10 @@ begin
 				WriteRegOut <= WriteRegIn;
 				
 			end if;
+			
+		else
+			null;
+			
 		end if;
 	end process;
 				

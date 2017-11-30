@@ -73,6 +73,8 @@ begin
 			ALUResultOut <= RealALUResultIn;
 			MemWriteDataOut <= MemWriteDataIn;
 			ExeMemWriteReg <= IdExeWriteReg;
+		else
+			null;
 		end if;
 	end process;
 

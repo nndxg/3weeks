@@ -109,7 +109,7 @@ begin
 						Im_out(7 downto 0) <= Im_in(7 downto 0);
 					when others =>
 				end case;
-			when others =>
+			when others => Im_out <= (others => '0');
 		end case;
 	end process;
 end Behavioral;
