@@ -33,6 +33,7 @@ entity ExeMemRegisters is
 	port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		IdExeRegWrite: in std_logic;
 		IdExeWBSrc: in std_logic;
 		IdExeMemRead: in std_logic;
@@ -66,15 +67,17 @@ begin
 			MemWriteDataOut <= (others => '0');
 			ExeMemWriteReg <= "1110";
 		elsif (rising_edge(clk)) then
-			ExeMemRegWrite <= IdExeRegWrite;
-			ExeMemWBSrc <= IdExeWBSrc;
-			ExeMemMemRead <= IdExeMemRead;
-			ExeMemMemWrite <= IdExeMemWrite;
-			ALUResultOut <= RealALUResultIn;
-			MemWriteDataOut <= MemWriteDataIn;
-			ExeMemWriteReg <= IdExeWriteReg;
-		else
-			null;
+			if(flashFinished = '1') then
+				ExeMemRegWrite <= IdExeRegWrite;
+				ExeMemWBSrc <= IdExeWBSrc;
+				ExeMemMemRead <= IdExeMemRead;
+				ExeMemMemWrite <= IdExeMemWrite;
+				ALUResultOut <= RealALUResultIn;
+				MemWriteDataOut <= MemWriteDataIn;
+				ExeMemWriteReg <= IdExeWriteReg;
+			else null;
+			end if;
+		else null;
 		end if;
 	end process;
 

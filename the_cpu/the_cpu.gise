@@ -101,10 +101,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512042694" xil_pn:in_ck="2728107161706174202" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-977251028570408546" xil_pn:start_ts="1512042653">
+    <transform xil_pn:end_ts="1512056987" xil_pn:in_ck="2728107161706174202" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-977251028570408546" xil_pn:start_ts="1512056959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="cpu.lso"/>
@@ -123,22 +125,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1512033390" xil_pn:in_ck="132379022094" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3486100200077750706" xil_pn:start_ts="1512033383">
+    <transform xil_pn:end_ts="1512057018" xil_pn:in_ck="132379022094" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3486100200077750706" xil_pn:start_ts="1512057009">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="cpu.bld"/>
       <outfile xil_pn:name="cpu.ngd"/>
       <outfile xil_pn:name="cpu_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1512033398" xil_pn:in_ck="132379022095" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1512033390">
+    <transform xil_pn:end_ts="1512057027" xil_pn:in_ck="132379022095" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3188416950630775481" xil_pn:start_ts="1512057018">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="cpu.pcf"/>
       <outfile xil_pn:name="cpu_map.map"/>
@@ -149,10 +148,9 @@
       <outfile xil_pn:name="cpu_summary.xml"/>
       <outfile xil_pn:name="cpu_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1512033438" xil_pn:in_ck="156993149055357352" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6268780068511726196" xil_pn:start_ts="1512033398">
+    <transform xil_pn:end_ts="1512057117" xil_pn:in_ck="156993149055357352" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6268780068511726196" xil_pn:start_ts="1512057027">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="cpu.ncd"/>
       <outfile xil_pn:name="cpu.pad"/>
@@ -164,10 +162,9 @@
       <outfile xil_pn:name="cpu_pad.txt"/>
       <outfile xil_pn:name="cpu_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1512033438" xil_pn:in_ck="132379021963" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1512033434">
+    <transform xil_pn:end_ts="1512057117" xil_pn:in_ck="132379021963" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1512057113">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="cpu.twr"/>
       <outfile xil_pn:name="cpu.twx"/>

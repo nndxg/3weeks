@@ -33,6 +33,7 @@ entity Registers is
 	Port(
 		clk:in std_logic;
 		rst:in std_logic;
+		flashFinished : in std_logic;
 		RegWrite:in std_logic;
 		readReg1:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
 		readReg2:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7
@@ -73,21 +74,25 @@ begin
 			SP <= (others => '0');
 			
 		elsif (clk'event and clk = '1') then
-			if (RegWrite = '1') then 
-				case WriteReg is 
-					when "0000" => r0 <= WriteData;
-					when "0001" => r1 <= WriteData;
-					when "0010" => r2 <= WriteData;
-					when "0011" => r3 <= WriteData;
-					when "0100" => r4 <= WriteData;
-					when "0101" => r5 <= WriteData;
-					when "0110" => r6 <= WriteData;
-					when "0111" => r7 <= WriteData;
-					when "1000" => SP <= WriteData;
-					when "1001" => IH <= WriteData;
-					when "1010" => T <= WriteData;
-					when others => null;
-				end case;
+			if(flashFinished = '1') then
+				if (RegWrite = '1') then 
+					case WriteReg is 
+						when "0000" => r0 <= WriteData;
+						when "0001" => r1 <= WriteData;
+						when "0010" => r2 <= WriteData;
+						when "0011" => r3 <= WriteData;
+						when "0100" => r4 <= WriteData;
+						when "0101" => r5 <= WriteData;
+						when "0110" => r6 <= WriteData;
+						when "0111" => r7 <= WriteData;
+						when "1000" => SP <= WriteData;
+						when "1001" => IH <= WriteData;
+						when "1010" => T <= WriteData;
+						when others => null;
+					end case;
+				else
+					null;
+				end if;
 			else
 				null;
 			end if;

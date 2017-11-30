@@ -33,6 +33,7 @@ entity PCRegister is
 	port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		PCKeep: in std_logic;
 		selectedPC: in std_logic_vector(15 downto 0);
 		nextPC: out std_logic_vector(15 downto 0)
@@ -48,9 +49,14 @@ begin
 		if (rst = '0') then
 			nextPC <= "1111111111111111";
 		elsif (rising_edge(clk)) then
-			if (PCKeep = '0') then
-				nextPC <= selectedPC;
+			if(flashFinished = '1') then
+				if (PCKeep = '0') then
+					nextPC <= selectedPC;
+				else null;
+				end if;
+			else null;
 			end if;
+		else null;
 		end if;
 	end process;
 

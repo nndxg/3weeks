@@ -33,6 +33,7 @@ entity MemWbRegisters is
 	port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		ExeMemRegWrite: in std_logic;
 		ExeMemWBSrc: in std_logic;
 		MemReadData: in std_logic_vector(15 downto 0);
@@ -56,12 +57,16 @@ begin
 			MemWbWriteReg <= "1110";   -- ±íÊ¾²»Ð´¼Ä´æÆ÷
 			WriteData <= (others => '0');
 		elsif (rising_edge(clk)) then
-			MemWbRegWrite <= ExeMemRegWrite;
-			MemWbWriteReg <= ExeMemWriteReg;
-			if (ExeMemWBSrc = '1') then
-				WriteData <= MemReadData;
+			if(flashFinished = '1') then
+				MemWbRegWrite <= ExeMemRegWrite;
+				MemWbWriteReg <= ExeMemWriteReg;
+				if (ExeMemWBSrc = '1') then
+					WriteData <= MemReadData;
+				else
+					WriteData <= ALUResult;
+				end if;
 			else
-				WriteData <= ALUResult;
+				null;
 			end if;
 		else
 			null;

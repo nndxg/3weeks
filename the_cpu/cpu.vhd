@@ -65,7 +65,19 @@ entity cpu is
 			led : out std_logic_vector(15 downto 0);
 			
 			hs,vs : out std_logic;
-			redOut, greenOut, blueOut : out std_logic_vector(2 downto 0)
+			redOut, greenOut, blueOut : out std_logic_vector(2 downto 0);
+			
+			
+			--Flash
+			flashAddr : out std_logic_vector(22 downto 0);		--flash地址线
+			flashData : inout std_logic_vector(15 downto 0);	--flash数据线
+			
+			flashByte : out std_logic;	--flash操作模式，常置'1'
+			flashVpen : out std_logic;	--flash写保护，常置'1'
+			flashRp : out std_logic;	--'1'表示flash工作，常置'1'
+			flashCe : out std_logic;	--flash使能
+			flashOe : out std_logic;	--flash读使能，'0'有效，每次读操作后置'1'
+			flashWe : out std_logic		--flash写使能
 	);
 end cpu;
 
@@ -109,7 +121,20 @@ architecture Behavioral of cpu is
 		
 		ram2_en : out std_logic;		--RAM2使能，='1'禁止，永远等于'0'
 		ram2_oe : out std_logic;		--RAM2读使能，='1'禁止
-		ram2_we : out std_logic		--RAM2写使能，='1'禁止		
+		ram2_we : out std_logic;	--RAM2写使能，='1'禁止	
+		
+		flashFinished : out std_logic;
+		
+		--Flash
+		flash_addr : out std_logic_vector(22 downto 0);		--flash地址线
+		flash_data : inout std_logic_vector(15 downto 0);	--flash数据线
+		
+		flash_byte : out std_logic;	--flash操作模式，常置'1'
+		flash_vpen : out std_logic;	--flash写保护，常置'1'
+		flash_rp : out std_logic;		--'1'表示flash工作，常置'1'
+		flash_ce : out std_logic;		--flash使能
+		flash_oe : out std_logic;		--flash读使能，'0'有效，每次读操作后置'1'
+		flash_we : out std_logic		--flash写使能
 		
 	);
 	end component;
@@ -159,6 +184,7 @@ architecture Behavioral of cpu is
 		Port(
 			clk:in std_logic;
 			rst:in std_logic;
+			flashFinished : in std_logic;
 			RegWrite:in std_logic;
 			readReg1:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7，"1000"=SP,"1001"=IH, "1010"=T
 			readReg2:in std_logic_vector(3 downto 0);--"0XXX"代表R0~R7
@@ -247,6 +273,7 @@ architecture Behavioral of cpu is
 	port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		IdExeRegWrite: in std_logic;
 		IdExeWBSrc: in std_logic;
 		IdExeMemRead: in std_logic;
@@ -298,6 +325,7 @@ architecture Behavioral of cpu is
 	port(
 		rst : in std_logic;
 		clk : in std_logic;
+		flashFinished : in std_logic;
 		IdExeFlush_LW : in std_logic;		            --LW数据冲突用
 		IdExeFlush_StructConflict : in std_logic;		--SW结构冲突用
 		
@@ -342,6 +370,7 @@ architecture Behavioral of cpu is
 	port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		isJump: in std_logic;
 		willBranch: in std_logic;
 		IfIdFlush_StructConflict: in std_logic;
@@ -362,6 +391,7 @@ architecture Behavioral of cpu is
 		port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		ExeMemRegWrite: in std_logic;
 		ExeMemWBSrc: in std_logic;
 		MemReadData: in std_logic_vector(15 downto 0);
@@ -406,6 +436,7 @@ architecture Behavioral of cpu is
 	port(
 		rst: in std_logic;
 		clk: in std_logic;
+		flashFinished : in std_logic;
 		PCKeep: in std_logic;
 		selectedPC: in std_logic_vector(15 downto 0);
 		nextPC: out std_logic_vector(15 downto 0)
@@ -528,6 +559,9 @@ architecture Behavioral of cpu is
 	signal IdExeFlush_StructConflictOut: std_logic;
 	signal PCRollBackOut: std_logic;
 	
+	
+	signal flashFinished : std_logic;
+	
 begin
 	u1 : ALUMuxA
 	port map(
@@ -556,6 +590,7 @@ begin
 	port map(
 			rst => rst,
 			clk => clk,
+			flashFinished => flashFinished,
 			IdExeRegWrite => IdExeRegWriteOut,
 			IdExeWBSrc => IdExeWBSrcOut,
 			IdExeMemRead => IdExeMemReadOut,
@@ -603,6 +638,7 @@ begin
 	port map(
 			rst => rst,
 			clk => clk,
+			flashFinished => flashFinished,
 			IdExeFlush_LW => IdExeFlush_LWOut,
 			IdExeFlush_StructConflict => IdExeFlush_StructConflictOut,
 			RegWriteIn => controllerOut(21),
@@ -642,6 +678,7 @@ begin
 	port map(
 			rst => rst,
 			clk => clk,
+			flashFinished => flashFinished,
 			isJump => isJumpOut,
 			willBranch => branchOut,
 			IfIdFlush_StructConflict => IfIdFlush_StructConflictOut,
@@ -670,6 +707,7 @@ begin
 	port map(
 			rst => rst,
 			clk => clk,
+			flashFinished => flashFinished,
 			ExeMemRegWrite => ExeMemRegWriteOut,
 			ExeMemWBSrc => ExeMemWBSrcOut,
 			ExeMemWriteReg => ExeMemWriteRegOut,
@@ -725,6 +763,7 @@ begin
 			
 			clk => clk,
 			rst => rst,
+			flashFinished => flashFinished,
 			PCKeep => PCKeepOut,
 			selectedPC => selectedPCOut,
 
@@ -746,6 +785,7 @@ begin
 		port map( 
 			clk => clk,
          rst => rst,
+			flashFinished => flashFinished,
 			
 			data_ready => dataReady,
 			tbre => tbre,
@@ -800,7 +840,8 @@ begin
 	u19 : Registers
 	port map(
 			clk => clk,
-			rst => rst,			
+			rst => rst,
+			flashFinished => flashFinished,			
 			readReg1 => ReadReg1MUXOut,
 			readReg2 => ReadReg2MUXOut,
 			WriteReg => MemWbWriteRegOut,

@@ -70,7 +70,20 @@ entity Memory_unit is
 		
 		ram2_en : out std_logic;		--RAM2使能，='1'禁止，永远等于'0'
 		ram2_oe : out std_logic;		--RAM2读使能，='1'禁止
-		ram2_we : out std_logic		--RAM2写使能，='1'禁止		
+		ram2_we : out std_logic;		--RAM2写使能，='1'禁止
+
+		flashFinished : out std_logic := '0';
+		
+		--Flash
+		flash_addr : out std_logic_vector(22 downto 0);		--flash地址线
+		flash_data : inout std_logic_vector(15 downto 0);	--flash数据线
+		
+		flash_byte : out std_logic := '1';	--flash操作模式，常置'1'
+		flash_vpen : out std_logic := '1';	--flash写保护，常置'1'
+		flash_rp : out std_logic := '1';		--'1'表示flash工作，常置'1'
+		flash_ce : out std_logic := '0';		--flash使能
+		flash_oe : out std_logic := '1';		--flash读使能，'0'有效，每次读操作后置'1'
+		flash_we : out std_logic := '1'		--flash写使能
 		
 	);
 end Memory_unit;
@@ -78,6 +91,18 @@ end Memory_unit;
 architecture Behavioral of Memory_unit is
 	signal state : std_logic_vector(1 downto 0) := "00";	--访存、串口操作的状态
 	signal rflag : std_logic := '0';		--rflag='1'代表把串口数据线（ram1_data）置高阻，用于节省状态的控制
+	
+	
+	type flash_state is (
+		read0,
+		read1, read2, read3, read4,read5
+	);
+	signal flash_finished : std_logic := '0';
+	--type FLASH_STATE is (STATE1, STATE2, STATE3, STATE4, STATE5, STATE6);
+	--signal flashstate : FLASH_STATE := STATE1;	--从flash载入指令到ram2的状态
+	signal flashstate : flash_state := read0;
+	--signal flashstate : std_logic_vector(2 downto 0) := "001";
+	signal current_addr : std_logic_vector(15 downto 0) := (others => '0');	--flash当前要读的地址
 	shared variable cnt : integer := 0;	--用于削弱50M时钟频率至1M
 
 begin
@@ -100,6 +125,7 @@ begin
 			state <= "00";			--rst之谜……
 			
 		elsif (clk'event and clk = '1') then 
+			if (flash_finished = '1') then
 				ram1_en <= '1';
 				ram1_oe <= '1';
 				ram1_we <= '1';
@@ -190,9 +216,78 @@ begin
 						state <= "00";
 						
 				end case;	
-			end if;	--rst/clk_raise
+			else				--从flash载入kernel指令到ram2尚未完成，则继续载入
+				if (cnt = 1000) then
+					cnt := 0;
+					
+					case flashstate is
+						
+						
+						when read0 =>		--WE置0
+							ram2_en <= '0';
+							ram2_we <= '0';
+							ram2_oe <= '1';
+							wrn <= '1';
+							rdn <= '1';
+							flash_we <= '0';
+							flash_oe <= '1';
+							
+							flash_byte <= '1';
+							flash_vpen <= '1';
+							flash_rp <= '1';
+							flash_ce <= '0';
+							
+							flashstate <= read1;
+							
+						when read1 =>
+							flash_data <= x"00FF";
+							flashstate <= read2;
+							
+						when read2 =>
+							flash_we <= '1';
+							flashstate <= read3;
+							
+						when read3 =>
+							flash_oe <= '0';
+							flash_addr <= "000000" & current_addr & '0';
+							flash_data <= (others => 'Z');
+							
+							flashstate <= read4;
+							
+						when read4 =>
+							flash_oe <= '1';
+							ram2_we <= '0';
+							ram2_addr <= "00" & current_addr;
+							ram2_data <= flash_data;
+							flashstate <= read5;
+						
+						when read5 =>
+							ram2_we <= '1';
+							current_addr <= current_addr + '1';
+							flashstate <= read0;
+						
+							
+						when others =>
+							flashstate <= read0;
+						
+					end case;
+					
+					if (current_addr > x"0249") then
+						flash_finished <= '1';
+					end if;
+				else 
+					if (cnt < 1000) then
+						cnt := cnt + 1;
+					end if;
+				end if;	--cnt 
+				
+			end if;	--flash finished or not
+			
+		end if;	--rst/clk_raise
 		
 	end process;
+	
+	flashFinished <= flash_finished;
 
 end Behavioral;
 

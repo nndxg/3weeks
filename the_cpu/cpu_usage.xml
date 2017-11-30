@@ -4,34 +4,38 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="1">
-<DesignStatistics TimeStamp="Thu Nov 30 17:16:37 2017"><group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="1">
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Thu Nov 30 23:50:25 2017"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="2">
 <attrib name="value" value="73"/></item>
-<item name="AGG_IO" rev="1">
+<item name="AGG_IO" rev="2">
 <attrib name="value" value="73"/></item>
-<item name="AGG_SLICE" rev="1">
-<attrib name="value" value="730"/></item>
-<item name="NUM_4_INPUT_LUT" rev="1">
-<attrib name="value" value="1182"/></item>
-<item name="NUM_BONDED_IBUF" rev="1">
+<item name="AGG_SLICE" rev="2">
+<attrib name="value" value="868"/></item>
+<item name="NUM_4_INPUT_LUT" rev="2">
+<attrib name="value" value="1466"/></item>
+<item name="NUM_BONDED_IBUF" rev="2">
 <attrib name="value" value="5"/></item>
-<item name="NUM_BONDED_IOB" rev="1">
+<item name="NUM_BONDED_IOB" rev="2">
 <attrib name="value" value="68"/></item>
-<item name="NUM_BUFGMUX" rev="1">
+<item name="NUM_BUFGMUX" rev="2">
 <attrib name="value" value="1"/></item>
-<item name="NUM_CYMUX" rev="1">
-<attrib name="value" value="83"/></item>
-<item name="NUM_LUT_RT" rev="1">
+<item name="NUM_CYMUX" rev="2">
+<attrib name="value" value="156"/></item>
+<item name="NUM_LUT_RT" rev="2">
+<attrib name="value" value="68"/></item>
+<item name="NUM_SHIFT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NUM_SLICEL" rev="2">
+<attrib name="value" value="867"/></item>
+<item name="NUM_SLICEM" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NUM_SLICE_FF" rev="2">
+<attrib name="value" value="512"/></item>
+<item name="NUM_SLICE_LATCH" rev="2">
 <attrib name="value" value="16"/></item>
-<item name="NUM_SLICEL" rev="1">
-<attrib name="value" value="730"/></item>
-<item name="NUM_SLICE_FF" rev="1">
-<attrib name="value" value="452"/></item>
-<item name="NUM_SLICE_LATCH" rev="1">
-<attrib name="value" value="59"/></item>
-<item name="NUM_XOR" rev="1">
-<attrib name="value" value="63"/></item>
+<item name="NUM_XOR" rev="2">
+<attrib name="value" value="111"/></item>
 </group>
 </DesignStatistics>
 <CmdHistory>

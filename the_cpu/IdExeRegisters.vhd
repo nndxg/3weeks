@@ -33,6 +33,7 @@ entity IdExeRegisters is
 	port(
 		rst : in std_logic;
 		clk : in std_logic;
+		flashFinished : in std_logic;
 		IdExeFlush_LW : in std_logic;		            --LW数据冲突用
 		IdExeFlush_StructConflict : in std_logic;		--SW结构冲突用
 		
@@ -99,45 +100,46 @@ begin
 			WriteRegOut <= "1110";
 			
 		elsif (rising_edge(clk)) then
+			if(flashFinished = '1') then
+				if ((IdExeFlush_LW = '1') or (IdExeFlush_StructConflict = '1')) then
+					
+					RegWriteOut <= '0';
+					WBSrcOut <= '0';
+					MemWriteOut <= '0';
+					MemReadOut <= '0';
+					isMFPCOut <= '0';
+					isJumpOut <= '0';
+					ALUOpOut <= "0000";
+					ALUSrcBIsImmeOut <= '0';
 			
-			if ((IdExeFlush_LW = '1') or (IdExeFlush_StructConflict = '1')) then
-				
-				RegWriteOut <= '0';
-				WBSrcOut <= '0';
-				MemWriteOut <= '0';
-				MemReadOut <= '0';
-				isMFPCOut <= '0';
-				isJumpOut <= '0';
-				ALUOpOut <= "0000";
-				ALUSrcBIsImmeOut <= '0';
-		
-				PCPlusOneOut <= (others => '0');
-				ReadReg1Out <= "1111";		
-				ReadReg2Out <= "1111";
-				ReadData1Out <= (others => '0');	
-				ReadData2Out <= (others => '0');			
-				ImmeOut <= (others => '0');	
-				WriteRegOut <= "1110";
-				
-			else
-				
-				RegWriteOut <= RegWriteIn;
-				WBSrcOut <= WBSrcIn;
-				MemWriteOut <= MemWriteIn;
-				MemReadOut <= MemReadIn;
-				isMFPCOut <= isMFPCIn;
-				isJumpOut <= isJumpIn;
-				ALUOpOut <= ALUOpIn;
-				ALUSrcBIsImmeOut <= ALUSrcBIsImmeIn;
-		
-				PCPlusOneOut <= PCPlusOneIn;
-				ReadReg1Out <= ReadReg1In;		
-				ReadReg2Out <= ReadReg2In;
-				ReadData1Out <= ReadData1In;	
-				ReadData2Out <= ReadData2In;			
-				ImmeOut <= ImmeIn;	
-				WriteRegOut <= WriteRegIn;
-				
+					PCPlusOneOut <= (others => '0');
+					ReadReg1Out <= "1111";		
+					ReadReg2Out <= "1111";
+					ReadData1Out <= (others => '0');	
+					ReadData2Out <= (others => '0');			
+					ImmeOut <= (others => '0');	
+					WriteRegOut <= "1110";
+					
+				else
+					
+					RegWriteOut <= RegWriteIn;
+					WBSrcOut <= WBSrcIn;
+					MemWriteOut <= MemWriteIn;
+					MemReadOut <= MemReadIn;
+					isMFPCOut <= isMFPCIn;
+					isJumpOut <= isJumpIn;
+					ALUOpOut <= ALUOpIn;
+					ALUSrcBIsImmeOut <= ALUSrcBIsImmeIn;
+			
+					PCPlusOneOut <= PCPlusOneIn;
+					ReadReg1Out <= ReadReg1In;		
+					ReadReg2Out <= ReadReg2In;
+					ReadData1Out <= ReadData1In;	
+					ReadData2Out <= ReadData2In;			
+					ImmeOut <= ImmeIn;	
+					WriteRegOut <= WriteRegIn;
+				end if;
+			else null;
 			end if;
 			
 		else
