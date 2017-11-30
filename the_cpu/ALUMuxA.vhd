@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:57:44 11/27/2017 
+-- Create Date:    11:33:57 11/29/2017 
 -- Design Name: 
--- Module Name:    ReadReg2MUX - Behavioral 
+-- Module Name:    ALUMuxA - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,29 +29,32 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ReadReg2MUX is
+entity ALUMuxA is
 	port(
-			ten_downto_eight : in std_logic_vector(2 downto 0);
-			seven_downto_five : in std_logic_vector(2 downto 0);
-			
-			contro : in std_logic_vector(1 downto 0);
-			
-			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1111"=没有
-		);
-end ReadReg2MUX;
+		--控制信号
+		ForwardA : in std_logic_vector(1 downto 0);
+		--供选择数据
+		readData1 : in std_logic_vector(15 downto 0);
+		ExeMemALUResult : in std_logic_vector(15 downto 0);	-- 上条指令的ALU结果（严格说是MFPCMux的结果）
+		MemWbWriteData : in std_logic_vector(15 downto 0);	   -- 上上条指令（包括插入的NOP）将写回的寄存器值(WriteData)
+		--选择结果输出
+		ALUSrcA : out std_logic_vector(15 downto 0)
+	);
+end ALUMuxA;
 
-architecture Behavioral of ReadReg2MUX is
-
+architecture Behavioral of ALUMuxA is
+	
 begin
-	process(ten_downto_eight,seven_downto_five,contro)
+	
+	process(ForwardA, readData1, ExeMemALUResult, MemWbWriteData)
 	begin
-		case contro is
-			when "10" =>		--(10,8)
-				ReadReg2Out <= '0' & ten_downto_eight;
-			when "11" =>		--(7,5)
-				ReadReg2Out <= '0' & seven_downto_five;
-			when others =>		--No ReadReg2
-				ReadReg2Out <= "1111";
+		case ForwardA is
+			when "01" =>
+				ALUSrcA <= ExeMemALUResult;
+			when "10" =>
+				ALUSrcA <= MemWbWriteData;
+			when others =>
+				ALUSrcA <= readData1;
 		end case;
 	end process;
 

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:57:44 11/27/2017 
+-- Create Date:    20:51:04 11/29/2017 
 -- Design Name: 
--- Module Name:    ReadReg2MUX - Behavioral 
+-- Module Name:    PCMux - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,30 +29,34 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ReadReg2MUX is
+entity PCMux is
 	port(
-			ten_downto_eight : in std_logic_vector(2 downto 0);
-			seven_downto_five : in std_logic_vector(2 downto 0);
-			
-			contro : in std_logic_vector(1 downto 0);
-			
-			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1111"=没有
-		);
-end ReadReg2MUX;
+		PCPlusOne: in std_logic_vector(15 downto 0);
+		ALUResult: in std_logic_vector(15 downto 0);
+		PCAfterBranch: in std_logic_vector(15 downto 0);
+		isJump: in std_logic;
+		willBranch: in std_logic;
+		PCRollBack: in std_logic;
+		
+		selectedPC: out std_logic_vector(15 downto 0)
+	);
+end PCMux;
 
-architecture Behavioral of ReadReg2MUX is
+architecture Behavioral of PCMux is
 
 begin
-	process(ten_downto_eight,seven_downto_five,contro)
+
+	process(PCPlusOne, ALUResult, PCAfterBranch, isJump, willBranch, PCRollBack)
 	begin
-		case contro is
-			when "10" =>		--(10,8)
-				ReadReg2Out <= '0' & ten_downto_eight;
-			when "11" =>		--(7,5)
-				ReadReg2Out <= '0' & seven_downto_five;
-			when others =>		--No ReadReg2
-				ReadReg2Out <= "1111";
-		end case;
+		if (willBranch = '1') then
+			selectedPC <= PCAfterBranch;
+		elsif (isJump = '1') then
+			selectedPC <= ALUResult;
+		elsif (PCRollBack = '1') then
+			selectedPC <= PCPlusOne - "0000000000000010";
+		else
+			selectedPC <= PCPlusOne;
+		end if;
 	end process;
 
 end Behavioral;

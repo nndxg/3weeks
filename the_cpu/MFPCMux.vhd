@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:57:44 11/27/2017 
+-- Create Date:    12:22:21 11/29/2017 
 -- Design Name: 
--- Module Name:    ReadReg2MUX - Behavioral 
+-- Module Name:    MFPCMux - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,30 +29,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ReadReg2MUX is
+entity MFPCMux is
+	--（MFPC指令）从PC+1和ALUResult中选择一个作为"真正的ALUResult" ???
 	port(
-			ten_downto_eight : in std_logic_vector(2 downto 0);
-			seven_downto_five : in std_logic_vector(2 downto 0);
-			
-			contro : in std_logic_vector(1 downto 0);
-			
-			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1111"=没有
-		);
-end ReadReg2MUX;
+		PCAddOne  : in std_logic_vector(15 downto 0);	
+		RawALUResult : in std_logic_vector(15 downto 0); -- ALU计算结果
+		isMFPC		 : in std_logic;		-- isMFPC = '1' 表示当前指令是MFPC，选择PC+1的值
+		
+		RealALUResult : out std_logic_vector(15 downto 0)
+	);
+end MFPCMux;
 
-architecture Behavioral of ReadReg2MUX is
+architecture Behavioral of MFPCMux is
 
 begin
-	process(ten_downto_eight,seven_downto_five,contro)
+	
+	process(PCAddOne, RawALUResult, isMFPC)
 	begin
-		case contro is
-			when "10" =>		--(10,8)
-				ReadReg2Out <= '0' & ten_downto_eight;
-			when "11" =>		--(7,5)
-				ReadReg2Out <= '0' & seven_downto_five;
-			when others =>		--No ReadReg2
-				ReadReg2Out <= "1111";
-		end case;
+		if (isMFPC = '1') then
+			RealALUResult <= PCAddOne;
+		else
+			RealALUResult <= RawALUResult;
+		end if;
 	end process;
 
 end Behavioral;

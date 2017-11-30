@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:57:44 11/27/2017 
+-- Create Date:    20:07:39 11/29/2017 
 -- Design Name: 
--- Module Name:    ReadReg2MUX - Behavioral 
+-- Module Name:    StructConflictUnit - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,30 +29,31 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ReadReg2MUX is
+entity StructConflictUnit is
 	port(
-			ten_downto_eight : in std_logic_vector(2 downto 0);
-			seven_downto_five : in std_logic_vector(2 downto 0);
-			
-			contro : in std_logic_vector(1 downto 0);
-			
-			ReadReg2Out : out std_logic_vector(3 downto 0)  --"0XXX"代表R0~R7，"1111"=没有
-		);
-end ReadReg2MUX;
+		IdExeMemWrite: in std_logic;
+		ALUResult: in std_logic_vector(15 downto 0);
+		IfIdFlush_StructConflict: out std_logic;
+		IdExeFlush_StructConflict: out std_logic;
+		PCRollBack: out std_logic
+	);
+end StructConflictUnit;
 
-architecture Behavioral of ReadReg2MUX is
+architecture Behavioral of StructConflictUnit is
 
 begin
-	process(ten_downto_eight,seven_downto_five,contro)
-	begin
-		case contro is
-			when "10" =>		--(10,8)
-				ReadReg2Out <= '0' & ten_downto_eight;
-			when "11" =>		--(7,5)
-				ReadReg2Out <= '0' & seven_downto_five;
-			when others =>		--No ReadReg2
-				ReadReg2Out <= "1111";
-		end case;
+
+	process(IdExeMemWrite, ALUResult, IfIdFlush_StructConflict)
+	begin 
+		if ((IdExeMemWrite = '1') and (ALUResult >= x"4000") and (ALUResult <= x"7FFF")) then
+			IfIdFlush_StructConflict <= '1';
+			IdExeFlush_StructConflict <= '1';
+			PCRollBack <= '1';
+		else
+			IfIdFlush_StructConflict <= '0';
+			IdExeFlush_StructConflict <= '0';
+			PCRollBack <= '0';
+		end if;
 	end process;
 
 end Behavioral;
