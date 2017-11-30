@@ -579,7 +579,7 @@ begin
 			MemWbWriteReg => MemWbWriteRegOut,
 			IdExeMemWrite => IdExeMemWriteOut,
 			IdExeReadReg1 => IdExeReadReg1Out,
-			IdExeReadReg2 => IdExeReadReg1Out,
+			IdExeReadReg2 => IdExeReadReg2Out,
 
 			ForwardA => ForwardAOut,
 			ForwardB => ForwardBOut,

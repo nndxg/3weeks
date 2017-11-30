@@ -85,7 +85,13 @@ begin
 				command4to2 <= CommandIn(4 downto 2);
 				command10to0 <= CommandIn(10 downto 0);
 				
+			else
+				null;
+				
 			end if;
+			
+		else
+			null;
 		
 		end if;
 		

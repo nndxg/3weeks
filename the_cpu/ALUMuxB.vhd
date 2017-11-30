@@ -47,7 +47,7 @@ end ALUMuxB;
 architecture Behavioral of ALUMuxB is
 begin
 
-	process(ForwardB, readData2, ExeMemALUResult, MemWbWriteData)
+	process(ForwardB, ALUSrcBIsImme, readData2, imme, ExeMemALUResult, MemWbWriteData)
 	begin
 		if (ALUSrcBIsImme = '1') then
 			ALUSrcB <= imme;
