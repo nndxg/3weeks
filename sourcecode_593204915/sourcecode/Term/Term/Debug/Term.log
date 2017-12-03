@@ -1,0 +1,387 @@
+﻿生成启动时间为 2017/12/2 20:54:07。
+     1>项目“C:\Users\thinkpad\Desktop\5days\sourcecode_593204915\sourcecode\Term\Term\Term.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\Term.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt term.cpp
+         term.cpp
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(105): warning C4172: 返回局部变量或临时变量的地址
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(111): warning C4101: “argv”: 未引用的局部变量
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(211): warning C4309: “return”: 截断常量值
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(228): warning C4309: “return”: 截断常量值
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714): error C2143: 语法错误 : 缺少“;”(在“<<”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(715): error C3861: “get_input”: 找不到标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(716): error C2143: 语法错误 : 缺少“;”(在“<<”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(716): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(716): error C2086: “int cout”: 重定义
+                 c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : 参见“cout”的声明
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(717): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(717): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(717): error C2078: 初始值设定项太多
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(718): error C2143: 语法错误 : 缺少“;”(在“<<”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(718): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(718): error C2086: “int cout”: 重定义
+                 c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : 参见“cout”的声明
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(719): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(720): error C2059: 语法错误:“}”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(720): error C2143: 语法错误 : 缺少“;”(在“}”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(722): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(722): error C2365: “closesocket”: 重定义；以前的定义是“函数”
+                 c:\program files (x86)\windows kits\8.0\include\um\winsock.h(744) : 参见“closesocket”的声明
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(723): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(723): error C2373: “WSACleanup”: 重定义；不同的类型修饰符
+                 c:\program files (x86)\windows kits\8.0\include\um\winsock.h(871) : 参见“WSACleanup”的声明
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(724): error C2059: 语法错误:“return”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(725): error C2059: 语法错误:“}”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(725): error C2143: 语法错误 : 缺少“;”(在“}”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(727): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(728): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(728): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(776): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(805): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(810): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(810): error C2297: “<<”: 非法，右操作数包含“const char [2]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(810): warning C4552: “<<”: 运算符不起任何作用；应输入带副作用的运算符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(814): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(814): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(814): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(839): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(844): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(844): error C2297: “<<”: 非法，右操作数包含“const char [2]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(844): warning C4552: “<<”: 运算符不起任何作用；应输入带副作用的运算符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(848): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(848): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(848): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(863): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(911): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(969): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(995): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1017): error C3861: “get_input”: 找不到标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1018): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1018): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1018): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1028): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1029): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1031): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1034): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1039): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1081): error C3861: “get_input”: 找不到标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1082): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1082): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1082): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1096): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1097): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1099): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1102): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1107): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1144): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1191): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1250): warning C4554: “&”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1268): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1303): error C3861: “run_int”: 找不到标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1347): error C3861: “run_int”: 找不到标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1360): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1382): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1382): error C2297: “<<”: 非法，右操作数包含“const char [9]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1382): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1382): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1385): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1385): error C2297: “<<”: 非法，右操作数包含“const char [9]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1385): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1385): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1388): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1388): error C2297: “<<”: 非法，右操作数包含“const char [13]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1388): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1388): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1413): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1413): error C2297: “<<”: 非法，右操作数包含“const char [9]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1413): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1413): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1416): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1416): error C2297: “<<”: 非法，右操作数包含“const char [9]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1416): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1416): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1419): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1419): error C2297: “<<”: 非法，右操作数包含“const char [13]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1419): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1419): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1432): error C2653: “Tconsole”: 不是类或命名空间名称
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1480): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1480): error C2297: “<<”: 非法，右操作数包含“const char [6]”类型
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1480): warning C4552: “<<”: 运算符不起任何作用；应输入带副作用的运算符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1481): error C3861: “get_input”: 找不到标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1482): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1482): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1482): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1483): error C2065: “buffer”: 未声明的标识符
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1484): error C2872: “cout”: 不明确的符号
+                 可能是“c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(714) : int cout”
+                 或       “c:\program files (x86)\microsoft visual studio 11.0\vc\include\iostream(27) : std::ostream std::cout”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1484): error C2563: 在形参表中不匹配
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1484): error C2568: “<<”: 无法解析函数重载
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1037): 可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=unsigned short,
+                     _Traits=std::char_traits<unsigned short>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1027): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=wchar_t,
+                     _Traits=std::char_traits<wchar_t>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(1019): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+                 with
+                 [
+                     _Elem=char,
+                     _Traits=std::char_traits<char>
+                 ]
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\ostream(993): 或       “std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1490): warning C4138: 在注释外找到“*/”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1490): error C2059: 语法错误:“/”
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1494): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>c:\users\thinkpad\desktop\5days\sourcecode_593204915\sourcecode\term\term\term.cpp(1494): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>已完成生成项目“C:\Users\thinkpad\Desktop\5days\sourcecode_593204915\sourcecode\Term\Term\Term.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:05.14

@@ -1,0 +1,400 @@
+1 logic loop found and disabled.
+
+  ----------------------------------------------------------------------
+ ! Warning: The following connections close logic loops, and some paths !
+ !          through these connections may not be analyzed. To better    !
+ !          understand the logic associated with these loops, run a     !
+ !          Analyze Against User-Defined End-Point Analysis inside      !
+ !          Timing Analyzer (timingan) with the listed signal as a      !
+ !          source NET (*signal_name). The Timing Report will display   !
+ !          all the paths associated with this signal and the logic     !
+ !          loop will be reported.                                      !
+ !                                                                      !
+ ! Signal                            Driver            Load             !
+ ! --------------------------------  ----------------  ---------------- !
+ ! u21/result_shift0005<15>          SLICEL.X          SLICEL.F3        !
+  ---------------------------------------------------------------------- 
+
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net clk
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6890 paths analyzed, 448 endpoints analyzed, 4 failing endpoints
+ 4 timing errors detected. (4 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.431ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.279 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_5 (FF)
+  Destination:          u16/ram2_addr_4 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.431 (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_5 to u16/ram2_addr_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y33.XQ      Tcko                  0.591   u16/cnt<5>
+                                                       u16/cnt_5
+    SLICE_X27Y36.F4      net (fanout=3)        0.968   u16/cnt<5>
+    SLICE_X27Y36.COUT    Topcyf                1.162   u16/cnt_cmp_eq0000_wg_cy<3>
+                                                       u16/cnt_cmp_eq0000_wg_lut<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<4>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X42Y26.CE      net (fanout=12)       1.180   u16/ram2_addr_0_not0001
+    SLICE_X42Y26.CLK     Tceck                 0.555   u16/ram2_addr<7>
+                                                       u16/ram2_addr_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.279 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_5 (FF)
+  Destination:          u16/ram2_addr_7 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.431 (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_5 to u16/ram2_addr_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y33.XQ      Tcko                  0.591   u16/cnt<5>
+                                                       u16/cnt_5
+    SLICE_X27Y36.F4      net (fanout=3)        0.968   u16/cnt<5>
+    SLICE_X27Y36.COUT    Topcyf                1.162   u16/cnt_cmp_eq0000_wg_cy<3>
+                                                       u16/cnt_cmp_eq0000_wg_lut<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<4>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X42Y26.CE      net (fanout=12)       1.180   u16/ram2_addr_0_not0001
+    SLICE_X42Y26.CLK     Tceck                 0.555   u16/ram2_addr<7>
+                                                       u16/ram2_addr_7
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.276 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_5 (FF)
+  Destination:          u16/ram2_addr_1 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.428 (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_5 to u16/ram2_addr_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y33.XQ      Tcko                  0.591   u16/cnt<5>
+                                                       u16/cnt_5
+    SLICE_X27Y36.F4      net (fanout=3)        0.968   u16/cnt<5>
+    SLICE_X27Y36.COUT    Topcyf                1.162   u16/cnt_cmp_eq0000_wg_cy<3>
+                                                       u16/cnt_cmp_eq0000_wg_lut<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<4>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X44Y27.CE      net (fanout=12)       1.177   u16/ram2_addr_0_not0001
+    SLICE_X44Y27.CLK     Tceck                 0.555   u16/ram2_addr<1>
+                                                       u16/ram2_addr_1
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.276 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_5 (FF)
+  Destination:          u16/ram2_addr_0 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.428 (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_5 to u16/ram2_addr_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y33.XQ      Tcko                  0.591   u16/cnt<5>
+                                                       u16/cnt_5
+    SLICE_X27Y36.F4      net (fanout=3)        0.968   u16/cnt<5>
+    SLICE_X27Y36.COUT    Topcyf                1.162   u16/cnt_cmp_eq0000_wg_cy<3>
+                                                       u16/cnt_cmp_eq0000_wg_lut<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<4>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X44Y26.CE      net (fanout=12)       1.177   u16/ram2_addr_0_not0001
+    SLICE_X44Y26.CLK     Tceck                 0.555   u16/ram2_addr<0>
+                                                       u16/ram2_addr_0
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.238 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_2 (FF)
+  Destination:          u16/ram2_addr_7 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.390 (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_2 to u16/ram2_addr_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y33.YQ      Tcko                  0.652   u16/cnt<3>
+                                                       u16/cnt_2
+    SLICE_X27Y37.G1      net (fanout=2)        1.145   u16/cnt<2>
+    SLICE_X27Y37.COUT    Topcyg                1.001   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_lut<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X42Y26.CE      net (fanout=12)       1.180   u16/ram2_addr_0_not0001
+    SLICE_X42Y26.CLK     Tceck                 0.555   u16/ram2_addr<7>
+                                                       u16/ram2_addr_7
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.238 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_2 (FF)
+  Destination:          u16/ram2_addr_4 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.390 (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_2 to u16/ram2_addr_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y33.YQ      Tcko                  0.652   u16/cnt<3>
+                                                       u16/cnt_2
+    SLICE_X27Y37.G1      net (fanout=2)        1.145   u16/cnt<2>
+    SLICE_X27Y37.COUT    Topcyg                1.001   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_lut<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X42Y26.CE      net (fanout=12)       1.180   u16/ram2_addr_0_not0001
+    SLICE_X42Y26.CLK     Tceck                 0.555   u16/ram2_addr<7>
+                                                       u16/ram2_addr_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.235 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_2 (FF)
+  Destination:          u16/ram2_addr_0 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.387 (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_2 to u16/ram2_addr_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y33.YQ      Tcko                  0.652   u16/cnt<3>
+                                                       u16/cnt_2
+    SLICE_X27Y37.G1      net (fanout=2)        1.145   u16/cnt<2>
+    SLICE_X27Y37.COUT    Topcyg                1.001   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_lut<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X44Y26.CE      net (fanout=12)       1.177   u16/ram2_addr_0_not0001
+    SLICE_X44Y26.CLK     Tceck                 0.555   u16/ram2_addr<0>
+                                                       u16/ram2_addr_0
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.235 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_2 (FF)
+  Destination:          u16/ram2_addr_1 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.387 (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_2 to u16/ram2_addr_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y33.YQ      Tcko                  0.652   u16/cnt<3>
+                                                       u16/cnt_2
+    SLICE_X27Y37.G1      net (fanout=2)        1.145   u16/cnt<2>
+    SLICE_X27Y37.COUT    Topcyg                1.001   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_lut<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X44Y27.CE      net (fanout=12)       1.177   u16/ram2_addr_0_not0001
+    SLICE_X44Y27.CLK     Tceck                 0.555   u16/ram2_addr<1>
+                                                       u16/ram2_addr_1
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.121 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_16 (FF)
+  Destination:          u16/ram2_addr_4 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.273 (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_16 to u16/ram2_addr_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y36.YQ      Tcko                  0.652   u16/cnt<17>
+                                                       u16/cnt_16
+    SLICE_X27Y36.F3      net (fanout=3)        0.749   u16/cnt<16>
+    SLICE_X27Y36.COUT    Topcyf                1.162   u16/cnt_cmp_eq0000_wg_cy<3>
+                                                       u16/cnt_cmp_eq0000_wg_lut<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<2>
+                                                       u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<4>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X42Y26.CE      net (fanout=12)       1.180   u16/ram2_addr_0_not0001
+    SLICE_X42Y26.CLK     Tceck                 0.555   u16/ram2_addr<7>
+                                                       u16/ram2_addr_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.121 (requirement - (data path - clock path skew + uncertainty))
+  Source:               u16/cnt_4 (FF)
+  Destination:          u16/ram2_addr_4 (FF)
+  Requirement:          7.152
+  Data Path Delay:      7.273 (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 7.152ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: u16/cnt_4 to u16/ram2_addr_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y33.YQ      Tcko                  0.587   u16/cnt<5>
+                                                       u16/cnt_4
+    SLICE_X27Y36.G3      net (fanout=3)        0.975   u16/cnt<4>
+    SLICE_X27Y36.COUT    Topcyg                1.001   u16/cnt_cmp_eq0000_wg_cy<3>
+                                                       u16/cnt_cmp_eq0000_wg_lut<3>
+                                                       u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<3>
+    SLICE_X27Y37.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000_wg_cy<5>
+                                                       u16/cnt_cmp_eq0000_wg_cy<4>
+                                                       u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   u16/cnt_cmp_eq0000_wg_cy<5>
+    SLICE_X27Y38.COUT    Tbyp                  0.118   u16/cnt_cmp_eq0000
+                                                       u16/cnt_cmp_eq0000_wg_cy<6>
+                                                       u16/cnt_cmp_eq0000_wg_cy<7>
+    SLICE_X44Y29.F3      net (fanout=41)       1.980   u16/cnt_cmp_eq0000
+    SLICE_X44Y29.X       Tilo                  0.759   u16/ram2_addr_0_not0001
+                                                       u16/ram2_addr_0_not00011
+    SLICE_X42Y26.CE      net (fanout=12)       1.180   u16/ram2_addr_0_not0001
+    SLICE_X42Y26.CLK     Tceck                 0.555   u16/ram2_addr<7>
+                                                       u16/ram2_addr_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net u24/count<0>
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2425280 paths analyzed, 770 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  15.630ns.
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+

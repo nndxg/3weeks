@@ -1,0 +1,8 @@
+NOP
+LI R1 5
+JR R1
+LI R2 3
+LI R3 4
+LI R4 5
+NOP
+RET

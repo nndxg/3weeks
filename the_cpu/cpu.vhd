@@ -32,9 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity cpu is
 	port(
 			rst : in std_logic; --reset
-			--clk_hand : in std_logic; --时钟源  默认为50M  可以通过修改绑定管脚来改变
-			--clk_50 : in std_logic;
-			clk_in : in std_logic;
+			clk_hand : in std_logic; --时钟源  默认为50M  可以通过修改绑定管脚来改变
+			clk_50 : in std_logic;
+			-- clk_in : in std_logic;
 			opt : in std_logic;	--选择输入时钟（为手动或者50M）
 			
 			
@@ -466,6 +466,7 @@ architecture Behavioral of cpu is
 	end component;
 	
 	--clock
+	signal clk_in : std_logic;
 	signal clk : std_logic;
 	signal clk_3 : std_logic;
 	signal clk_registers : std_logic;
@@ -873,7 +874,7 @@ begin
 		
 	u19 : Registers
 	port map(
-			clk => clk,
+			clk => clk_registers,
 			rst => rst,
 			flashFinished => flashFinished,			
 			readReg1 => ReadReg1MUXOut,
@@ -932,6 +933,23 @@ begin
 		clk1 => clk_3,
 		clk2 => clk_registers
 	);
+	
+	process(clk_50, rst, clk_hand, opt)
+	begin
+		if opt = '1' then
+			if rst = '0' then
+				clk_in <= '0';
+			else
+				clk_in <= clk_hand;
+			end if;
+		else
+			if rst = '0' then
+				clk_in <= '0';
+			else 
+				clk_in <= clk_50;
+			end if;
+		end if;
+	end process;
 
 end Behavioral;
 

@@ -108,14 +108,17 @@ begin
 				else 
 					branch <= '0';
 				end if;
+				result <= "0000000000000000";
 			when "1010" => --B
 				branch <= '1';
+				result <= "0000000000000000";
 			when "1011" => --BNEZ, BTNEZ 
 				if (input1 = "0000000000000000") then
 					branch <= '0';
 				else 
 					branch <= '1';
 				end if;
+				result <= "0000000000000000";
 			when "1110" => --input1
 				result <= input1;
 				branch <= '0';

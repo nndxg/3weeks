@@ -1,0 +1,536 @@
+0	  <0000>     ADDSP3 R0 0000
+1	  <0000>     ADDSP3 R0 0000
+2	  <0800>     NOP
+3	  <1061>     B 0061
+4	  <0800>     NOP
+5	  <0800>     NOP
+6	  <0800>     NOP
+7	  <0800>     NOP
+8	  <6ebf>     LI R6 00bf
+9	  <36c0>     SLL R6 R6 0000
+a	  <4e10>     ADDIU R6 0010
+b	  <de00>     SW R6 R0 0000
+c	  <de21>     SW R6 R1 0001
+d	  <de42>     SW R6 R2 0002
+e	  <de84>     SW R6 R4 0004
+f	  <dea5>     SW R6 R5 0005
+10	  <9100>     LW_SP R1 0000
+11	  <6301>     ADDSP 0001
+12	  <68ff>     LI R0 00ff
+13	  <e90c>     AND R1 R0
+14	  <9200>     LW_SP R2 0000
+15	  <6301>     ADDSP 0001
+16	  <63ff>     ADDSP ffff
+17	  <d300>     SW_SP R3 0000
+18	  <63ff>     ADDSP ffff
+19	  <d700>     SW_SP R7 0000
+1a	  <6b0f>     LI R3 000f
+1b	  <ef40>     MFPC R7
+1c	  <4f03>     ADDIU R7 0003
+1d	  <0800>     NOP
+1e	  <10ac>     B 00ac
+1f	  <0800>     NOP
+20	  <6ebf>     LI R6 00bf
+21	  <36c0>     SLL R6 R6 0000
+22	  <de60>     SW R6 R3 0000
+23	  <0800>     NOP
+24	  <6ebf>     LI R6 00bf
+25	  <36c0>     SLL R6 R6 0000
+26	  <4e10>     ADDIU R6 0010
+27	  <6800>     LI R0 0000
+28	  <e82a>     CMP R0 R1
+29	  <6102>     BTNEZ 0002
+2a	  <0800>     NOP
+2b	  <9e87>     LW R6 R4 0007
+2c	  <6820>     LI R0 0020
+2d	  <e82a>     CMP R0 R1
+2e	  <6102>     BTNEZ 0002
+2f	  <0800>     NOP
+30	  <9e88>     LW R6 R4 0008
+31	  <6810>     LI R0 0010
+32	  <e82a>     CMP R0 R1
+33	  <6102>     BTNEZ 0002
+34	  <0800>     NOP
+35	  <9e89>     LW R6 R4 0009
+36	  <0800>     NOP
+37	  <9ea6>     LW R6 R5 0006
+38	  <eca2>     SLT R4 R5
+39	  <610b>     BTNEZ 000b
+3a	  <0800>     NOP
+3b	  <de86>     SW R6 R4 0006
+3c	  <ef40>     MFPC R7
+3d	  <4f03>     ADDIU R7 0003
+3e	  <0800>     NOP
+3f	  <108b>     B 008b
+40	  <0800>     NOP
+41	  <6ebf>     LI R6 00bf
+42	  <36c0>     SLL R6 R6 0000
+43	  <de20>     SW R6 R1 0000
+44	  <0800>     NOP
+45	  <0800>     NOP
+46	  <6b0f>     LI R3 000f
+47	  <ef40>     MFPC R7
+48	  <4f03>     ADDIU R7 0003
+49	  <0800>     NOP
+4a	  <1080>     B 0080
+4b	  <0800>     NOP
+4c	  <6ebf>     LI R6 00bf
+4d	  <36c0>     SLL R6 R6 0000
+4e	  <de60>     SW R6 R3 0000
+4f	  <0800>     NOP
+50	  <42c0>     ADDIU3 R2 R6 0000
+51	  <f300>     MFIH R3
+52	  <6880>     LI R0 0080
+53	  <3000>     SLL R0 R0 0000
+54	  <eb0d>     OR R3 R0
+55	  <6fbf>     LI R7 00bf
+56	  <37e0>     SLL R7 R7 0000
+57	  <4f10>     ADDIU R7 0010
+58	  <9f00>     LW R7 R0 0000
+59	  <9f21>     LW R7 R1 0001
+5a	  <9f42>     LW R7 R2 0002
+5b	  <9f84>     LW R7 R4 0004
+5c	  <9fa5>     LW R7 R5 0005
+5d	  <9700>     LW_SP R7 0000
+5e	  <6301>     ADDSP 0001
+5f	  <6301>     ADDSP 0001
+60	  <0800>     NOP
+61	  <f301>     MTIH R3
+62	  <ee00>     JR R6
+63	  <93ff>     LW_SP R3 00ff
+64	  <0800>     NOP
+65	  <6807>     LI R0 0007
+66	  <f001>     MTIH R0
+67	  <68bf>     LI R0 00bf
+68	  <3000>     SLL R0 R0 0000
+69	  <4810>     ADDIU R0 0010
+6a	  <6400>     MTSP R0
+6b	  <0800>     NOP
+6c	  <6ebf>     LI R6 00bf
+6d	  <36c0>     SLL R6 R6 0000
+6e	  <4e10>     ADDIU R6 0010
+6f	  <6800>     LI R0 0000
+70	  <de00>     SW R6 R0 0000
+71	  <de01>     SW R6 R0 0001
+72	  <de02>     SW R6 R0 0002
+73	  <de03>     SW R6 R0 0003
+74	  <de04>     SW R6 R0 0004
+75	  <de05>     SW R6 R0 0005
+76	  <de06>     SW R6 R0 0006
+77	  <4801>     ADDIU R0 0001
+78	  <de07>     SW R6 R0 0007
+79	  <4801>     ADDIU R0 0001
+7a	  <de08>     SW R6 R0 0008
+7b	  <4801>     ADDIU R0 0001
+7c	  <de09>     SW R6 R0 0009
+7d	  <ef40>     MFPC R7
+7e	  <4f03>     ADDIU R7 0003
+7f	  <0800>     NOP
+80	  <104a>     B 004a
+81	  <6ebf>     LI R6 00bf
+82	  <36c0>     SLL R6 R6 0000
+83	  <684f>     LI R0 004f
+84	  <de00>     SW R6 R0 0000
+85	  <0800>     NOP
+86	  <ef40>     MFPC R7
+87	  <4f03>     ADDIU R7 0003
+88	  <0800>     NOP
+89	  <1041>     B 0041
+8a	  <6ebf>     LI R6 00bf
+8b	  <36c0>     SLL R6 R6 0000
+8c	  <684b>     LI R0 004b
+8d	  <de00>     SW R6 R0 0000
+8e	  <0800>     NOP
+8f	  <ef40>     MFPC R7
+90	  <4f03>     ADDIU R7 0003
+91	  <0800>     NOP
+92	  <1038>     B 0038
+93	  <6ebf>     LI R6 00bf
+94	  <36c0>     SLL R6 R6 0000
+95	  <680a>     LI R0 000a
+96	  <de00>     SW R6 R0 0000
+97	  <0800>     NOP
+98	  <ef40>     MFPC R7
+99	  <4f03>     ADDIU R7 0003
+9a	  <0800>     NOP
+9b	  <102f>     B 002f
+9c	  <6ebf>     LI R6 00bf
+9d	  <36c0>     SLL R6 R6 0000
+9e	  <680d>     LI R0 000d
+9f	  <de00>     SW R6 R0 0000
+a0	  <0800>     NOP
+a1	  <ef40>     MFPC R7
+a2	  <4f03>     ADDIU R7 0003
+a3	  <0800>     NOP
+a4	  <1031>     B 0031
+a5	  <0800>     NOP
+a6	  <6ebf>     LI R6 00bf
+a7	  <36c0>     SLL R6 R6 0000
+a8	  <9e20>     LW R6 R1 0000
+a9	  <6eff>     LI R6 00ff
+aa	  <e9cc>     AND R1 R6
+ab	  <0800>     NOP
+ac	  <6852>     LI R0 0052
+ad	  <e82a>     CMP R0 R1
+ae	  <6032>     BTEQZ 0032
+af	  <0800>     NOP
+b0	  <6844>     LI R0 0044
+b1	  <e82a>     CMP R0 R1
+b2	  <604d>     BTEQZ 004d
+b3	  <0800>     NOP
+b4	  <6841>     LI R0 0041
+b5	  <e82a>     CMP R0 R1
+b6	  <600e>     BTEQZ 000e
+b7	  <0800>     NOP
+b8	  <6855>     LI R0 0055
+b9	  <e82a>     CMP R0 R1
+ba	  <6007>     BTEQZ 0007
+bb	  <0800>     NOP
+bc	  <6847>     LI R0 0047
+bd	  <e82a>     CMP R0 R1
+be	  <6009>     BTEQZ 0009
+bf	  <0800>     NOP
+c0	  <17e0>     B ffe0
+c1	  <0800>     NOP
+c2	  <0800>     NOP
+c3	  <10c0>     B 00c0
+c4	  <0800>     NOP
+c5	  <0800>     NOP
+c6	  <1082>     B 0082
+c7	  <0800>     NOP
+c8	  <0800>     NOP
+c9	  <1103>     B 0103
+ca	  <0800>     NOP
+cb	  <0800>     NOP
+cc	  <6ebf>     LI R6 00bf
+cd	  <36c0>     SLL R6 R6 0000
+ce	  <4e01>     ADDIU R6 0001
+cf	  <9e00>     LW R6 R0 0000
+d0	  <6e01>     LI R6 0001
+d1	  <e8cc>     AND R0 R6
+d2	  <20f8>     BEQZ R0 fff8
+d3	  <0800>     NOP
+d4	  <ef00>     JR R7
+d5	  <0800>     NOP
+d6	  <0800>     NOP
+d7	  <6ebf>     LI R6 00bf
+d8	  <36c0>     SLL R6 R6 0000
+d9	  <4e01>     ADDIU R6 0001
+da	  <9e00>     LW R6 R0 0000
+db	  <6e02>     LI R6 0002
+dc	  <e8cc>     AND R0 R6
+dd	  <20f8>     BEQZ R0 fff8
+de	  <0800>     NOP
+df	  <ef00>     JR R7
+e0	  <0800>     NOP
+e1	  <6906>     LI R1 0006
+e2	  <6a06>     LI R2 0006
+e3	  <68bf>     LI R0 00bf
+e4	  <3000>     SLL R0 R0 0000
+e5	  <4810>     ADDIU R0 0010
+e6	  <e22f>     SUBU R2 R1 R3
+e7	  <e061>     ADDU R0 R3 R0
+e8	  <9860>     LW R0 R3 0000
+e9	  <ef40>     MFPC R7
+ea	  <4f03>     ADDIU R7 0003
+eb	  <0800>     NOP
+ec	  <17de>     B ffde
+ed	  <0800>     NOP
+ee	  <6ebf>     LI R6 00bf
+ef	  <36c0>     SLL R6 R6 0000
+f0	  <de60>     SW R6 R3 0000
+f1	  <3363>     SRA R3 R3 0000
+f2	  <ef40>     MFPC R7
+f3	  <4f03>     ADDIU R7 0003
+f4	  <0800>     NOP
+f5	  <17d5>     B ffd5
+f6	  <0800>     NOP
+f7	  <6ebf>     LI R6 00bf
+f8	  <36c0>     SLL R6 R6 0000
+f9	  <de60>     SW R6 R3 0000
+fa	  <49ff>     ADDIU R1 ffff
+fb	  <0800>     NOP
+fc	  <29e6>     BNEZ R1 ffe6
+fd	  <0800>     NOP
+fe	  <17a2>     B ffa2
+ff	  <0800>     NOP
+100	  <ef40>     MFPC R7
+101	  <4f03>     ADDIU R7 0003
+102	  <0800>     NOP
+103	  <17d2>     B ffd2
+104	  <0800>     NOP
+105	  <6ebf>     LI R6 00bf
+106	  <36c0>     SLL R6 R6 0000
+107	  <9ea0>     LW R6 R5 0000
+108	  <6eff>     LI R6 00ff
+109	  <edcc>     AND R5 R6
+10a	  <0800>     NOP
+10b	  <ef40>     MFPC R7
+10c	  <4f03>     ADDIU R7 0003
+10d	  <0800>     NOP
+10e	  <17c7>     B ffc7
+10f	  <0800>     NOP
+110	  <6ebf>     LI R6 00bf
+111	  <36c0>     SLL R6 R6 0000
+112	  <9e20>     LW R6 R1 0000
+113	  <6eff>     LI R6 00ff
+114	  <e9cc>     AND R1 R6
+115	  <0800>     NOP
+116	  <3120>     SLL R1 R1 0000
+117	  <e9ad>     OR R1 R5
+118	  <ef40>     MFPC R7
+119	  <4f03>     ADDIU R7 0003
+11a	  <0800>     NOP
+11b	  <17ba>     B ffba
+11c	  <0800>     NOP
+11d	  <6ebf>     LI R6 00bf
+11e	  <36c0>     SLL R6 R6 0000
+11f	  <9ea0>     LW R6 R5 0000
+120	  <6eff>     LI R6 00ff
+121	  <edcc>     AND R5 R6
+122	  <0800>     NOP
+123	  <ef40>     MFPC R7
+124	  <4f03>     ADDIU R7 0003
+125	  <0800>     NOP
+126	  <17af>     B ffaf
+127	  <0800>     NOP
+128	  <6ebf>     LI R6 00bf
+129	  <36c0>     SLL R6 R6 0000
+12a	  <9e40>     LW R6 R2 0000
+12b	  <6eff>     LI R6 00ff
+12c	  <eacc>     AND R2 R6
+12d	  <0800>     NOP
+12e	  <3240>     SLL R2 R2 0000
+12f	  <eaad>     OR R2 R5
+130	  <9960>     LW R1 R3 0000
+131	  <ef40>     MFPC R7
+132	  <4f03>     ADDIU R7 0003
+133	  <0800>     NOP
+134	  <1796>     B ff96
+135	  <0800>     NOP
+136	  <6ebf>     LI R6 00bf
+137	  <36c0>     SLL R6 R6 0000
+138	  <de60>     SW R6 R3 0000
+139	  <3363>     SRA R3 R3 0000
+13a	  <ef40>     MFPC R7
+13b	  <4f03>     ADDIU R7 0003
+13c	  <0800>     NOP
+13d	  <178d>     B ff8d
+13e	  <0800>     NOP
+13f	  <6ebf>     LI R6 00bf
+140	  <36c0>     SLL R6 R6 0000
+141	  <de60>     SW R6 R3 0000
+142	  <4901>     ADDIU R1 0001
+143	  <4aff>     ADDIU R2 ffff
+144	  <0800>     NOP
+145	  <2aea>     BNEZ R2 ffea
+146	  <0800>     NOP
+147	  <1759>     B ff59
+148	  <0800>     NOP
+149	  <ef40>     MFPC R7
+14a	  <4f03>     ADDIU R7 0003
+14b	  <0800>     NOP
+14c	  <1789>     B ff89
+14d	  <0800>     NOP
+14e	  <6ebf>     LI R6 00bf
+14f	  <36c0>     SLL R6 R6 0000
+150	  <9ea0>     LW R6 R5 0000
+151	  <6eff>     LI R6 00ff
+152	  <edcc>     AND R5 R6
+153	  <0800>     NOP
+154	  <ef40>     MFPC R7
+155	  <4f03>     ADDIU R7 0003
+156	  <0800>     NOP
+157	  <177e>     B ff7e
+158	  <0800>     NOP
+159	  <6ebf>     LI R6 00bf
+15a	  <36c0>     SLL R6 R6 0000
+15b	  <9e20>     LW R6 R1 0000
+15c	  <6eff>     LI R6 00ff
+15d	  <e9cc>     AND R1 R6
+15e	  <0800>     NOP
+15f	  <3120>     SLL R1 R1 0000
+160	  <e9ad>     OR R1 R5
+161	  <6800>     LI R0 0000
+162	  <e82a>     CMP R0 R1
+163	  <601d>     BTEQZ 001d
+164	  <0800>     NOP
+165	  <ef40>     MFPC R7
+166	  <4f03>     ADDIU R7 0003
+167	  <0800>     NOP
+168	  <176d>     B ff6d
+169	  <0800>     NOP
+16a	  <6ebf>     LI R6 00bf
+16b	  <36c0>     SLL R6 R6 0000
+16c	  <9ea0>     LW R6 R5 0000
+16d	  <6eff>     LI R6 00ff
+16e	  <edcc>     AND R5 R6
+16f	  <0800>     NOP
+170	  <ef40>     MFPC R7
+171	  <4f03>     ADDIU R7 0003
+172	  <0800>     NOP
+173	  <1762>     B ff62
+174	  <0800>     NOP
+175	  <6ebf>     LI R6 00bf
+176	  <36c0>     SLL R6 R6 0000
+177	  <9e40>     LW R6 R2 0000
+178	  <6eff>     LI R6 00ff
+179	  <eacc>     AND R2 R6
+17a	  <0800>     NOP
+17b	  <3240>     SLL R2 R2 0000
+17c	  <eaad>     OR R2 R5
+17d	  <d940>     SW R1 R2 0000
+17e	  <0800>     NOP
+17f	  <17c9>     B ffc9
+180	  <0800>     NOP
+181	  <0800>     NOP
+182	  <171e>     B ff1e
+183	  <0800>     NOP
+184	  <ef40>     MFPC R7
+185	  <4f03>     ADDIU R7 0003
+186	  <0800>     NOP
+187	  <174e>     B ff4e
+188	  <0800>     NOP
+189	  <6ebf>     LI R6 00bf
+18a	  <36c0>     SLL R6 R6 0000
+18b	  <9ea0>     LW R6 R5 0000
+18c	  <6eff>     LI R6 00ff
+18d	  <edcc>     AND R5 R6
+18e	  <0800>     NOP
+18f	  <ef40>     MFPC R7
+190	  <4f03>     ADDIU R7 0003
+191	  <0800>     NOP
+192	  <1743>     B ff43
+193	  <0800>     NOP
+194	  <6ebf>     LI R6 00bf
+195	  <36c0>     SLL R6 R6 0000
+196	  <9e20>     LW R6 R1 0000
+197	  <6eff>     LI R6 00ff
+198	  <e9cc>     AND R1 R6
+199	  <0800>     NOP
+19a	  <3120>     SLL R1 R1 0000
+19b	  <e9ad>     OR R1 R5
+19c	  <ef40>     MFPC R7
+19d	  <4f03>     ADDIU R7 0003
+19e	  <0800>     NOP
+19f	  <1736>     B ff36
+1a0	  <0800>     NOP
+1a1	  <6ebf>     LI R6 00bf
+1a2	  <36c0>     SLL R6 R6 0000
+1a3	  <9ea0>     LW R6 R5 0000
+1a4	  <6eff>     LI R6 00ff
+1a5	  <edcc>     AND R5 R6
+1a6	  <0800>     NOP
+1a7	  <ef40>     MFPC R7
+1a8	  <4f03>     ADDIU R7 0003
+1a9	  <0800>     NOP
+1aa	  <172b>     B ff2b
+1ab	  <0800>     NOP
+1ac	  <6ebf>     LI R6 00bf
+1ad	  <36c0>     SLL R6 R6 0000
+1ae	  <9e40>     LW R6 R2 0000
+1af	  <6eff>     LI R6 00ff
+1b0	  <eacc>     AND R2 R6
+1b1	  <0800>     NOP
+1b2	  <3240>     SLL R2 R2 0000
+1b3	  <eaad>     OR R2 R5
+1b4	  <9960>     LW R1 R3 0000
+1b5	  <ef40>     MFPC R7
+1b6	  <4f03>     ADDIU R7 0003
+1b7	  <0800>     NOP
+1b8	  <1712>     B ff12
+1b9	  <0800>     NOP
+1ba	  <6ebf>     LI R6 00bf
+1bb	  <36c0>     SLL R6 R6 0000
+1bc	  <de60>     SW R6 R3 0000
+1bd	  <3363>     SRA R3 R3 0000
+1be	  <ef40>     MFPC R7
+1bf	  <4f03>     ADDIU R7 0003
+1c0	  <0800>     NOP
+1c1	  <1709>     B ff09
+1c2	  <0800>     NOP
+1c3	  <6ebf>     LI R6 00bf
+1c4	  <36c0>     SLL R6 R6 0000
+1c5	  <de60>     SW R6 R3 0000
+1c6	  <4901>     ADDIU R1 0001
+1c7	  <4aff>     ADDIU R2 ffff
+1c8	  <0800>     NOP
+1c9	  <2aea>     BNEZ R2 ffea
+1ca	  <0800>     NOP
+1cb	  <16d5>     B fed5
+1cc	  <0800>     NOP
+1cd	  <ef40>     MFPC R7
+1ce	  <4f03>     ADDIU R7 0003
+1cf	  <0800>     NOP
+1d0	  <1705>     B ff05
+1d1	  <0800>     NOP
+1d2	  <6ebf>     LI R6 00bf
+1d3	  <36c0>     SLL R6 R6 0000
+1d4	  <9ea0>     LW R6 R5 0000
+1d5	  <6eff>     LI R6 00ff
+1d6	  <edcc>     AND R5 R6
+1d7	  <0800>     NOP
+1d8	  <ef40>     MFPC R7
+1d9	  <4f03>     ADDIU R7 0003
+1da	  <0800>     NOP
+1db	  <16fa>     B fefa
+1dc	  <0800>     NOP
+1dd	  <6ebf>     LI R6 00bf
+1de	  <36c0>     SLL R6 R6 0000
+1df	  <9e40>     LW R6 R2 0000
+1e0	  <6eff>     LI R6 00ff
+1e1	  <eacc>     AND R2 R6
+1e2	  <0800>     NOP
+1e3	  <3240>     SLL R2 R2 0000
+1e4	  <eaad>     OR R2 R5
+1e5	  <42c0>     ADDIU3 R2 R6 0000
+1e6	  <6fbf>     LI R7 00bf
+1e7	  <37e0>     SLL R7 R7 0000
+1e8	  <4f10>     ADDIU R7 0010
+1e9	  <9fa5>     LW R7 R5 0005
+1ea	  <63ff>     ADDSP ffff
+1eb	  <d500>     SW_SP R5 0000
+1ec	  <f500>     MFIH R5
+1ed	  <6980>     LI R1 0080
+1ee	  <3120>     SLL R1 R1 0000
+1ef	  <ed2d>     OR R5 R1
+1f0	  <9f00>     LW R7 R0 0000
+1f1	  <9f21>     LW R7 R1 0001
+1f2	  <9f42>     LW R7 R2 0002
+1f3	  <9f63>     LW R7 R3 0003
+1f4	  <9f84>     LW R7 R4 0004
+1f5	  <ef40>     MFPC R7
+1f6	  <4f04>     ADDIU R7 0004
+1f7	  <f501>     MTIH R5
+1f8	  <ee00>     JR R6
+1f9	  <9500>     LW_SP R5 0000
+1fa	  <0800>     NOP
+1fb	  <0800>     NOP
+1fc	  <6301>     ADDSP 0001
+1fd	  <6fbf>     LI R7 00bf
+1fe	  <37e0>     SLL R7 R7 0000
+1ff	  <4f10>     ADDIU R7 0010
+200	  <df00>     SW R7 R0 0000
+201	  <df21>     SW R7 R1 0001
+202	  <df42>     SW R7 R2 0002
+203	  <df63>     SW R7 R3 0003
+204	  <df84>     SW R7 R4 0004
+205	  <dfa5>     SW R7 R5 0005
+206	  <f000>     MFIH R0
+207	  <697f>     LI R1 007f
+208	  <3120>     SLL R1 R1 0000
+209	  <6aff>     LI R2 00ff
+20a	  <e94d>     OR R1 R2
+20b	  <e82c>     AND R0 R1
+20c	  <f001>     MTIH R0
+20d	  <6907>     LI R1 0007
+20e	  <ef40>     MFPC R7
+20f	  <4f03>     ADDIU R7 0003
+210	  <0800>     NOP
+211	  <16b9>     B feb9
+212	  <0800>     NOP
+213	  <6ebf>     LI R6 00bf
+214	  <36c0>     SLL R6 R6 0000
+215	  <de20>     SW R6 R1 0000
+216	  <168a>     B fe8a
+217	  <0800>     NOP

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Dec 01 06:15:29 2017
+// Written by: Map P.20131013 on Sun Dec 03 00:10:59 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -146,6 +146,7 @@ COMP "blueOut<2>" LOCATE = SITE "B6" LEVEL 1;
 COMP "greenOut<0>" LOCATE = SITE "B4" LEVEL 1;
 COMP "greenOut<1>" LOCATE = SITE "C4" LEVEL 1;
 COMP "greenOut<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "clk_hand" LOCATE = SITE "U9" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "D10" LEVEL 1;
 COMP "led<1>" LOCATE = SITE "E10" LEVEL 1;
 COMP "led<2>" LOCATE = SITE "A11" LEVEL 1;
@@ -155,8 +156,8 @@ COMP "led<5>" LOCATE = SITE "D11" LEVEL 1;
 COMP "led<6>" LOCATE = SITE "E11" LEVEL 1;
 COMP "led<7>" LOCATE = SITE "F11" LEVEL 1;
 COMP "led<8>" LOCATE = SITE "A12" LEVEL 1;
+COMP "clk_50" LOCATE = SITE "B9" LEVEL 1;
 COMP "led<9>" LOCATE = SITE "E12" LEVEL 1;
-COMP "clk_in" LOCATE = SITE "B9" LEVEL 1;
 COMP "ram1En" LOCATE = SITE "M15" LEVEL 1;
 COMP "ram2En" LOCATE = SITE "N10" LEVEL 1;
 COMP "ram1Oe" LOCATE = SITE "M16" LEVEL 1;
