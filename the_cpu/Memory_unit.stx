@@ -4,32 +4,34 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+WARNING:HDLParsers:3607 - Unit work/Memory_unit is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/5days/the_cpu/Memory_unit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd".
+WARNING:HDLParsers:3607 - Unit work/Memory_unit/Behavioral is now defined in a different file.  It was defined in "C:/Users/thinkpad/Desktop/5days/the_cpu/Memory_unit.vhd", and is now defined in "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd".
 Compiling vhdl file "C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd" in Library work.
 Entity <memory_unit> compiled.
 Entity <memory_unit> (Architecture <behavioral>) compiled.
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.33 secs
  
 --> 
 
-Total memory usage is 264596 kilobytes
+Total memory usage is 295876 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

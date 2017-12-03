@@ -9,6 +9,7 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem>u16 - Memory_unit - Behavioral (C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >18</ScrollbarPosition>
@@ -16,6 +17,15 @@
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d10000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>u16 - Memory_unit - Behavioral (C:/Users/nuonuo/Desktop/3weeks_in/3weeks/the_cpu/Memory_unit.vhd)</CurrentItem>
+=======
+         <SelectedItem>cpu - Behavioral (C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >19</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d10000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>cpu - Behavioral (C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.vhd)</CurrentItem>
+>>>>>>> ca9248dcca63fb1624d2ec40bf1761697b0a933e
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -26,13 +36,23 @@
          <ClosedNode>Implement Design/Translate</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+<<<<<<< HEAD
          <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+=======
+         <SelectedItem>Place &amp; Route</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >10</ScrollbarPosition>
+>>>>>>> ca9248dcca63fb1624d2ec40bf1761697b0a933e
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+<<<<<<< HEAD
       <CurrentItem></CurrentItem>
+=======
+      <CurrentItem>Place &amp; Route</CurrentItem>
+>>>>>>> ca9248dcca63fb1624d2ec40bf1761697b0a933e
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -41,7 +61,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000a60000000100000000000000480000000100000000000000780000000100000000000000ec0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000a60000000100000000000000480000000100000000000000780000000100000000000001170000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>ALU.vhd</CurrentItem>
    </ItemView>

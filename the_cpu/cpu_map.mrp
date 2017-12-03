@@ -9,37 +9,35 @@ Target Device  : xc3s1200e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 01 06:15:26 2017
+Mapped Date    : Sun Dec 03 23:53:49 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   10
+Number of warnings:    8
 Logic Utilization:
-  Total Number Slice Registers:         549 out of  17,344    3%
-    Number used as Flip Flops:          533
-    Number used as Latches:              16
-  Number of 4 input LUTs:             1,314 out of  17,344    7%
+  Number of Slice Flip Flops:           533 out of  17,344    3%
+  Number of 4 input LUTs:             1,424 out of  17,344    8%
 Logic Distribution:
-  Number of occupied Slices:            849 out of   8,672    9%
-    Number of Slices containing only related logic:     849 out of     849 100%
-    Number of Slices containing unrelated logic:          0 out of     849   0%
+  Number of occupied Slices:            889 out of   8,672   10%
+    Number of Slices containing only related logic:     889 out of     889 100%
+    Number of Slices containing unrelated logic:          0 out of     889   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,403 out of  17,344    8%
-    Number used as logic:             1,314
-    Number used as a route-thru:         89
+  Total Number of 4 input LUTs:       1,491 out of  17,344    8%
+    Number used as logic:             1,424
+    Number used as a route-thru:         67
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                160 out of     250   64%
+  Number of bonded IOBs:                161 out of     250   64%
   Number of BUFGMUXs:                     3 out of      24   12%
 
-Average Fanout of Non-Clock Nets:                3.82
+Average Fanout of Non-Clock Nets:                3.74
 
-Peak Memory Usage:  332 MB
-Total REAL time to MAP completion:  3 secs 
-Total CPU time to MAP completion:   3 secs 
+Peak Memory Usage:  362 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 
@@ -96,15 +94,10 @@ WARNING:MapLib:701 - Signal ram1Data<9> connected to top level port ram1Data<9>
    has been removed.
 WARNING:MapLib:701 - Signal ram1Data<8> connected to top level port ram1Data<8>
    has been removed.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net u21/result_not0001 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal <opt_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network opt_IBUF has no load.
+INFO:LIT:243 - Logical network u21/result_shift0005<15>1/LO has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -112,12 +105,25 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  16 block(s) removed
+  17 block(s) removed
    2 block(s) optimized away
-   8 signal(s) removed
+   9 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "u21/result_shift0005<15>1/LO" is loadless and has been removed.
+ Loadless block "u21/result_shift0005<15>1/LUT3_D_BUF" (BUF) removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -167,7 +173,8 @@ Section 6 - IOB Properties
 | blueOut<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | blueOut<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | blueOut<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| clk_in                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| clk_50                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| clk_hand                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | dataReady                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | digit1<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | digit1<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |

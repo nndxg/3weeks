@@ -1,5 +1,4 @@
 
-# PlanAhead Generated physical constraints 
 
 NET "digit1[6]" LOC = F8;
 NET "digit1[5]" LOC = E8;
@@ -147,7 +146,6 @@ NET "ram2Data[0]" LOC = U13;
 NET "redOut[1]" LOC = C3;
 NET "redOut[2]" LOC = A4;
 NET "redOut[0]" LOC = A7;
-NET "clk_in" LOC = B9;
 NET "dataReady" LOC = A16;
 NET "flashByte" LOC = C1;
 NET "flashOe" LOC = E1;
@@ -169,3 +167,8 @@ NET "tbre" LOC = D14;
 NET "tsre" LOC = N9;
 NET "vs" LOC = E6;
 NET "wrn" LOC = U5;
+
+# PlanAhead Generated physical constraints 
+
+NET "clk_50" LOC = B9;
+NET "clk_hand" LOC = U9;

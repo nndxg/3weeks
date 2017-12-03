@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Sat Dec 02 20:11:34 2017
+# Process ID: 14024
+# Log file: C:/Users/thinkpad/Desktop/5days/the_cpu/planAhead_run_5/planAhead.log
+# Journal file: C:/Users/thinkpad/Desktop/5days/the_cpu/planAhead_run_5/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/thinkpad/Desktop/5days/the_cpu/pa.fromNetlist.tcl
+# create_project -name the_cpu -dir "C:/Users/thinkpad/Desktop/5days/the_cpu/planAhead_run_5" -part xc3s1200efg320-4
+create_project: Time (s): elapsed = 00:00:06 . Memory (MB): peak = 448.070 ; gain = 30.391
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/thinkpad/Desktop/5days/the_cpu} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "cpu.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.ucf' to fileset 'constrs_1'
+# add_files [list {cpu.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design cpu.ngc ...
+WARNING:NetListWriters:298 - No output is written to cpu.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus u16/Mcompar_cnt_cmp_ge0000_lut<10 : 1>
+   on block cpu is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   u16/Mcompar_flash_finished_cmp_le0000_lut<7 : 0> on block cpu is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u18/controller<16 : 14> on block cpu is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u6/ImmeOut_mux0001<15 : 0> on block cpu
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus u7/CommandOut<15 : 0> on block cpu is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file cpu.edif ...
+ngc2edif: Total memory usage is 85092 kilobytes
+
+Parsing EDIF File [./planAhead_run_5/the_cpu.data/cache/cpu_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_5/the_cpu.data/cache/cpu_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+WARNING: [Netlist 29-43] Netlist 'cpu' is not ideal for floorplanning, since the cellview 'cpu' defined in file 'cpu.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'clk_in' [C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.ucf:149]
+Finished Parsing UCF File [C:/Users/thinkpad/Desktop/5days/the_cpu/cpu.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 239f850f
+link_design: Time (s): elapsed = 00:00:27 . Memory (MB): peak = 535.613 ; gain = 70.332
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/thinkpad/Desktop/5days/the_cpu\planAhead_pid14024.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat Dec 02 20:13:06 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

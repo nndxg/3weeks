@@ -40,7 +40,8 @@ entity Registers is
 		WriteReg:in std_logic_vector(3 downto 0);--"0XXX"´ú±íR0~R7£¬"1000"=SP,"1001"=IH, "1010"=T
 		WriteData:in std_logic_vector(15 downto 0);
 		readData1:out std_logic_vector(15 downto 0);
-		readData2:out std_logic_vector(15 downto 0)
+		readData2:out std_logic_vector(15 downto 0);
+		RegisterState : out std_logic_Vector(1 downto 0)
 	);
 end Registers;
 
@@ -56,6 +57,7 @@ architecture Behavioral of Registers is
 	signal T : std_logic_vector(15 downto 0);
 	signal IH : std_logic_vector(15 downto 0);
 	signal SP : std_logic_vector(15 downto 0);
+	signal state : std_logic_vector(1 downto 0) := "00";
 
 begin
 	process(clk, rst)
@@ -72,32 +74,40 @@ begin
 			T <= (others => '0');
 			IH <= (others => '0');			
 			SP <= (others => '0');
+			state <= "00";
 			
 		elsif (clk'event and clk = '1') then
-			if(flashFinished = '1') then
-				if (RegWrite = '1') then 
-					case WriteReg is 
-						when "0000" => r0 <= WriteData;
-						when "0001" => r1 <= WriteData;
-						when "0010" => r2 <= WriteData;
-						when "0011" => r3 <= WriteData;
-						when "0100" => r4 <= WriteData;
-						when "0101" => r5 <= WriteData;
-						when "0110" => r6 <= WriteData;
-						when "0111" => r7 <= WriteData;
-						when "1000" => SP <= WriteData;
-						when "1001" => IH <= WriteData;
-						when "1010" => T <= WriteData;
-						when others => null;
-					end case;
-				else
-					null;
-				end if;
-			else
-				null;
+			if(flashFinished = '1') then				
+				case state is				
+					when "00" =>						
+						state <= "01";					
+					when "01" =>
+						state <= "10";		
+					when "10" =>						
+						if (RegWrite = '1') then 
+							case WriteReg is 
+								when "0000" => r0 <= WriteData;
+								when "0001" => r1 <= WriteData;
+								when "0010" => r2 <= WriteData;
+								when "0011" => r3 <= WriteData;
+								when "0100" => r4 <= WriteData;
+								when "0101" => r5 <= WriteData;
+								when "0110" => r6 <= WriteData;
+								when "0111" => r7 <= WriteData;
+								when "1000" => SP <= WriteData;
+								when "1001" => IH <= WriteData;
+								when "1010" => T <= WriteData;
+								when others => null;
+							end case;
+						else null;
+						end if;
+						state <= "00";	
+					when others =>
+						state <= "00";
+				end case;
+			else null;
 			end if;
-		else
-			null;
+		else null;
 		end if;
 	end process;
 	
@@ -131,6 +141,7 @@ begin
 		end case;
 		
 	end process;
+	RegisterState <= state;
 
 end Behavioral;
 
